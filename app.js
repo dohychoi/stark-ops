@@ -616,9 +616,10 @@ async function loadData() {
     const s = loadSettings();
     const site = (s.site || "ICN81").toUpperCase();
     const role = s.team || "DCO";
+    const base = location.hostname === "localhost" || location.hostname === "127.0.0.1" ? "" : "https://dohychoi.github.io/stark-ops";
     // Try site-role specific data first, fallback to default
-    let res = await fetch(`data/${site}-${role}.json`);
-    if (!res.ok) res = await fetch("data.json");
+    let res = await fetch(`${base}/data/${site}-${role}.json`);
+    if (!res.ok) res = await fetch(`${base}/data.json`);
     const d = await res.json();
     CLUSTERS = d.CLUSTERS;
     EMAIL_UPDATES = d.EMAIL_UPDATES;
