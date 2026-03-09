@@ -516,8 +516,8 @@ async function sendMessage() {
     const syncAge = lastSync ? Math.round((Date.now() - new Date(lastSync).getTime()) / 3600000) : null;
     const syncLabel = syncAge !== null ? (syncAge < 1 ? "방금 전" : `${syncAge}시간 전`) : "알 수 없음";
 
-    // Open tickets filtered by user's site, sorted by IBU
-    const openTickets = TICKET_UPDATES.filter(t => (t.status === "Open" || t.status === "Pending" || t.status === "Assigned") && (t.cluster || "").toUpperCase().includes(site.toUpperCase()));
+    // Open tickets filtered by user's site, sorted by IBU (exclude compliance reminders)
+    const openTickets = TICKET_UPDATES.filter(t => (t.status === "Open" || t.status === "Pending" || t.status === "Assigned") && (t.cluster || "").toUpperCase().includes(site.toUpperCase()) && !t.excludeFromBriefing);
     openTickets.sort((a, b) => (a.ibu ?? 999) - (b.ibu ?? 999));
     const cats = {};
     openTickets.forEach(t => { const c = categorizeTicket(t.title); cats[c] = (cats[c]||0)+1; });

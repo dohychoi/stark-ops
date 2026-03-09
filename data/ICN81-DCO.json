@@ -1451,7 +1451,6 @@
     {
       "id": "V2132902845",
       "shortId": "V2132902845",
-      "ibu": 15,
       "severity": "LOW",
       "status": "Resolved",
       "title": "[Drills][DCO][ICN81] Weekly Compliance Reminder (Mar 8)",
@@ -1459,12 +1458,12 @@
       "cluster": "ICN81",
       "team": "DCO",
       "from": "boost-ticket-processor",
-      "date": "2026-03-09"
+      "date": "2026-03-09",
+      "excludeFromBriefing": true
     },
     {
       "id": "D405633198",
       "shortId": "D405633198",
-      "ibu": 13,
       "severity": "LOW",
       "status": "Resolved",
       "title": "[RPO_1][EC2_BP_4] Repair VFM_AL_K2_ALL_PCIE_PORTS_FAILED - FOX.5HPK51770328 [EC2R7IK21]",
@@ -1472,12 +1471,12 @@
       "cluster": "ICN81",
       "team": "DCO",
       "from": "boost-ticket-processor",
-      "date": "2026-03-09"
+      "date": "2026-03-09",
+      "ibu": 11
     },
     {
       "id": "D404898076",
       "shortId": "D404898076",
-      "ibu": 9,
       "severity": "LOW",
       "status": "Resolved",
       "title": "[EC2_BP_2] Repair VFM_AL_K2_PCIE_LINK_EP - FOX.2M0555370369 [EC2R8G23]",
@@ -1485,12 +1484,12 @@
       "cluster": "ICN81",
       "team": "DCO",
       "from": "boost-ticket-processor",
-      "date": "2026-03-09"
+      "date": "2026-03-09",
+      "ibu": 5
     },
     {
       "id": "D404957091",
       "shortId": "D404957091",
-      "ibu": 8,
       "severity": "LOW",
       "status": "Resolved",
       "title": "[EC2_BP_4] Repair VETTING_CBP_MEMORY - ZT.210546710015 [EC2M7IK21]",
@@ -1498,7 +1497,8 @@
       "cluster": "ICN81",
       "team": "DCO",
       "from": "boost-ticket-processor",
-      "date": "2026-03-09"
+      "date": "2026-03-09",
+      "ibu": 8
     },
     {
       "id": "6fd4d6db-240d-4241-a5d8-4e17531168a9",
@@ -1511,9 +1511,9 @@
       "from": "boost-ticket-processor",
       "date": "2026-03-07",
       "alias": "D404855598",
-      "ibu": 10,
       "shortId": "D404855598",
-      "lastUpdated": "2026-03-08T22:43:14Z"
+      "lastUpdated": "2026-03-08T22:43:14Z",
+      "ibu": 6
     },
     {
       "id": "6f2cbb6e-3ed3-4092-a9b4-a2ca284d53dd",
@@ -1773,9 +1773,9 @@
       "from": "boost-ticket-processor",
       "date": "2026-03-02",
       "alias": "D401489664",
-      "ibu": 1,
       "shortId": "D401489664",
-      "lastUpdated": "2026-03-09T05:11:19Z"
+      "lastUpdated": "2026-03-09T05:11:19Z",
+      "ibu": 15
     },
     {
       "id": "5b2e53cf-2888-4179-a6b8-9aff47317f1c",
@@ -1905,9 +1905,9 @@
       "from": "rackdown_workflow",
       "date": "2026-03-01",
       "alias": "V2124990152",
-      "ibu": 14,
       "shortId": "V2124990152",
-      "lastUpdated": "2026-03-08T12:02:47Z"
+      "lastUpdated": "2026-03-08T12:02:47Z",
+      "excludeFromBriefing": true
     },
     {
       "id": "d85482ba-0b35-4a9d-9a2e-443bde2d3dff",
@@ -2063,7 +2063,8 @@
       "from": "rackdown_workflow",
       "date": "2026-02-01",
       "alias": "V2094579064",
-      "shortId": "V2094579064"
+      "shortId": "V2094579064",
+      "excludeFromBriefing": true
     },
     {
       "id": "286712b8-781c-4b36-bcb0-7f42390076e1",
@@ -2115,7 +2116,8 @@
       "from": "rackdown_workflow",
       "date": "2026-02-22",
       "alias": "V2117294933",
-      "shortId": "V2117294933"
+      "shortId": "V2117294933",
+      "excludeFromBriefing": true
     },
     {
       "id": "52610afa-85f0-4570-a306-0194798bbe54",
@@ -2166,7 +2168,8 @@
       "lastUpdated": "2026-03-09T02:58:25Z",
       "cluster": "ICN81",
       "team": "DCO",
-      "from": "boost-ticket-processor"
+      "from": "boost-ticket-processor",
+      "ibu": 11
     },
     {
       "id": "672614d2-f1cc-452a-903a-bc0d72a839f2",
@@ -2178,7 +2181,8 @@
       "lastUpdated": "2026-03-08T22:42:37Z",
       "cluster": "ICN81",
       "team": "DCO",
-      "from": "boost-ticket-processor"
+      "from": "boost-ticket-processor",
+      "ibu": 5
     },
     {
       "id": "7e8646a8-a8d1-4f3c-a005-4b5376b495bc",
@@ -2190,7 +2194,8 @@
       "lastUpdated": "2026-03-08T21:06:46Z",
       "cluster": "ICN81",
       "team": "DCO",
-      "from": "boost-ticket-processor"
+      "from": "boost-ticket-processor",
+      "ibu": 8
     },
     {
       "id": "f1916a74-c0fc-40b6-8cc1-a1dbf2d02f5b",
@@ -2202,7 +2207,8 @@
       "lastUpdated": "2026-03-08T20:47:06Z",
       "cluster": "ICN81",
       "team": "DCO",
-      "from": "boost-ticket-processor"
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": true
     }
   ],
   "GLOBAL_TEAMS": [
