@@ -539,8 +539,18 @@ async function sendMessage() {
     const syncAge = lastSync ? Math.round((Date.now() - new Date(lastSync).getTime()) / 3600000) : null;
     const syncLabel = syncAge !== null ? (syncAge < 1 ? "방금 전" : `${syncAge}시간 전`) : "알 수 없음";
 
-    // Open tickets filtered by user's site, sorted by auto-calculated priority
-    const openTickets = TICKET_UPDATES.filter(t => (t.status === "Open" || t.status === "Pending" || t.status === "Assigned") && (t.cluster || "").toUpperCase().includes(site.toUpperCase()) && !t.excludeFromBriefing);
+    // Get all sites this DCO handles (e.g. ICN52 DCO handles ICN51+ICN52)
+    const mySites = new Set();
+    Object.entries(SITE_DCO).forEach(([s, dco]) => { if (dco.toUpperCase() === site.toUpperCase()) mySites.add(s.toUpperCase()); });
+    if (mySites.size === 0) mySites.add(site.toUpperCase());
+
+    // Open tickets for all sites this DCO handles
+    const openTickets = TICKET_UPDATES.filter(t => {
+      if (!["Open","Pending","Assigned","Work In Progress","Researching"].includes(t.status)) return false;
+      if (t.excludeFromBriefing) return false;
+      const tc = (t.cluster || "").toUpperCase();
+      return mySites.has(tc);
+    });
     openTickets.forEach(t => t._priority = calcPriority(t));
     openTickets.sort((a, b) => a._priority - b._priority);
     const cats = {};
@@ -632,7 +642,7 @@ async function sendMessage() {
 }
 
 // ===== DATA =====
-let CLUSTERS = {}, EMAIL_UPDATES = [], TICKET_UPDATES = [], GLOBAL_TEAMS = [], SUB_GEOS = {};
+let CLUSTERS = {}, EMAIL_UPDATES = [], TICKET_UPDATES = [], GLOBAL_TEAMS = [], SUB_GEOS = {}, SITE_DCO = {}, AZ_MAP = {}, UNMANNED_SITES = [];
 
 async function loadData() {
   try {
@@ -649,6 +659,9 @@ async function loadData() {
     TICKET_UPDATES = d.TICKET_UPDATES;
     GLOBAL_TEAMS = d.GLOBAL_TEAMS;
     SUB_GEOS = d.SUB_GEOS;
+    SITE_DCO = d.SITE_DCO || {};
+    AZ_MAP = d.AZ_MAP || {};
+    UNMANNED_SITES = d.UNMANNED_SITES || [];
     window._lastSync = d.lastSync;
   } catch(e) {
     console.error("Failed to load data:", e);

@@ -2857,5 +2857,88 @@
       "emoji": "🇺🇸"
     }
   },
-  "lastSync": "2026-03-09T08:13:18.177Z"
+  "lastSync": "2026-03-09T08:13:18.177Z",
+  "AZ_MAP": {
+    "ICN52AZ": {
+      "sites": [
+        "ICN51",
+        "ICN52",
+        "ICN56",
+        "ICN59",
+        "ICN63",
+        "ICN71"
+      ],
+      "dcoGroups": {
+        "ICN51": "ICN52",
+        "ICN52": "ICN52",
+        "ICN56": "ICN56",
+        "ICN59": "ICN59",
+        "ICN63": "ICN63",
+        "ICN71": "ICN71"
+      }
+    },
+    "ICN53AZ": {
+      "sites": [
+        "ICN53",
+        "ICN66",
+        "ICN69"
+      ],
+      "dcoGroups": {
+        "ICN53": "ICN53",
+        "ICN66": "ICN66",
+        "ICN69": "ICN69"
+      }
+    },
+    "ICN54AZ": {
+      "sites": [
+        "ICN54",
+        "ICN65",
+        "ICN91",
+        "ICN92"
+      ],
+      "dcoGroups": {
+        "ICN54": "ICN54",
+        "ICN65": "ICN65",
+        "ICN91": "ICN91",
+        "ICN92": "ICN92"
+      }
+    },
+    "ICN80AZ": {
+      "sites": [
+        "ICN57",
+        "ICN80",
+        "ICN81"
+      ],
+      "dcoGroups": {
+        "ICN57": "ICN80",
+        "ICN80": "ICN80",
+        "ICN81": "ICN81"
+      }
+    }
+  },
+  "SITE_DCO": {
+    "ICN51": "ICN52",
+    "ICN52": "ICN52",
+    "ICN56": "ICN56",
+    "ICN59": "ICN59",
+    "ICN63": "ICN63",
+    "ICN71": "ICN71",
+    "ICN53": "ICN53",
+    "ICN66": "ICN66",
+    "ICN69": "ICN69",
+    "ICN54": "ICN54",
+    "ICN65": "ICN65",
+    "ICN91": "ICN91",
+    "ICN92": "ICN92",
+    "ICN57": "ICN80",
+    "ICN80": "ICN80",
+    "ICN81": "ICN81"
+  },
+  "UNMANNED_SITES": [
+    "ICN50",
+    "ICN55",
+    "ICN58",
+    "ICN400",
+    "ICN401"
+  ]
 }

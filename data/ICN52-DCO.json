@@ -2219,7 +2219,8 @@
       "cluster": "ICN52",
       "team": "DCO",
       "severity": "LOW",
-      "from": "boost-ticket-processor"
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
     },
     {
       "id": "67889cbb-461b-48c5-86de-f5a1171b82cc",
@@ -2264,7 +2265,8 @@
       "cluster": "ICN52",
       "team": "DCO",
       "severity": "LOW",
-      "from": "boost-ticket-processor"
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
     },
     {
       "id": "600a0bd8-6cd7-4141-adff-a19ccf76aed8",
@@ -2275,7 +2277,8 @@
       "cluster": "ICN52",
       "team": "DCO",
       "severity": "LOW",
-      "from": "boost-ticket-processor"
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
     },
     {
       "id": "97aa255e-315d-4b2c-865e-0d517369e281",
@@ -2286,7 +2289,8 @@
       "cluster": "ICN52",
       "team": "DCO",
       "severity": "LOW",
-      "from": "boost-ticket-processor"
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
     },
     {
       "id": "594f4a73-9fee-4ef5-b2e4-efa4120f4651",
@@ -2297,7 +2301,8 @@
       "cluster": "ICN52",
       "team": "DCO",
       "severity": "LOW",
-      "from": "boost-ticket-processor"
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
     },
     {
       "id": "b1507432-5958-48dd-a54d-acc16a04a4e4",
@@ -2308,7 +2313,512 @@
       "cluster": "ICN52",
       "team": "DCO",
       "severity": "LOW",
-      "from": "boost-ticket-processor"
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "26792697-def6-496d-9065-d9f5c79c10cc",
+      "shortId": "P168780508",
+      "title": "Exothermic Event Incident Report [ICN63] - [4905020697]",
+      "status": "Assigned",
+      "severity": "LOW",
+      "date": "2024-11-11",
+      "cluster": "ICN63",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "60854363-5899-459a-b591-dacc431d1cc5",
+      "shortId": "D387239038",
+      "title": "[POWERSHELF_BP_1][ICN59 8-2 08-02-005-23] Please repair VETTING_POWERSHELF problem with FOX.62153HANN010AP3601R [PWRWMW240PSC16]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-02-03",
+      "cluster": "ICN59",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "9dec2d80-b461-4f04-ad43-50c15424cfe6",
+      "shortId": "P388321066",
+      "title": "[Media][S3_STORAGE_BP_1][ICN63-3-2-22809][486 TB] Host requires troubleshooting",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-02-24",
+      "cluster": "ICN63",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "3e08f66b-550a-4af1-aab8-e7f8e8dbe325",
+      "shortId": "V2123073215",
+      "title": "[ICN71] 7S - Site Walkthrough",
+      "status": "Assigned",
+      "severity": "LOW",
+      "date": "2026-02-27",
+      "cluster": "ICN71",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "6cb35cbd-dc73-4c5a-b2e2-3adddac68e51",
+      "shortId": "D400054402",
+      "title": "[REIN-76][EC2_BP_2][ICN56 4-2 21103] Please repair VETTING_MEMORY problem with SNX.MAL15T041802888 [EC2I315]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-02-28",
+      "cluster": "ICN56",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "09570c00-82b3-4f83-9afc-4ae65b12ef1a",
+      "shortId": "V2124986423",
+      "title": "[Drills][DCO][ICN71] Weekly Compliance Reminder",
+      "status": "Assigned",
+      "severity": "LOW",
+      "date": "2026-03-01",
+      "cluster": "ICN71",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": true
+    },
+    {
+      "id": "9b10d713-e2a6-41af-980d-b7f681c77d14",
+      "shortId": "D401453950",
+      "title": "[Media][EBS_BP_1][ICN63 3-1 12516] Please repair VETTING_VFM problem with FOX.GASH13130021 [EBSFLASH816]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-02",
+      "cluster": "ICN63",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "4135d884-c084-4ba6-8798-2c4f53bae868",
+      "shortId": "D401580068",
+      "title": "[DONE][EC2_BP_2][ICN56 9-3 31514] Please repair VETTING_ANNAPURNA_PCIE_K2C problem with QCI.QTFCLP9350920 [EC2I315]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-02",
+      "cluster": "ICN56",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "dc462639-668d-414e-9e4c-e99371787658",
+      "shortId": "D401954279",
+      "title": "[RE-OPENED][POWERSHELF_BP_1][ICN71 5-8 05-08-006-19] Please repair VETTING_CBP_POWERSHELF problem with DTA.LYBD2551021426",
+      "status": "Assigned",
+      "severity": "LOW",
+      "date": "2026-03-03",
+      "cluster": "ICN71",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "968ad830-1a5a-4498-8f7f-1437d99741a7",
+      "shortId": "D402451691",
+      "title": "[RE-OPENED][EC2_BP_1][ICN71 2-2 02-02-003-43] Please repair VETTING_CBP_NVIDIA_FDT_GPU_STALL problem with QCI.QTWA5PAC245200010 [EC2G6E17C]",
+      "status": "Assigned",
+      "severity": "LOW",
+      "date": "2026-03-04",
+      "cluster": "ICN71",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "35f3c491-f60c-4050-99da-01d244c5b938",
+      "shortId": "D402637593",
+      "title": "[ICN56][9-3 30903][9-5 52603][NETWORK_BP_5][Johnny 5] icn52-56-es-e1-b18-t2-r13 jrp3-2 <-> icn52-56-es-e1-s10-r13 jrp5-2",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-04",
+      "cluster": "ICN56",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "c4a58af9-c35c-4e97-b5f9-d4a8f1927fa3",
+      "shortId": "D402777057",
+      "title": "[MF-S][EC2_BP_4][ICN56 9-5 50812] Please repair HWMON problem with SNX.TCY16W121801507 [EC2C516]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-04",
+      "cluster": "ICN56",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "95ba189a-53ad-4175-9d6d-cdb6e6e45703",
+      "shortId": "D403145688",
+      "title": "[EC2_BP_2][ICN56 4-1 41813] Please repair VETTING_ANNAPURNA_LTSSM_NVME problem with ZT.206564810133 [EC2I315]",
+      "status": "Assigned",
+      "severity": "LOW",
+      "date": "2026-03-05",
+      "cluster": "ICN56",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "9bfa93bb-9535-49aa-b523-e2d3994ad1c3",
+      "shortId": "D403278014",
+      "title": "[ICN56][9-5 52713][4-2 22102][NETWORK_BP_5][Johnny 5] icn52-56-es-e1-s16-r11 jrp3-1 <-> icn52-56-es-e1-b9-t2-r11 jrp4-4",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-05",
+      "cluster": "ICN56",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "58c5a57f-2f8f-41b9-b137-e41b9d9e098e",
+      "shortId": "D403519380",
+      "title": "[EC2_BP_4][ICN63 6-3 31914] Please repair VETTING_CBP_VFM_AL_GRV_MOBO_BOOT_FAIL problem with FOX.1H0533770084 [EC2R7G21]",
+      "status": "Assigned",
+      "severity": "LOW",
+      "date": "2026-03-05",
+      "cluster": "ICN63",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "7801c670-fe29-4d39-a3f7-37358dcc39a1",
+      "shortId": "V2129913211",
+      "title": "Weekly Pod Walkthrough - ICN71",
+      "status": "Assigned",
+      "severity": "LOW",
+      "date": "2026-03-05",
+      "cluster": "ICN71",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "148f6b8e-48f1-4fcf-930a-e0b98da4cdbb",
+      "shortId": "D403778036",
+      "title": "[EC2_BP_4][ICN63 3-1 10805] Please repair VETTING_ANNAPURNA_REVERT_TO_STOCK problem with FOX.TR0410870046 [EC2M5D16C]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-06",
+      "cluster": "ICN63",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "c7119cb6-048c-4611-89f8-641d178cd4bc",
+      "shortId": "D404002248",
+      "title": "[ICN56][9-5 52603][9-5 51601][NETWORK_BP_5][Johnny 5] icn52-56-es-e1-s10-r11 jrp5-1 <-> icn52-56-es-e1-b17-t2-r11 jrp3-2",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-06",
+      "cluster": "ICN56",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "0fdaddea-01a3-4fa5-b4f3-269ed6be7003",
+      "shortId": "D404062892",
+      "title": "[EC2_BP_4][ICN63 3-2 22012] Please repair VETTING_VFM problem with FOX.T16R21670022 [EC2R5DN16C]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-06",
+      "cluster": "ICN63",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "d2e44774-dafe-4488-b53f-3b24a4edf7d2",
+      "shortId": "D404151162",
+      "title": "[Media][EBS_BP_1][ICN63 3-1 12408] Please repair HWMON problem with FOX.GASH13330088 [EBSFLASH816]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-06",
+      "cluster": "ICN63",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "5726e0c9-f501-4dd6-b878-a4d7f6eb470f",
+      "shortId": "D404250664",
+      "title": "[EC2_BP_1][ICN71 5-8 05-08-004-19] Please repair VETTING_CBP_NVIDIA_FDT_GPU_OTHER_SOFTWARE_ERROR problem with QCI.QTWA5LAC260600113 [EC2G7E21]",
+      "status": "Assigned",
+      "severity": "LOW",
+      "date": "2026-03-06",
+      "cluster": "ICN71",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "5e2016fb-a400-4c96-b58a-d37709c6cf96",
+      "shortId": "D404298859",
+      "title": "[ICN56][9-5 52603][9-5 50601][NETWORK_BP_5][Johnny 5] icn52-56-es-e1-s9-r15 jrp3-4 <-> icn52-56-es-e1-b12-t2-r15 jrp3-1",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-06",
+      "cluster": "ICN56",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "cb1a3057-5df3-4529-95d9-443c3bc78da3",
+      "shortId": "V2130953312",
+      "title": "[ICN71] 7S - Site Walkthrough",
+      "status": "Assigned",
+      "severity": "LOW",
+      "date": "2026-03-06",
+      "cluster": "ICN71",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "5e8e3e3a-placeholder",
+      "shortId": "D404402778",
+      "title": "[EC2_BP_1][ICN71 5-8 05-08-006-21] Please repair VETTING_CBP_NVIDIA_FDT_GPU_PCIE_EXPRESS_BUS_ERROR problem with QCI.QTWA5LAC260600119 [EC2G7E21]",
+      "status": "Assigned",
+      "severity": "LOW",
+      "date": "2026-03-06",
+      "cluster": "ICN71",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "placeholder-D404653454",
+      "shortId": "D404653454",
+      "title": "[EC2_BP_4][ICN71 5-7 05-07-003-27] Please repair VETTING_CBP_PDB problem with FOX.5HPK54670466 [EC2R7IK21]",
+      "status": "Assigned",
+      "severity": "LOW",
+      "date": "2026-03-07",
+      "cluster": "ICN71",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "placeholder-D404801562",
+      "shortId": "D404801562",
+      "title": "[EC2_BP_2][ICN71 2-1 02-01-008-31] Please repair VETTING_CBP_AL_GRV_DDR_LOG_PARSER_CBP_DDR_INIT problem with FOX.2M0560470059 [EC2R8G23]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-07",
+      "cluster": "ICN71",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "placeholder-D404806816",
+      "shortId": "D404806816",
+      "title": "[EC2_BP_4][ICN63 6-3 32005] Please repair VETTING_CBP_VFM problem with SNX.BRUN1W082305245 [EC2I419]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-07",
+      "cluster": "ICN63",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "placeholder-D404853144",
+      "shortId": "D404853144",
+      "title": "[EC2_BP_2][ICN63 3-2 20412] Please repair VETTING_ANNAPURNA_K2X_SIDE_LINK_DEGRADED problem with SNX.TRK45W112101375 [EC2R5B16C]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-07",
+      "cluster": "ICN63",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "placeholder-D404905631",
+      "shortId": "D404905631",
+      "title": "[EC2_BP_4][ICN63 3-2 20415] Please repair VETTING_CBP_VFM_K2_1G_BMC_CONNECTIVITY problem with FOX.1B0913250236 [EC2G5G19]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-07",
+      "cluster": "ICN63",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "placeholder-D404906934",
+      "shortId": "D404906934",
+      "title": "[EC2_BP_2][ICN71 3-3 03-03-002-37] Please repair VETTING_CBP_VFM_AL_K2_PCIE_LINK_EP problem with FOX.1HPK53570087 [EC2C7IK21]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-07",
+      "cluster": "ICN71",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "placeholder-D405198381",
+      "shortId": "D405198381",
+      "title": "[EC2_BP_2][ICN56 9-5 52410] Please repair VETTING_MEMORY problem with FOX.TR0504670045 [EC2R516C]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-08",
+      "cluster": "ICN56",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "placeholder-D405300404",
+      "shortId": "D405300404",
+      "title": "[EC2_BP_2][ICN63 3-2 21213] Please repair VETTING_ANNAPURNA_K2X_SIDE_LINK_DEGRADED problem with SNX.TRK45W112101449 [EC2R5B16C]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-08",
+      "cluster": "ICN63",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "placeholder-D405426860",
+      "shortId": "D405426860",
+      "title": "[EC2_BP_4][ICN56 9-3 30709] Please repair VETTING_VFM problem with SNX.CN16BW101902661 [EC2C5N16]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-08",
+      "cluster": "ICN56",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "placeholder-D405459825",
+      "shortId": "D405459825",
+      "title": "[ICN71][2-1 02-01-004-17][2-1 02-01-004-34][NETWORK_BP_5][Johnny 5] icn71-br-fnc-f1-b1-t1-r1 jrp6-3 <-> icn71-br-fnc-f1-lul-r3",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-08",
+      "cluster": "ICN71",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "placeholder-D405473816",
+      "shortId": "D405473816",
+      "title": "[MF-S][EC2_BP_4][ICN56 9-5 50714] Please repair HWMON problem with FOX.DTAC85230158 [EC2C516]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-08",
+      "cluster": "ICN56",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "placeholder-D405495774",
+      "shortId": "D405495774",
+      "title": "[EC2_BP_4][ICN63 3-1 10707] Please repair VETTING_VFM problem with SNX.CN16BW022109801 [EC2C5N16]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-08",
+      "cluster": "ICN63",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "placeholder-D405577465",
+      "shortId": "D405577465",
+      "title": "[EC2_BP_4][ICN63 3-1 10707] Please repair VETTING_VFM problem with SNX.CN16BW022110137 [EC2C5N16]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-08",
+      "cluster": "ICN63",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "placeholder-D405619150",
+      "shortId": "D405619150",
+      "title": "[ICN63][3-2 20303][3-2 20407][NETWORK_BP_5][Johnny 5] icn52-63-es-e1-b7-t1-r6 jrp10-4 <-> icn52-63-es-acc-rsw-10-43-124-128 jrp32-4",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-08",
+      "cluster": "ICN63",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "placeholder-D405642632",
+      "shortId": "D405642632",
+      "title": "[EC2_BP_4][ICN63 6-3 30816] Please repair VETTING_VFM problem with FOX.QD1624870007 [EC2I3EN16C]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-09",
+      "cluster": "ICN63",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "placeholder-D405644305",
+      "shortId": "D405644305",
+      "title": "[EC2_BP_1][ICN56 9-3 32509] Please repair VETTING_VFM problem with SNX.TREK3W111900708 [EC2M516C]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-09",
+      "cluster": "ICN56",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "placeholder-D405664908",
+      "shortId": "D405664908",
+      "title": "[EC2_BP_1][ICN71 4-6 04-06-011-43] Please repair VETTING_CBP_VFM_AL_1G_K2_MANAGED_MISSING_MULTI problem with WYN.WAA7HN529045Y [EC2TRN2PD21]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-09",
+      "cluster": "ICN71",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "placeholder-D405669049",
+      "shortId": "D405669049",
+      "title": "[EC2_BP_1][ICN71 4-5 04-05-007-45] Please repair VETTING_CBP_VFM_MLA_DIAG_PERMANENT_HSC_OVERCURRENT problem with WYN.WAA7HN513034Y [EC2TRN2PD21]",
+      "status": "Work In Progress",
+      "severity": "LOW",
+      "date": "2026-03-09",
+      "cluster": "ICN71",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
     }
   ],
   "GLOBAL_TEAMS": [
@@ -2347,5 +2857,88 @@
       "emoji": "🇺🇸"
     }
   },
-  "lastSync": "2026-03-09T08:05:02.726Z"
+  "lastSync": "2026-03-09T08:13:18.177Z",
+  "AZ_MAP": {
+    "ICN52AZ": {
+      "sites": [
+        "ICN51",
+        "ICN52",
+        "ICN56",
+        "ICN59",
+        "ICN63",
+        "ICN71"
+      ],
+      "dcoGroups": {
+        "ICN51": "ICN52",
+        "ICN52": "ICN52",
+        "ICN56": "ICN56",
+        "ICN59": "ICN59",
+        "ICN63": "ICN63",
+        "ICN71": "ICN71"
+      }
+    },
+    "ICN53AZ": {
+      "sites": [
+        "ICN53",
+        "ICN66",
+        "ICN69"
+      ],
+      "dcoGroups": {
+        "ICN53": "ICN53",
+        "ICN66": "ICN66",
+        "ICN69": "ICN69"
+      }
+    },
+    "ICN54AZ": {
+      "sites": [
+        "ICN54",
+        "ICN65",
+        "ICN91",
+        "ICN92"
+      ],
+      "dcoGroups": {
+        "ICN54": "ICN54",
+        "ICN65": "ICN65",
+        "ICN91": "ICN91",
+        "ICN92": "ICN92"
+      }
+    },
+    "ICN80AZ": {
+      "sites": [
+        "ICN57",
+        "ICN80",
+        "ICN81"
+      ],
+      "dcoGroups": {
+        "ICN57": "ICN80",
+        "ICN80": "ICN80",
+        "ICN81": "ICN81"
+      }
+    }
+  },
+  "SITE_DCO": {
+    "ICN51": "ICN52",
+    "ICN52": "ICN52",
+    "ICN56": "ICN56",
+    "ICN59": "ICN59",
+    "ICN63": "ICN63",
+    "ICN71": "ICN71",
+    "ICN53": "ICN53",
+    "ICN66": "ICN66",
+    "ICN69": "ICN69",
+    "ICN54": "ICN54",
+    "ICN65": "ICN65",
+    "ICN91": "ICN91",
+    "ICN92": "ICN92",
+    "ICN57": "ICN80",
+    "ICN80": "ICN80",
+    "ICN81": "ICN81"
+  },
+  "UNMANNED_SITES": [
+    "ICN50",
+    "ICN55",
+    "ICN58",
+    "ICN400",
+    "ICN401"
+  ]
 }
