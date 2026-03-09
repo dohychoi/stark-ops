@@ -1,208 +1,1311 @@
 {
   "CLUSTERS": {
     "ICN": {
-      "name": "Seoul / Incheon",
+      "name": "Seoul",
       "flag": "🇰🇷",
-      "country": "South Korea",
-      "region": "ap-northeast-2",
-      "lat": 37.46,
-      "lng": 126.44,
+      "subGeo": "Greater China",
+      "lat": 37.5,
+      "lng": 127,
+      "adoption": 82,
       "status": "healthy",
-      "tier": "major",
-      "sites": 22,
-      "adoption": 82
+      "leader": "N/A",
+      "capacity": {
+        "servers": 1250,
+        "utilization": 78,
+        "uptime": 99.97
+      },
+      "recentTickets": [
+        {
+          "id": "TT-40231",
+          "severity": "SEV3",
+          "title": "Network latency spike in AZ-2",
+          "status": "Resolved",
+          "date": "2026-03-05"
+        },
+        {
+          "id": "TT-40198",
+          "severity": "SEV4",
+          "title": "Disk usage alert on storage cluster B",
+          "status": "Resolved",
+          "date": "2026-03-04"
+        },
+        {
+          "id": "TT-40112",
+          "severity": "SEV3",
+          "title": "Cooling unit maintenance Zone C",
+          "status": "Open",
+          "date": "2026-03-03"
+        },
+        {
+          "id": "TT-40087",
+          "severity": "SEV5",
+          "title": "Badge reader firmware update needed",
+          "status": "Open",
+          "date": "2026-03-02"
+        },
+        {
+          "id": "TT-40045",
+          "severity": "SEV2",
+          "title": "Power redundancy failover test failure",
+          "status": "Resolved",
+          "date": "2026-02-28"
+        }
+      ],
+      "securityIssues": [
+        {
+          "id": "SEC-1021",
+          "type": "Access Control",
+          "title": "Expired badge access found for 3 contractors",
+          "status": "Remediated",
+          "date": "2026-03-01"
+        },
+        {
+          "id": "SEC-1018",
+          "type": "Compliance",
+          "title": "Quarterly security audit completed - 2 minor findings",
+          "status": "In Progress",
+          "date": "2026-02-20"
+        }
+      ]
     },
-    "NRT": {
-      "name": "Tokyo / Narita",
-      "flag": "🇯🇵",
-      "country": "Japan",
-      "region": "ap-northeast-1",
-      "lat": 35.76,
-      "lng": 140.39,
+    "KUL": {
+      "name": "Kuala Lumpur",
+      "flag": "🇲🇾",
+      "subGeo": "Greater China",
+      "lat": 3.1,
+      "lng": 101.7,
+      "adoption": 67.6,
       "status": "healthy",
-      "tier": "major",
-      "sites": 20,
-      "adoption": 75
-    },
-    "KIX": {
-      "name": "Osaka",
-      "flag": "🇯🇵",
-      "country": "Japan",
-      "region": "ap-northeast-3",
-      "lat": 34.43,
-      "lng": 135.24,
-      "status": "healthy",
-      "tier": "standard",
-      "sites": 3,
-      "adoption": 60
-    },
-    "BOM": {
-      "name": "Mumbai",
-      "flag": "🇮🇳",
-      "country": "India",
-      "region": "ap-south-1",
-      "lat": 19.09,
-      "lng": 72.87,
-      "status": "healthy",
-      "tier": "major",
-      "sites": 7,
-      "adoption": 70
-    },
-    "HYD": {
-      "name": "Hyderabad",
-      "flag": "🇮🇳",
-      "country": "India",
-      "region": "ap-south-2",
-      "lat": 17.24,
-      "lng": 78.43,
-      "status": "healthy",
-      "tier": "standard",
-      "sites": 5,
-      "adoption": 55
-    },
-    "DEL": {
-      "name": "Delhi / NCR",
-      "flag": "🇮🇳",
-      "country": "India",
-      "region": "ap-south-1",
-      "lat": 28.56,
-      "lng": 77.1,
-      "status": "healthy",
-      "tier": "edge",
-      "sites": 3,
-      "adoption": 40
-    },
-    "CCU": {
-      "name": "Kolkata",
-      "flag": "🇮🇳",
-      "country": "India",
-      "region": "ap-south-1",
-      "lat": 22.65,
-      "lng": 88.45,
-      "status": "healthy",
-      "tier": "edge",
-      "sites": 2,
-      "adoption": 35
-    },
-    "MAA": {
-      "name": "Chennai",
-      "flag": "🇮🇳",
-      "country": "India",
-      "region": "ap-south-1",
-      "lat": 12.99,
-      "lng": 80.17,
-      "status": "healthy",
-      "tier": "edge",
-      "sites": 2,
-      "adoption": 35
-    },
-    "SIN": {
-      "name": "Singapore",
-      "flag": "🇸🇬",
-      "country": "Singapore",
-      "region": "ap-southeast-1",
-      "lat": 1.35,
-      "lng": 103.82,
-      "status": "healthy",
-      "tier": "major",
-      "sites": 7,
-      "adoption": 72
+      "leader": "hcyeoh",
+      "capacity": {
+        "servers": 890,
+        "utilization": 72,
+        "uptime": 99.95
+      },
+      "recentTickets": [
+        {
+          "id": "TT-38901",
+          "severity": "SEV3",
+          "title": "UPS battery replacement scheduled",
+          "status": "Open",
+          "date": "2026-03-06"
+        },
+        {
+          "id": "TT-38876",
+          "severity": "SEV4",
+          "title": "HVAC sensor calibration drift",
+          "status": "Resolved",
+          "date": "2026-03-04"
+        },
+        {
+          "id": "TT-38812",
+          "severity": "SEV3",
+          "title": "Fiber optic link degradation MDF-3",
+          "status": "Resolved",
+          "date": "2026-03-02"
+        },
+        {
+          "id": "TT-38790",
+          "severity": "SEV5",
+          "title": "Rack labeling update request",
+          "status": "Open",
+          "date": "2026-03-01"
+        },
+        {
+          "id": "TT-38745",
+          "severity": "SEV4",
+          "title": "Generator fuel level monitoring alert",
+          "status": "Resolved",
+          "date": "2026-02-27"
+        }
+      ],
+      "securityIssues": [
+        {
+          "id": "SEC-982",
+          "type": "Physical",
+          "title": "Tailgating incident at loading dock",
+          "status": "Remediated",
+          "date": "2026-02-25"
+        }
+      ]
     },
     "SYD": {
       "name": "Sydney",
       "flag": "🇦🇺",
-      "country": "Australia",
-      "region": "ap-southeast-2",
-      "lat": -33.95,
-      "lng": 151.18,
+      "subGeo": "South Asia & ANZ",
+      "lat": -33.9,
+      "lng": 151.2,
+      "adoption": 66,
       "status": "healthy",
-      "tier": "major",
-      "sites": 5,
-      "adoption": 68
+      "leader": "simontan",
+      "capacity": {
+        "servers": 1100,
+        "utilization": 81,
+        "uptime": 99.98
+      },
+      "recentTickets": [
+        {
+          "id": "TT-39501",
+          "severity": "SEV2",
+          "title": "Core switch failover event - traffic rerouted",
+          "status": "Resolved",
+          "date": "2026-03-06"
+        },
+        {
+          "id": "TT-39478",
+          "severity": "SEV3",
+          "title": "Fire suppression system quarterly test",
+          "status": "Open",
+          "date": "2026-03-05"
+        },
+        {
+          "id": "TT-39432",
+          "severity": "SEV4",
+          "title": "PDU firmware update rollout",
+          "status": "Resolved",
+          "date": "2026-03-03"
+        },
+        {
+          "id": "TT-39401",
+          "severity": "SEV3",
+          "title": "Elevated temperature in hot aisle Row 12",
+          "status": "Resolved",
+          "date": "2026-03-01"
+        },
+        {
+          "id": "TT-39367",
+          "severity": "SEV5",
+          "title": "Cable management cleanup request",
+          "status": "Open",
+          "date": "2026-02-28"
+        }
+      ],
+      "securityIssues": [
+        {
+          "id": "SEC-1005",
+          "type": "Network",
+          "title": "Unauthorized port scan detected from internal host",
+          "status": "Investigating",
+          "date": "2026-03-04"
+        },
+        {
+          "id": "SEC-998",
+          "type": "Compliance",
+          "title": "SOC2 audit preparation - documentation gap",
+          "status": "In Progress",
+          "date": "2026-02-18"
+        }
+      ]
     },
-    "MEL": {
-      "name": "Melbourne",
-      "flag": "🇦🇺",
-      "country": "Australia",
-      "region": "ap-southeast-4",
-      "lat": -37.67,
-      "lng": 144.84,
+    "HYD": {
+      "name": "Hyderabad",
+      "flag": "🇮🇳",
+      "subGeo": "India",
+      "lat": 17.4,
+      "lng": 78.5,
+      "adoption": 65,
       "status": "healthy",
-      "tier": "standard",
-      "sites": 3,
-      "adoption": 50
+      "leader": "achowdhr",
+      "capacity": {
+        "servers": 950,
+        "utilization": 85,
+        "uptime": 99.94
+      },
+      "recentTickets": [
+        {
+          "id": "TT-37801",
+          "severity": "SEV2",
+          "title": "Power grid fluctuation - switched to generator",
+          "status": "Resolved",
+          "date": "2026-03-06"
+        },
+        {
+          "id": "TT-37789",
+          "severity": "SEV3",
+          "title": "Water leak detected in sub-floor plenum",
+          "status": "Resolved",
+          "date": "2026-03-05"
+        },
+        {
+          "id": "TT-37756",
+          "severity": "SEV3",
+          "title": "Server decommission batch - 45 units",
+          "status": "Open",
+          "date": "2026-03-03"
+        },
+        {
+          "id": "TT-37721",
+          "severity": "SEV4",
+          "title": "CCTV camera offline in corridor B2",
+          "status": "Resolved",
+          "date": "2026-03-01"
+        },
+        {
+          "id": "TT-37698",
+          "severity": "SEV5",
+          "title": "Visitor parking allocation request",
+          "status": "Open",
+          "date": "2026-02-27"
+        }
+      ],
+      "securityIssues": [
+        {
+          "id": "SEC-991",
+          "type": "Physical",
+          "title": "Perimeter fence sensor malfunction - Zone 4",
+          "status": "Remediated",
+          "date": "2026-03-02"
+        }
+      ]
+    },
+    "BOM": {
+      "name": "Mumbai",
+      "flag": "🇮🇳",
+      "subGeo": "India",
+      "lat": 19.1,
+      "lng": 72.9,
+      "adoption": 65,
+      "status": "healthy",
+      "leader": "achowdhr",
+      "capacity": {
+        "servers": 870,
+        "utilization": 88,
+        "uptime": 99.92
+      },
+      "recentTickets": [
+        {
+          "id": "TT-37201",
+          "severity": "SEV2",
+          "title": "Monsoon preparation - drainage system check",
+          "status": "Open",
+          "date": "2026-03-06"
+        },
+        {
+          "id": "TT-37189",
+          "severity": "SEV3",
+          "title": "Rack power distribution imbalance",
+          "status": "Resolved",
+          "date": "2026-03-04"
+        },
+        {
+          "id": "TT-37145",
+          "severity": "SEV3",
+          "title": "ISP link degradation - backup active",
+          "status": "Resolved",
+          "date": "2026-03-02"
+        },
+        {
+          "id": "TT-37112",
+          "severity": "SEV4",
+          "title": "Environmental monitoring sensor replacement",
+          "status": "Open",
+          "date": "2026-03-01"
+        },
+        {
+          "id": "TT-37089",
+          "severity": "SEV5",
+          "title": "Documentation update for rack layout",
+          "status": "Open",
+          "date": "2026-02-26"
+        }
+      ],
+      "securityIssues": [
+        {
+          "id": "SEC-987",
+          "type": "Access Control",
+          "title": "Biometric reader calibration needed - Entry 3",
+          "status": "In Progress",
+          "date": "2026-02-28"
+        }
+      ]
+    },
+    "BizOps": {
+      "name": "BizOps",
+      "flag": "💼",
+      "subGeo": "Global Services",
+      "lat": 38.9,
+      "lng": -77.4,
+      "adoption": 52.17,
+      "status": "moderate",
+      "leader": "stutip",
+      "capacity": {
+        "servers": 320,
+        "utilization": 65,
+        "uptime": 99.99
+      },
+      "recentTickets": [
+        {
+          "id": "TT-36501",
+          "severity": "SEV4",
+          "title": "Dashboard reporting delay",
+          "status": "Resolved",
+          "date": "2026-03-05"
+        },
+        {
+          "id": "TT-36478",
+          "severity": "SEV3",
+          "title": "Data pipeline sync failure",
+          "status": "Resolved",
+          "date": "2026-03-03"
+        },
+        {
+          "id": "TT-36445",
+          "severity": "SEV5",
+          "title": "New team onboarding access request",
+          "status": "Open",
+          "date": "2026-03-01"
+        },
+        {
+          "id": "TT-36412",
+          "severity": "SEV4",
+          "title": "Report generation timeout",
+          "status": "Resolved",
+          "date": "2026-02-28"
+        },
+        {
+          "id": "TT-36389",
+          "severity": "SEV5",
+          "title": "Quarterly metrics review preparation",
+          "status": "Open",
+          "date": "2026-02-25"
+        }
+      ],
+      "securityIssues": []
+    },
+    "IAD": {
+      "name": "Virginia",
+      "flag": "🇺🇸",
+      "subGeo": "Global Services",
+      "lat": 38.9,
+      "lng": -77,
+      "adoption": 44,
+      "status": "moderate",
+      "leader": "buccella",
+      "capacity": {
+        "servers": 2100,
+        "utilization": 74,
+        "uptime": 99.96
+      },
+      "recentTickets": [
+        {
+          "id": "TT-41001",
+          "severity": "SEV2",
+          "title": "BGP route leak affecting east coast traffic",
+          "status": "Resolved",
+          "date": "2026-03-06"
+        },
+        {
+          "id": "TT-40987",
+          "severity": "SEV3",
+          "title": "Chiller plant capacity expansion",
+          "status": "Open",
+          "date": "2026-03-05"
+        },
+        {
+          "id": "TT-40945",
+          "severity": "SEV3",
+          "title": "DNS resolution intermittent failures",
+          "status": "Resolved",
+          "date": "2026-03-03"
+        },
+        {
+          "id": "TT-40912",
+          "severity": "SEV4",
+          "title": "Rack power metering discrepancy",
+          "status": "Open",
+          "date": "2026-03-01"
+        },
+        {
+          "id": "TT-40878",
+          "severity": "SEV5",
+          "title": "Asset inventory reconciliation",
+          "status": "Open",
+          "date": "2026-02-27"
+        }
+      ],
+      "securityIssues": [
+        {
+          "id": "SEC-1030",
+          "type": "Network",
+          "title": "DDoS mitigation triggered - traffic anomaly",
+          "status": "Monitoring",
+          "date": "2026-03-05"
+        },
+        {
+          "id": "SEC-1025",
+          "type": "Compliance",
+          "title": "FedRAMP control review - 1 finding",
+          "status": "In Progress",
+          "date": "2026-02-22"
+        }
+      ]
+    },
+    "SIN": {
+      "name": "Singapore",
+      "flag": "🇸🇬",
+      "subGeo": "South Asia & ANZ",
+      "lat": 1.3,
+      "lng": 103.8,
+      "adoption": 43,
+      "status": "moderate",
+      "leader": "simontan",
+      "capacity": {
+        "servers": 780,
+        "utilization": 82,
+        "uptime": 99.95
+      },
+      "recentTickets": [
+        {
+          "id": "TT-35901",
+          "severity": "SEV3",
+          "title": "Cross-connect installation delay",
+          "status": "Open",
+          "date": "2026-03-06"
+        },
+        {
+          "id": "TT-35878",
+          "severity": "SEV3",
+          "title": "Humidity control drift in Hall B",
+          "status": "Resolved",
+          "date": "2026-03-04"
+        },
+        {
+          "id": "TT-35845",
+          "severity": "SEV4",
+          "title": "Network switch EOL replacement plan",
+          "status": "Open",
+          "date": "2026-03-02"
+        },
+        {
+          "id": "TT-35812",
+          "severity": "SEV4",
+          "title": "Backup generator load test scheduled",
+          "status": "Resolved",
+          "date": "2026-02-28"
+        },
+        {
+          "id": "TT-35789",
+          "severity": "SEV5",
+          "title": "Vendor access badge renewal batch",
+          "status": "Open",
+          "date": "2026-02-26"
+        }
+      ],
+      "securityIssues": [
+        {
+          "id": "SEC-975",
+          "type": "Physical",
+          "title": "CCTV blind spot identified in loading area",
+          "status": "Remediated",
+          "date": "2026-02-20"
+        }
+      ]
+    },
+    "KIX": {
+      "name": "Osaka",
+      "flag": "🇯🇵",
+      "subGeo": "Japan",
+      "lat": 34.7,
+      "lng": 135.5,
+      "adoption": 40,
+      "status": "moderate",
+      "leader": "timrex",
+      "capacity": {
+        "servers": 680,
+        "utilization": 71,
+        "uptime": 99.97
+      },
+      "recentTickets": [
+        {
+          "id": "TT-34501",
+          "severity": "SEV3",
+          "title": "Seismic sensor calibration check",
+          "status": "Resolved",
+          "date": "2026-03-05"
+        },
+        {
+          "id": "TT-34478",
+          "severity": "SEV3",
+          "title": "Power distribution unit upgrade",
+          "status": "Open",
+          "date": "2026-03-03"
+        },
+        {
+          "id": "TT-34445",
+          "severity": "SEV4",
+          "title": "Floor tile replacement in cold aisle",
+          "status": "Resolved",
+          "date": "2026-03-01"
+        },
+        {
+          "id": "TT-34412",
+          "severity": "SEV4",
+          "title": "Fiber patch panel reorganization",
+          "status": "Open",
+          "date": "2026-02-28"
+        },
+        {
+          "id": "TT-34389",
+          "severity": "SEV5",
+          "title": "Emergency exit signage inspection",
+          "status": "Resolved",
+          "date": "2026-02-25"
+        }
+      ],
+      "securityIssues": []
     },
     "HKG": {
       "name": "Hong Kong",
       "flag": "🇭🇰",
-      "country": "Hong Kong",
-      "region": "ap-east-1",
-      "lat": 22.31,
-      "lng": 113.92,
-      "status": "healthy",
-      "tier": "standard",
-      "sites": 4,
-      "adoption": 58
+      "subGeo": "Greater China",
+      "lat": 22.3,
+      "lng": 114.2,
+      "adoption": 35.51,
+      "status": "moderate",
+      "leader": "hcyeoh",
+      "capacity": {
+        "servers": 560,
+        "utilization": 79,
+        "uptime": 99.93
+      },
+      "recentTickets": [
+        {
+          "id": "TT-33901",
+          "severity": "SEV2",
+          "title": "Typhoon preparation - emergency protocol activated",
+          "status": "Resolved",
+          "date": "2026-03-06"
+        },
+        {
+          "id": "TT-33878",
+          "severity": "SEV3",
+          "title": "Cooling tower maintenance window",
+          "status": "Open",
+          "date": "2026-03-04"
+        },
+        {
+          "id": "TT-33845",
+          "severity": "SEV3",
+          "title": "Network backbone capacity upgrade",
+          "status": "Open",
+          "date": "2026-03-02"
+        },
+        {
+          "id": "TT-33812",
+          "severity": "SEV4",
+          "title": "Access card system firmware update",
+          "status": "Resolved",
+          "date": "2026-02-28"
+        },
+        {
+          "id": "TT-33789",
+          "severity": "SEV5",
+          "title": "Quarterly fire drill scheduling",
+          "status": "Open",
+          "date": "2026-02-26"
+        }
+      ],
+      "securityIssues": [
+        {
+          "id": "SEC-968",
+          "type": "Access Control",
+          "title": "After-hours access anomaly detected",
+          "status": "Investigating",
+          "date": "2026-03-03"
+        }
+      ]
+    },
+    "MEL": {
+      "name": "Melbourne",
+      "flag": "🇦🇺",
+      "subGeo": "South Asia & ANZ",
+      "lat": -37.8,
+      "lng": 145,
+      "adoption": 35,
+      "status": "moderate",
+      "leader": "simontan",
+      "capacity": {
+        "servers": 520,
+        "utilization": 68,
+        "uptime": 99.96
+      },
+      "recentTickets": [
+        {
+          "id": "TT-33201",
+          "severity": "SEV3",
+          "title": "UPS module replacement",
+          "status": "Resolved",
+          "date": "2026-03-05"
+        },
+        {
+          "id": "TT-33178",
+          "severity": "SEV4",
+          "title": "Network monitoring tool upgrade",
+          "status": "Open",
+          "date": "2026-03-03"
+        },
+        {
+          "id": "TT-33145",
+          "severity": "SEV4",
+          "title": "Raised floor inspection",
+          "status": "Resolved",
+          "date": "2026-03-01"
+        },
+        {
+          "id": "TT-33112",
+          "severity": "SEV5",
+          "title": "Spare parts inventory check",
+          "status": "Open",
+          "date": "2026-02-27"
+        },
+        {
+          "id": "TT-33089",
+          "severity": "SEV5",
+          "title": "New rack installation request",
+          "status": "Open",
+          "date": "2026-02-25"
+        }
+      ],
+      "securityIssues": []
+    },
+    "NRT": {
+      "name": "Tokyo",
+      "flag": "🇯🇵",
+      "subGeo": "Japan",
+      "lat": 35.7,
+      "lng": 139.7,
+      "adoption": 35,
+      "status": "moderate",
+      "leader": "timrex",
+      "capacity": {
+        "servers": 1450,
+        "utilization": 76,
+        "uptime": 99.98
+      },
+      "recentTickets": [
+        {
+          "id": "TT-34901",
+          "severity": "SEV2",
+          "title": "Earthquake early warning system triggered",
+          "status": "Resolved",
+          "date": "2026-03-06"
+        },
+        {
+          "id": "TT-34878",
+          "severity": "SEV3",
+          "title": "Redundant cooling path validation",
+          "status": "Open",
+          "date": "2026-03-04"
+        },
+        {
+          "id": "TT-34845",
+          "severity": "SEV3",
+          "title": "Optical transport network upgrade",
+          "status": "Open",
+          "date": "2026-03-02"
+        },
+        {
+          "id": "TT-34812",
+          "severity": "SEV4",
+          "title": "BMS integration testing",
+          "status": "Resolved",
+          "date": "2026-02-28"
+        },
+        {
+          "id": "TT-34789",
+          "severity": "SEV5",
+          "title": "Staff training schedule update",
+          "status": "Open",
+          "date": "2026-02-26"
+        }
+      ],
+      "securityIssues": [
+        {
+          "id": "SEC-1012",
+          "type": "Compliance",
+          "title": "ISMS audit finding - log retention policy",
+          "status": "In Progress",
+          "date": "2026-02-15"
+        }
+      ]
+    },
+    "CPT": {
+      "name": "Cape Town",
+      "flag": "🇿🇦",
+      "subGeo": "Middle East & Africa",
+      "lat": -33.9,
+      "lng": 18.4,
+      "adoption": 30,
+      "status": "low",
+      "leader": "alashqar",
+      "capacity": {
+        "servers": 340,
+        "utilization": 58,
+        "uptime": 99.91
+      },
+      "recentTickets": [
+        {
+          "id": "TT-32501",
+          "severity": "SEV2",
+          "title": "Load shedding - generator runtime extended",
+          "status": "Resolved",
+          "date": "2026-03-06"
+        },
+        {
+          "id": "TT-32478",
+          "severity": "SEV3",
+          "title": "Diesel fuel delivery delayed",
+          "status": "Open",
+          "date": "2026-03-04"
+        },
+        {
+          "id": "TT-32445",
+          "severity": "SEV3",
+          "title": "Network peering capacity review",
+          "status": "Open",
+          "date": "2026-03-02"
+        },
+        {
+          "id": "TT-32412",
+          "severity": "SEV4",
+          "title": "CRAC unit filter replacement",
+          "status": "Resolved",
+          "date": "2026-02-28"
+        },
+        {
+          "id": "TT-32389",
+          "severity": "SEV5",
+          "title": "Staff shift schedule optimization",
+          "status": "Open",
+          "date": "2026-02-25"
+        }
+      ],
+      "securityIssues": [
+        {
+          "id": "SEC-955",
+          "type": "Physical",
+          "title": "Perimeter lighting failure - Section E",
+          "status": "Remediated",
+          "date": "2026-02-22"
+        }
+      ]
     },
     "CGK": {
       "name": "Jakarta",
       "flag": "🇮🇩",
-      "country": "Indonesia",
-      "region": "ap-southeast-3",
-      "lat": -6.13,
-      "lng": 106.66,
-      "status": "healthy",
-      "tier": "standard",
-      "sites": 4,
-      "adoption": 52
+      "subGeo": "South Asia & ANZ",
+      "lat": -6.2,
+      "lng": 106.8,
+      "adoption": 30,
+      "status": "low",
+      "leader": "simontan",
+      "capacity": {
+        "servers": 410,
+        "utilization": 73,
+        "uptime": 99.9
+      },
+      "recentTickets": [
+        {
+          "id": "TT-31901",
+          "severity": "SEV2",
+          "title": "Flooding risk assessment - rainy season",
+          "status": "Open",
+          "date": "2026-03-06"
+        },
+        {
+          "id": "TT-31878",
+          "severity": "SEV3",
+          "title": "Power transformer maintenance",
+          "status": "Open",
+          "date": "2026-03-04"
+        },
+        {
+          "id": "TT-31845",
+          "severity": "SEV3",
+          "title": "Fiber cut - alternate path activated",
+          "status": "Resolved",
+          "date": "2026-03-02"
+        },
+        {
+          "id": "TT-31812",
+          "severity": "SEV4",
+          "title": "Air handling unit vibration alert",
+          "status": "Resolved",
+          "date": "2026-02-28"
+        },
+        {
+          "id": "TT-31789",
+          "severity": "SEV5",
+          "title": "Vendor contract renewal review",
+          "status": "Open",
+          "date": "2026-02-26"
+        }
+      ],
+      "securityIssues": [
+        {
+          "id": "SEC-960",
+          "type": "Network",
+          "title": "Suspicious outbound traffic pattern detected",
+          "status": "Investigating",
+          "date": "2026-03-01"
+        }
+      ]
+    },
+    "TPE": {
+      "name": "Taipei",
+      "flag": "🇹🇼",
+      "subGeo": "Greater China",
+      "lat": 25,
+      "lng": 121.5,
+      "adoption": 0,
+      "status": "not_started",
+      "leader": "hcyeoh",
+      "capacity": {
+        "servers": 290,
+        "utilization": 45,
+        "uptime": 99.94
+      },
+      "recentTickets": [
+        {
+          "id": "TT-30501",
+          "severity": "SEV3",
+          "title": "Earthquake preparedness drill",
+          "status": "Open",
+          "date": "2026-03-05"
+        },
+        {
+          "id": "TT-30478",
+          "severity": "SEV4",
+          "title": "Network switch stack upgrade",
+          "status": "Open",
+          "date": "2026-03-03"
+        },
+        {
+          "id": "TT-30445",
+          "severity": "SEV4",
+          "title": "Cooling efficiency optimization",
+          "status": "Resolved",
+          "date": "2026-03-01"
+        },
+        {
+          "id": "TT-30412",
+          "severity": "SEV5",
+          "title": "Cable labeling standardization",
+          "status": "Open",
+          "date": "2026-02-27"
+        },
+        {
+          "id": "TT-30389",
+          "severity": "SEV5",
+          "title": "New hire orientation scheduling",
+          "status": "Open",
+          "date": "2026-02-25"
+        }
+      ],
+      "securityIssues": []
+    },
+    "AKL": {
+      "name": "Auckland",
+      "flag": "🇳🇿",
+      "subGeo": "South Asia & ANZ",
+      "lat": -36.8,
+      "lng": 174.8,
+      "adoption": 0,
+      "status": "not_started",
+      "leader": "simontan",
+      "capacity": {
+        "servers": 180,
+        "utilization": 42,
+        "uptime": 99.95
+      },
+      "recentTickets": [
+        {
+          "id": "TT-29901",
+          "severity": "SEV3",
+          "title": "ISP circuit upgrade planning",
+          "status": "Open",
+          "date": "2026-03-05"
+        },
+        {
+          "id": "TT-29878",
+          "severity": "SEV4",
+          "title": "Generator annual service",
+          "status": "Open",
+          "date": "2026-03-02"
+        },
+        {
+          "id": "TT-29845",
+          "severity": "SEV4",
+          "title": "Environmental monitoring expansion",
+          "status": "Resolved",
+          "date": "2026-02-28"
+        },
+        {
+          "id": "TT-29812",
+          "severity": "SEV5",
+          "title": "Spare parts order request",
+          "status": "Open",
+          "date": "2026-02-26"
+        },
+        {
+          "id": "TT-29789",
+          "severity": "SEV5",
+          "title": "Documentation translation project",
+          "status": "Open",
+          "date": "2026-02-24"
+        }
+      ],
+      "securityIssues": []
+    },
+    "ZHY": {
+      "name": "Zhongwei",
+      "flag": "🇨🇳",
+      "subGeo": "Greater China",
+      "lat": 37.5,
+      "lng": 105.2,
+      "adoption": 0,
+      "status": "not_started",
+      "leader": "hcyeoh",
+      "capacity": {
+        "servers": 450,
+        "utilization": 52,
+        "uptime": 99.93
+      },
+      "recentTickets": [
+        {
+          "id": "TT-29501",
+          "severity": "SEV3",
+          "title": "Sandstorm air filtration check",
+          "status": "Resolved",
+          "date": "2026-03-05"
+        },
+        {
+          "id": "TT-29478",
+          "severity": "SEV3",
+          "title": "Power grid stability monitoring",
+          "status": "Open",
+          "date": "2026-03-03"
+        },
+        {
+          "id": "TT-29445",
+          "severity": "SEV4",
+          "title": "Water cooling system inspection",
+          "status": "Resolved",
+          "date": "2026-03-01"
+        },
+        {
+          "id": "TT-29412",
+          "severity": "SEV4",
+          "title": "Remote hands staffing review",
+          "status": "Open",
+          "date": "2026-02-27"
+        },
+        {
+          "id": "TT-29389",
+          "severity": "SEV5",
+          "title": "Annual compliance documentation",
+          "status": "Open",
+          "date": "2026-02-25"
+        }
+      ],
+      "securityIssues": [
+        {
+          "id": "SEC-945",
+          "type": "Compliance",
+          "title": "Data sovereignty audit - pending review",
+          "status": "In Progress",
+          "date": "2026-02-18"
+        }
+      ]
+    },
+    "BJS": {
+      "name": "Beijing",
+      "flag": "🇨🇳",
+      "subGeo": "Greater China",
+      "lat": 39.9,
+      "lng": 116.4,
+      "adoption": 0,
+      "status": "not_started",
+      "leader": "hcyeoh",
+      "capacity": {
+        "servers": 620,
+        "utilization": 67,
+        "uptime": 99.94
+      },
+      "recentTickets": [
+        {
+          "id": "TT-29001",
+          "severity": "SEV3",
+          "title": "Air quality impact on HVAC filters",
+          "status": "Open",
+          "date": "2026-03-06"
+        },
+        {
+          "id": "TT-28978",
+          "severity": "SEV3",
+          "title": "Redundant power path testing",
+          "status": "Resolved",
+          "date": "2026-03-03"
+        },
+        {
+          "id": "TT-28945",
+          "severity": "SEV4",
+          "title": "BMS software update",
+          "status": "Open",
+          "date": "2026-03-01"
+        },
+        {
+          "id": "TT-28912",
+          "severity": "SEV4",
+          "title": "Structured cabling audit",
+          "status": "Resolved",
+          "date": "2026-02-27"
+        },
+        {
+          "id": "TT-28889",
+          "severity": "SEV5",
+          "title": "Vendor performance review",
+          "status": "Open",
+          "date": "2026-02-25"
+        }
+      ],
+      "securityIssues": [
+        {
+          "id": "SEC-940",
+          "type": "Compliance",
+          "title": "MLPS certification renewal",
+          "status": "In Progress",
+          "date": "2026-02-10"
+        }
+      ]
     },
     "BKK": {
       "name": "Bangkok",
       "flag": "🇹🇭",
-      "country": "Thailand",
-      "region": "ap-southeast-7",
-      "lat": 13.69,
-      "lng": 100.75,
-      "status": "new",
-      "tier": "new",
-      "sites": 2,
-      "adoption": 25
+      "subGeo": "Greater China",
+      "lat": 13.8,
+      "lng": 100.5,
+      "adoption": 0,
+      "status": "not_started",
+      "leader": "hcyeoh",
+      "capacity": {
+        "servers": 350,
+        "utilization": 55,
+        "uptime": 99.92
+      },
+      "recentTickets": [
+        {
+          "id": "TT-28501",
+          "severity": "SEV3",
+          "title": "Monsoon season preparation",
+          "status": "Open",
+          "date": "2026-03-05"
+        },
+        {
+          "id": "TT-28478",
+          "severity": "SEV3",
+          "title": "Electrical panel thermal scan",
+          "status": "Resolved",
+          "date": "2026-03-03"
+        },
+        {
+          "id": "TT-28445",
+          "severity": "SEV4",
+          "title": "CCTV system storage expansion",
+          "status": "Open",
+          "date": "2026-03-01"
+        },
+        {
+          "id": "TT-28412",
+          "severity": "SEV4",
+          "title": "Network topology documentation",
+          "status": "Resolved",
+          "date": "2026-02-27"
+        },
+        {
+          "id": "TT-28389",
+          "severity": "SEV5",
+          "title": "Local vendor onboarding",
+          "status": "Open",
+          "date": "2026-02-25"
+        }
+      ],
+      "securityIssues": []
+    },
+    "BAH": {
+      "name": "Bahrain",
+      "flag": "🇧🇭",
+      "subGeo": "Middle East & Africa",
+      "lat": 26.2,
+      "lng": 50.6,
+      "adoption": 0,
+      "status": "not_started",
+      "leader": "alashqar",
+      "capacity": {
+        "servers": 280,
+        "utilization": 48,
+        "uptime": 99.95
+      },
+      "recentTickets": [
+        {
+          "id": "TT-28001",
+          "severity": "SEV3",
+          "title": "Dust storm air intake protection",
+          "status": "Resolved",
+          "date": "2026-03-05"
+        },
+        {
+          "id": "TT-27978",
+          "severity": "SEV3",
+          "title": "Cooling tower water treatment",
+          "status": "Open",
+          "date": "2026-03-03"
+        },
+        {
+          "id": "TT-27945",
+          "severity": "SEV4",
+          "title": "UPS battery health check",
+          "status": "Resolved",
+          "date": "2026-02-28"
+        },
+        {
+          "id": "TT-27912",
+          "severity": "SEV4",
+          "title": "Fire alarm panel testing",
+          "status": "Open",
+          "date": "2026-02-26"
+        },
+        {
+          "id": "TT-27889",
+          "severity": "SEV5",
+          "title": "Ramadan staffing schedule",
+          "status": "Open",
+          "date": "2026-02-24"
+        }
+      ],
+      "securityIssues": []
     },
     "DXB": {
       "name": "Dubai",
       "flag": "🇦🇪",
-      "country": "UAE",
-      "region": "me-central-1",
-      "lat": 25.25,
-      "lng": 55.37,
-      "status": "healthy",
-      "tier": "standard",
-      "sites": 3,
-      "adoption": 48
+      "subGeo": "Middle East & Africa",
+      "lat": 25.2,
+      "lng": 55.3,
+      "adoption": 0,
+      "status": "not_started",
+      "leader": "alashqar",
+      "capacity": {
+        "servers": 420,
+        "utilization": 51,
+        "uptime": 99.96
+      },
+      "recentTickets": [
+        {
+          "id": "TT-27501",
+          "severity": "SEV3",
+          "title": "Extreme heat cooling capacity test",
+          "status": "Open",
+          "date": "2026-03-06"
+        },
+        {
+          "id": "TT-27478",
+          "severity": "SEV3",
+          "title": "Solar panel array maintenance",
+          "status": "Resolved",
+          "date": "2026-03-03"
+        },
+        {
+          "id": "TT-27445",
+          "severity": "SEV4",
+          "title": "Network edge router upgrade",
+          "status": "Open",
+          "date": "2026-03-01"
+        },
+        {
+          "id": "TT-27412",
+          "severity": "SEV4",
+          "title": "Raised floor load assessment",
+          "status": "Resolved",
+          "date": "2026-02-27"
+        },
+        {
+          "id": "TT-27389",
+          "severity": "SEV5",
+          "title": "Staff certification tracking",
+          "status": "Open",
+          "date": "2026-02-25"
+        }
+      ],
+      "securityIssues": [
+        {
+          "id": "SEC-950",
+          "type": "Physical",
+          "title": "Unauthorized drone activity near facility",
+          "status": "Reported",
+          "date": "2026-02-28"
+        }
+      ]
     },
-    "BAH": {
-      "name": "Manama",
-      "flag": "🇧🇭",
-      "country": "Bahrain",
-      "region": "me-south-1",
-      "lat": 26.07,
-      "lng": 50.56,
-      "status": "healthy",
-      "tier": "standard",
-      "sites": 5,
-      "adoption": 45
-    },
-    "TLV": {
-      "name": "Tel Aviv",
-      "flag": "🇮🇱",
-      "country": "Israel",
-      "region": "il-central-1",
-      "lat": 32.01,
-      "lng": 34.89,
-      "status": "healthy",
-      "tier": "standard",
-      "sites": 3,
-      "adoption": 42
+    "RUH": {
+      "name": "Riyadh",
+      "flag": "🇸🇦",
+      "subGeo": "Middle East & Africa",
+      "lat": 24.7,
+      "lng": 46.7,
+      "adoption": 0,
+      "status": "not_started",
+      "leader": "alashqar",
+      "capacity": {
+        "servers": 380,
+        "utilization": 47,
+        "uptime": 99.94
+      },
+      "recentTickets": [
+        {
+          "id": "TT-27001",
+          "severity": "SEV3",
+          "title": "Sandstorm damage assessment",
+          "status": "Resolved",
+          "date": "2026-03-05"
+        },
+        {
+          "id": "TT-26978",
+          "severity": "SEV3",
+          "title": "Diesel generator fuel quality test",
+          "status": "Open",
+          "date": "2026-03-03"
+        },
+        {
+          "id": "TT-26945",
+          "severity": "SEV4",
+          "title": "HVAC compressor replacement",
+          "status": "Open",
+          "date": "2026-03-01"
+        },
+        {
+          "id": "TT-26912",
+          "severity": "SEV4",
+          "title": "Fiber optic cable testing",
+          "status": "Resolved",
+          "date": "2026-02-27"
+        },
+        {
+          "id": "TT-26889",
+          "severity": "SEV5",
+          "title": "Vision 2030 compliance review",
+          "status": "Open",
+          "date": "2026-02-25"
+        }
+      ],
+      "securityIssues": [
+        {
+          "id": "SEC-948",
+          "type": "Compliance",
+          "title": "NCA cybersecurity framework assessment",
+          "status": "In Progress",
+          "date": "2026-02-20"
+        }
+      ]
     }
   },
   "EMAIL_UPDATES": [
@@ -2997,7 +4100,7 @@
       "emoji": "🇺🇸"
     }
   },
-  "lastSync": "2026-03-09T10:23:23.234Z",
+  "lastSync": "2026-03-09T10:42:04.139Z",
   "AZ_MAP": {
     "ICN52AZ": {
       "sites": [
