@@ -233,40 +233,21 @@ function renderNewsFeed() {
   const visible = getVisibleTeams();
 
   if (activeFeedTab === "emails") {
-    let filtered;
-    const s2 = loadSettings();
-    const allEmails = visible.size > 0 ? EMAIL_UPDATES.filter(u => visible.has(u.team)) : EMAIL_UPDATES;
+    let filtered = EMAIL_UPDATES;
 
-    if (activeTeamFilter === "All") {
-      filtered = allEmails;
-    } else {
-      filtered = EMAIL_UPDATES.filter(u => u.team === activeTeamFilter);
-    }
-
-    // Filter by site/cluster scope
-    if (s2.site) {
-      const clusterPrefix = s2.site.replace(/\d+/g, "").toUpperCase(); // ICN81 → ICN
-      filtered = filtered.filter(u => {
-        const scope = u.scope.toUpperCase();
-        return scope === "GLOBAL" || scope === clusterPrefix || scope === s2.site;
-      });
-    }
     container.innerHTML = filtered.length === 0
-      ? '<p class="text-sm text-slate-400 dark:text-gray-500 text-center py-8">No email updates for this team.</p>'
+      ? '<p class="text-sm text-slate-400 dark:text-gray-500 text-center py-8">No email updates.</p>'
       : filtered.map(u => {
-      const prioColor = { high: "text-red-600 bg-red-100 dark:text-red-400 dark:bg-red-900/30", medium: "text-amber-600 bg-amber-100 dark:text-amber-400 dark:bg-yellow-900/30", low: "text-slate-600 bg-slate-200 dark:text-slate-400 dark:bg-gray-800" }[u.priority];
-      return `<div class="bg-white dark:bg-gray-800/50 rounded-lg p-4 text-sm border ${u.actionRequired ? "border-l-4 border-l-red-500 border-red-200 dark:border-red-800" : "border-slate-200 dark:border-gray-700"} shadow-sm">
+      const prioColor = u.important ? "text-red-600 bg-red-100 dark:text-red-400 dark:bg-red-900/30" : "text-slate-600 bg-slate-200 dark:text-slate-400 dark:bg-gray-800";
+      return `<div class="bg-white dark:bg-gray-800/50 rounded-lg p-4 text-sm border ${u.important ? "border-l-4 border-l-red-500 border-red-200 dark:border-red-800" : "border-slate-200 dark:border-gray-700"} shadow-sm">
         <div class="flex items-center gap-2 mb-1.5 flex-wrap">
-          <span class="px-1.5 py-0.5 text-xs rounded font-medium ${prioColor}">${u.priority.toUpperCase()}</span>
-          <span class="text-xs font-medium text-blue-600 dark:text-blue-400">${u.team}</span>
+          <span class="px-1.5 py-0.5 text-xs rounded font-medium ${prioColor}">${u.important ? "IMPORTANT" : "INFO"}</span>
+          <span class="text-xs font-medium text-blue-600 dark:text-blue-400">${u.tag}</span>
           <span class="text-xs text-slate-500 dark:text-gray-500">${u.date}</span>
-          <span class="text-xs px-1.5 py-0.5 rounded bg-slate-200 dark:bg-gray-700 text-slate-600 dark:text-gray-400">${u.scope}</span>
-          ${u.actionRequired ? '<span class="text-xs text-red-600 dark:text-red-400 font-medium">⚡ Action Required</span>' : ""}
         </div>
-        <div class="font-medium text-slate-900 dark:text-gray-200">${u.title}</div>
-        <div class="text-slate-600 dark:text-gray-400 text-xs mt-1.5 leading-relaxed">${u.summary}</div>
-        <div class="flex items-center justify-between mt-2">
-          <div class="flex gap-1 flex-wrap">${u.tags.map(t => `<span class="text-xs bg-slate-200 dark:bg-gray-700 text-slate-600 dark:text-gray-300 px-1.5 py-0.5 rounded">${t}</span>`).join("")}</div>
+        <div class="font-medium text-slate-900 dark:text-gray-200">${u.subject}</div>
+        <div class="text-slate-600 dark:text-gray-400 text-xs mt-1.5 leading-relaxed">${u.preview}</div>
+        <div class="flex items-center justify-end mt-2">
           <span class="text-xs text-slate-500 dark:text-gray-500">from ${u.from}</span>
         </div>
       </div>`;
@@ -412,7 +393,7 @@ function buildSystemPrompt() {
   }).join("\n\n");
 
   const emailSummary = EMAIL_UPDATES.map(u =>
-    `[${u.id}] ${u.team} | ${u.priority.toUpperCase()} | "${u.title}" | ${u.summary} | Scope: ${u.scope} | ${u.date}`
+    `[${u.id}] ${u.important?"⚠️":"📧"} ${u.tag} | "${u.subject}" | From: ${u.from} | ${u.preview} | ${u.date}`
   ).join("\n");
 
   const ticketStats = buildTicketStats();
@@ -569,13 +550,9 @@ async function sendMessage() {
     openTickets.forEach(t => { const c = categorizeTicket(t.title); cats[c] = (cats[c]||0)+1; });
 
     // High priority emails
-    const visibleEmails = EMAIL_UPDATES.filter(u => {
-      const scope = u.scope.toUpperCase();
-      const prefix = site.replace(/\d+/g,"").toUpperCase();
-      return scope === "GLOBAL" || scope === prefix;
-    });
-    const highEmails = visibleEmails.filter(e => e.priority === "high");
-    const lowEmails = visibleEmails.filter(e => e.priority !== "high");
+    const visibleEmails = EMAIL_UPDATES;
+    const highEmails = visibleEmails.filter(e => e.important);
+    const lowEmails = visibleEmails.filter(e => !e.important);
 
     let briefing = `☀️ ${site} ${team} Daily Briefing\n🔄 데이터 기준: ${syncLabel} (Kiro에서 "sync" 실행으로 업데이트)\n\n`;
 
@@ -590,11 +567,11 @@ async function sendMessage() {
 
     // Section 2: High Priority Emails
     briefing += `\n🚨 Important email (${highEmails.length}건)\n`;
-    highEmails.forEach(e => { briefing += `  • [${e.id}] ${e.title}\n    ${e.summary.substring(0,100)}\n`; });
+    highEmails.forEach(e => { briefing += `  • [${e.tag}] ${e.subject}\n    From: ${e.from} | ${e.preview.substring(0,80)}\n`; });
 
     // Section 3: Other Updates
     briefing += `\n📬 기타 업데이트 (${lowEmails.length}건)\n`;
-    lowEmails.forEach(e => { briefing += `  • [${e.id}] ${e.title}\n`; });
+    lowEmails.forEach(e => { briefing += `  • [${e.tag}] ${e.subject}\n`; });
 
     // Chart: open ticket categories
     const catEntries = Object.entries(cats).sort((a,b)=>b[1]-a[1]);
