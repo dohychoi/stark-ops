@@ -500,8 +500,8 @@ async function sendMessage() {
     const site = s.site || "ICN81";
     const team = s.team || "DCO";
 
-    // Open tickets sorted by IBU (lower = higher priority)
-    const openTickets = TICKET_UPDATES.filter(t => t.status === "Open" || t.status === "Pending" || t.status === "Assigned");
+    // Open tickets filtered by user's site, sorted by IBU
+    const openTickets = TICKET_UPDATES.filter(t => (t.status === "Open" || t.status === "Pending" || t.status === "Assigned") && (t.cluster || "").toUpperCase().includes(site.toUpperCase()));
     openTickets.sort((a, b) => (a.ibu ?? 999) - (b.ibu ?? 999));
     const cats = {};
     openTickets.forEach(t => { const c = categorizeTicket(t.title); cats[c] = (cats[c]||0)+1; });
