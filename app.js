@@ -3,6 +3,76 @@ const REGION = "us-east-1";
 const IDENTITY_POOL_ID = "us-east-1:91dc7b85-b40b-49ea-91f8-d7cb2ce86252";
 const MODEL_ID = "us.anthropic.claude-3-5-haiku-20241022-v1:0";
 
+// ===== CHAT HISTORY =====
+let currentChatId = null;
+let chatSessions = JSON.parse(localStorage.getItem('stark_chats') || '[]');
+
+function saveChatSessions() { localStorage.setItem('stark_chats', JSON.stringify(chatSessions)); }
+
+function newChat() {
+  // Save current chat
+  saveCurrentChat();
+  // Create new
+  currentChatId = Date.now().toString();
+  chatSessions.unshift({ id: currentChatId, title: 'New Chat', date: new Date().toISOString(), messages: [] });
+  saveChatSessions();
+  renderChatHistory();
+  renderWelcome();
+  renderQuickPrompts();
+}
+
+function saveCurrentChat() {
+  if (!currentChatId) return;
+  const session = chatSessions.find(s => s.id === currentChatId);
+  if (!session) return;
+  const msgs = document.getElementById('chat-messages');
+  // Extract text from chat messages
+  const msgEls = msgs.querySelectorAll('.chat-msg');
+  session.messages = [...msgEls].map(el => {
+    const role = el.querySelector('.text-green-500') ? 'user' : 'ai';
+    const text = el.querySelector('div > div:last-child')?.textContent?.substring(0, 500) || '';
+    return { role, text };
+  });
+  // Set title from first user message
+  const firstUser = session.messages.find(m => m.role === 'user');
+  if (firstUser) session.title = firstUser.text.substring(0, 40) + (firstUser.text.length > 40 ? '...' : '');
+  saveChatSessions();
+}
+
+function loadChat(id) {
+  saveCurrentChat();
+  currentChatId = id;
+  const session = chatSessions.find(s => s.id === id);
+  if (!session || !session.messages.length) { renderWelcome(); renderQuickPrompts(); renderChatHistory(); return; }
+  const container = document.getElementById('chat-messages');
+  container.innerHTML = '';
+  welcomeShown = false;
+  session.messages.forEach(m => { if (m.text) addMessage(m.role, m.text); });
+  renderChatHistory();
+}
+
+function deleteChat(id, e) {
+  e.stopPropagation();
+  chatSessions = chatSessions.filter(s => s.id !== id);
+  saveChatSessions();
+  if (currentChatId === id) { currentChatId = null; newChat(); }
+  renderChatHistory();
+}
+
+function renderChatHistory() {
+  const list = document.getElementById('chat-history-list');
+  if (!list) return;
+  list.innerHTML = chatSessions.slice(0, 30).map(s => {
+    const active = s.id === currentChatId;
+    const date = new Date(s.date).toLocaleDateString('ko-KR', { month: 'short', day: 'numeric' });
+    return `<div onclick="loadChat('${s.id}')" class="group flex items-center gap-1 px-2 py-1.5 rounded-lg cursor-pointer text-xs ${active ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300' : 'text-slate-600 dark:text-gray-400 hover:bg-slate-100 dark:hover:bg-gray-800'}">
+      <span class="flex-1 truncate">${s.title}</span>
+      <span class="text-[10px] text-slate-400 dark:text-gray-600 shrink-0">${date}</span>
+      <button onclick="deleteChat('${s.id}',event)" class="opacity-0 group-hover:opacity-100 text-slate-400 hover:text-red-500 shrink-0">×</button>
+    </div>`;
+  }).join('');
+}
+
 // ===== SETTINGS =====
 const ALL_FOLLOWABLE_TEAMS = ["DCO", "DCEO", "Security", "Logistics", "Central Ops Install", "Networking Ops Excellence", "DCC Global"];
 
@@ -158,14 +228,25 @@ function statusColor(s) {
 // ===== MAP =====
 function renderMap() {
   const container = document.getElementById("map-container");
+  // APMEA bounding box: lat -45~45, lng 25~180
+  const minLat=-45, maxLat=45, minLng=25, maxLng=180;
   Object.entries(CLUSTERS).forEach(([code, c]) => {
-    const x = ((c.lng + 180) / 360) * 100;
-    const y = ((90 - c.lat) / 180) * 100;
+    if (c.lng < minLng || c.lng > maxLng || c.lat < minLat || c.lat > maxLat) return; // skip non-APMEA
+    const x = ((c.lng - minLng) / (maxLng - minLng)) * 100;
+    const y = ((maxLat - c.lat) / (maxLat - minLat)) * 100;
     const dot = document.createElement("div");
-    dot.className = "cluster-dot absolute w-3.5 h-3.5 rounded-full border-2 border-white";
-    dot.style.cssText = `left:${x}%;top:${y}%;background:${statusColor(c.status)};transform:translate(-50%,-50%)`;
-    dot.title = `${code} - ${c.name} (${c.adoption}%)`;
+    dot.className = "cluster-dot absolute rounded-full border-2 border-white cursor-pointer";
+    const sz = code === "ICN" ? "w-5 h-5" : "w-3.5 h-3.5";
+    dot.className += " " + sz;
+    dot.style.cssText = `left:${x}%;top:${y}%;background:${statusColor(c.status)};transform:translate(-50%,-50%);z-index:10`;
+    dot.title = `${code} - ${c.name} (${c.flag}) Adoption: ${c.adoption}%`;
+    // Label
+    const label = document.createElement("div");
+    label.className = "absolute text-[9px] font-bold text-white whitespace-nowrap pointer-events-none";
+    label.style.cssText = `left:${x}%;top:${y+3}%;transform:translateX(-50%);z-index:11;text-shadow:0 1px 2px rgba(0,0,0,0.8)`;
+    label.textContent = code;
     container.appendChild(dot);
+    container.appendChild(label);
   });
 }
 
@@ -501,6 +582,8 @@ function addMessage(role, text) {
   });
 
   container.scrollTop = container.scrollHeight;
+  saveCurrentChat();
+  renderChatHistory();
   return div;
 }
 
@@ -672,6 +755,8 @@ loadData().then(() => {
   renderSubGeoCards();
   renderTeamFilters();
   renderNewsFeed();
+  renderChatHistory();
+  if (!currentChatId) newChat();
 });
 
 // Auto-refresh data every 5 minutes (picks up new syncs from GitHub Pages)
