@@ -1453,7 +1453,7 @@
       "shortId": "V2132902845",
       "ibu": 15,
       "severity": "LOW",
-      "status": "Assigned",
+      "status": "Resolved",
       "title": "[Drills][DCO][ICN81] Weekly Compliance Reminder (Mar 8)",
       "summary": "",
       "cluster": "ICN81",
@@ -1466,7 +1466,7 @@
       "shortId": "D405633198",
       "ibu": 13,
       "severity": "LOW",
-      "status": "Pending",
+      "status": "Resolved",
       "title": "[RPO_1][EC2_BP_4] Repair VFM_AL_K2_ALL_PCIE_PORTS_FAILED - FOX.5HPK51770328 [EC2R7IK21]",
       "summary": "",
       "cluster": "ICN81",
@@ -1479,7 +1479,7 @@
       "shortId": "D404898076",
       "ibu": 9,
       "severity": "LOW",
-      "status": "Pending",
+      "status": "Resolved",
       "title": "[EC2_BP_2] Repair VFM_AL_K2_PCIE_LINK_EP - FOX.2M0555370369 [EC2R8G23]",
       "summary": "",
       "cluster": "ICN81",
@@ -1492,7 +1492,7 @@
       "shortId": "D404957091",
       "ibu": 8,
       "severity": "LOW",
-      "status": "Pending",
+      "status": "Resolved",
       "title": "[EC2_BP_4] Repair VETTING_CBP_MEMORY - ZT.210546710015 [EC2M7IK21]",
       "summary": "",
       "cluster": "ICN81",
@@ -1504,7 +1504,7 @@
       "id": "6fd4d6db-240d-4241-a5d8-4e17531168a9",
       "severity": "LOW",
       "status": "Pending",
-      "title": "[RPO_2][EC2_BP_4] Repair VETTING_CBP_VFM - FOX.BRN155170017 [EC2I419]",
+      "title": "[RPO_2][EC2_BP_2][ICN81 6-3 06-03-015-19] Please repair VETTING_CBP_VFM problem with FOX.BRN155170017 [EC2I419] [ec2] [Vetting]",
       "summary": "",
       "cluster": "ICN81",
       "team": "DCO",
@@ -1512,7 +1512,8 @@
       "date": "2026-03-07",
       "alias": "D404855598",
       "ibu": 10,
-      "shortId": "D404855598"
+      "shortId": "D404855598",
+      "lastUpdated": "2026-03-08T22:43:14Z"
     },
     {
       "id": "6f2cbb6e-3ed3-4092-a9b4-a2ca284d53dd",
@@ -1595,7 +1596,7 @@
     {
       "id": "a045eb86-c0d8-4157-bb90-b9220f69080d",
       "severity": "LOW",
-      "status": "Open",
+      "status": "Resolved",
       "title": "[RPO_3][EC2_BP_4] Repair VETTING_CBP_VFM - FOX.2M0660870151 [EC2R8GD23]",
       "summary": "",
       "cluster": "ICN81",
@@ -1621,7 +1622,7 @@
     {
       "id": "3b5e5450-294b-469c-b0b6-747597f98b86",
       "severity": "LOW",
-      "status": "Open",
+      "status": "Resolved",
       "title": "[EC2_BP_4] Repair VETTING_CBP_AL_K2_HBER_FAIL - FOX.2M0352670097",
       "summary": "",
       "cluster": "ICN81",
@@ -1699,7 +1700,7 @@
     {
       "id": "ead36d09-99c3-4bd6-aef3-236e116988bc",
       "severity": "LOW",
-      "status": "Open",
+      "status": "Resolved",
       "title": "[EC2_BP_4] Repair VETTING_CBP_CONSOLE - FOX.5HPK51770328 [EC2R7IK21]",
       "summary": "",
       "cluster": "ICN81",
@@ -1765,7 +1766,7 @@
       "id": "a674e3b9-bb0f-4b38-9ed0-94e8a70ef511",
       "severity": "LOW",
       "status": "Pending",
-      "title": "[MF-S][EC2_BP_1] Repair VETTING_CBP_VFM - FOX.1HPK52970868 [EC2C7IK21]",
+      "title": "[MF-S][EC2_BP_1][ICN81 5-2 05-02-012-38] Please repair VETTING_CBP_VFM problem with FOX.1HPK52970868 [EC2C7IK21] [ec2] [Vetting]",
       "summary": "",
       "cluster": "ICN81",
       "team": "DCO",
@@ -1773,7 +1774,8 @@
       "date": "2026-03-02",
       "alias": "D401489664",
       "ibu": 1,
-      "shortId": "D401489664"
+      "shortId": "D401489664",
+      "lastUpdated": "2026-03-09T05:11:19Z"
     },
     {
       "id": "5b2e53cf-2888-4179-a6b8-9aff47317f1c",
@@ -1904,7 +1906,8 @@
       "date": "2026-03-01",
       "alias": "V2124990152",
       "ibu": 14,
-      "shortId": "V2124990152"
+      "shortId": "V2124990152",
+      "lastUpdated": "2026-03-08T12:02:47Z"
     },
     {
       "id": "d85482ba-0b35-4a9d-9a2e-443bde2d3dff",
@@ -2152,6 +2155,54 @@
       "date": "2026-02-09",
       "alias": "D390333416",
       "shortId": "D390333416"
+    },
+    {
+      "id": "cdab20e9-2829-4fc2-b382-a5b1af0978e7",
+      "shortId": "D405633198",
+      "title": "[RPO_1][EC2_BP_4][ICN81 4-1 04-01-012-37] Please repair VETTING_CBP_VFM_AL_K2_ALL_PCIE_PORTS_FAILED problem with FOX.5HPK51770328 [EC2R7IK21] [ec2] [Vetting]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-09",
+      "lastUpdated": "2026-03-09T02:58:25Z",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor"
+    },
+    {
+      "id": "672614d2-f1cc-452a-903a-bc0d72a839f2",
+      "shortId": "D404898076",
+      "title": "[EC2_BP_2][ICN81 6-3 06-03-007-19] Please repair VETTING_CBP_VFM_AL_K2_PCIE_LINK_EP problem with FOX.2M0555370369 [EC2R8G23] [ec2] [Vetting]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-07",
+      "lastUpdated": "2026-03-08T22:42:37Z",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor"
+    },
+    {
+      "id": "7e8646a8-a8d1-4f3c-a005-4b5376b495bc",
+      "shortId": "D404957091",
+      "title": "[EC2_BP_4][ICN81 4-1 04-01-011-33] Please repair VETTING_CBP_MEMORY problem with ZT.210546710015 [EC2M7IK21] [ec2] [Vetting]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-07",
+      "lastUpdated": "2026-03-08T21:06:46Z",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor"
+    },
+    {
+      "id": "f1916a74-c0fc-40b6-8cc1-a1dbf2d02f5b",
+      "shortId": "V2132902845",
+      "title": "[Drills][DCO][ICN81] Weekly Compliance Reminder",
+      "status": "Assigned",
+      "severity": "LOW",
+      "date": "2026-03-08",
+      "lastUpdated": "2026-03-08T20:47:06Z",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor"
     }
   ],
   "GLOBAL_TEAMS": [
