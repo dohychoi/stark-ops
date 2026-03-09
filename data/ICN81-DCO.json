@@ -2209,6 +2209,106 @@
       "team": "DCO",
       "from": "boost-ticket-processor",
       "excludeFromBriefing": true
+    },
+    {
+      "id": "7ca1911c-31a0-4803-b9ef-9a2a3ce2a6b4",
+      "shortId": "V2129107020",
+      "title": "[24TH][DONE][SDO_BP_4][ICN52 1-1 11904]Please diagnose icn52-52-es-svc-p11301.icn",
+      "status": "Pending",
+      "date": "2026-03-05",
+      "cluster": "ICN52",
+      "team": "DCO",
+      "severity": "LOW",
+      "from": "boost-ticket-processor"
+    },
+    {
+      "id": "67889cbb-461b-48c5-86de-f5a1171b82cc",
+      "shortId": "V2133151030",
+      "title": "ICN52 - Visual Media Bin Inspection",
+      "status": "Assigned",
+      "date": "2026-03-09",
+      "cluster": "ICN52",
+      "team": "DCO",
+      "severity": "LOW",
+      "from": "boost-ticket-processor"
+    },
+    {
+      "id": "ee5f0f5a-31a2-4024-857e-8928658e6bb0",
+      "shortId": "V2132988330",
+      "title": "DWELL Daily Report Ticket - ICN52",
+      "status": "Assigned",
+      "date": "2026-03-08",
+      "cluster": "ICN52",
+      "team": "DCO",
+      "severity": "LOW",
+      "from": "boost-ticket-processor"
+    },
+    {
+      "id": "545d8fd6-679c-4160-af6d-e96d3461ace8",
+      "shortId": "V2132915338",
+      "title": "[Drills][DCO][ICN52] Weekly Compliance Reminder",
+      "status": "Assigned",
+      "date": "2026-03-08",
+      "excludeFromBriefing": true,
+      "cluster": "ICN52",
+      "team": "DCO",
+      "severity": "LOW",
+      "from": "boost-ticket-processor"
+    },
+    {
+      "id": "5d54ea27-ec1d-4a69-96cb-f14e716ee0a7",
+      "shortId": "V2131070393",
+      "title": "Apply updates on spare laptop and CICO laptops - ICN52",
+      "status": "Pending",
+      "date": "2026-03-06",
+      "cluster": "ICN52",
+      "team": "DCO",
+      "severity": "LOW",
+      "from": "boost-ticket-processor"
+    },
+    {
+      "id": "600a0bd8-6cd7-4141-adff-a19ccf76aed8",
+      "shortId": "V2131070430",
+      "title": "Critical spare cycle count - ICN52",
+      "status": "Pending",
+      "date": "2026-03-06",
+      "cluster": "ICN52",
+      "team": "DCO",
+      "severity": "LOW",
+      "from": "boost-ticket-processor"
+    },
+    {
+      "id": "97aa255e-315d-4b2c-865e-0d517369e281",
+      "shortId": "V2131070764",
+      "title": "DWELL Daily Report Ticket - ICN52",
+      "status": "Pending",
+      "date": "2026-03-06",
+      "cluster": "ICN52",
+      "team": "DCO",
+      "severity": "LOW",
+      "from": "boost-ticket-processor"
+    },
+    {
+      "id": "594f4a73-9fee-4ef5-b2e4-efa4120f4651",
+      "shortId": "V2132058991",
+      "title": "DWELL Daily Report Ticket - ICN52",
+      "status": "Pending",
+      "date": "2026-03-07",
+      "cluster": "ICN52",
+      "team": "DCO",
+      "severity": "LOW",
+      "from": "boost-ticket-processor"
+    },
+    {
+      "id": "b1507432-5958-48dd-a54d-acc16a04a4e4",
+      "shortId": "V2129913094",
+      "title": "Pager test UPDATED read the details carefully - ICN52",
+      "status": "Pending",
+      "date": "2026-03-05",
+      "cluster": "ICN52",
+      "team": "DCO",
+      "severity": "LOW",
+      "from": "boost-ticket-processor"
     }
   ],
   "GLOBAL_TEAMS": [
@@ -2247,5 +2347,5 @@
       "emoji": "🇺🇸"
     }
   },
-  "lastSync": "2026-03-09T06:57:10.356Z"
+  "lastSync": "2026-03-09T08:02:13.153Z"
 }

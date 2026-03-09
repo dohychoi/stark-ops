@@ -338,7 +338,7 @@ function categorizeTicket(title) {
   if (t.includes("POWERSHELF")) return "PowerShelf Repair";
   if (t.includes("MEMORY")) return "Memory Repair";
   if (t.includes("CONSOLE") || t.includes("CPLD")) return "Console/CPLD Repair";
-  if (t.includes("VFM") || t.includes("VETTING_CBP")) return "EC2 VFM/CBP Vetting";
+  if (t.includes("VFM") || t.includes("VETTING_CBP")) return "CBP Vetting";
   if (t.includes("PCIE") || t.includes("NVME") || t.includes("SPI_FLASH") || t.includes("HBER") || t.includes("HUM_")) return "Hardware Component Repair";
   if (t.includes("FIRMWARE") || t.includes("BBU")) return "Firmware/BBU Upgrade";
   if (t.includes("JOHNNY 5") || t.includes("NETWORK_BP") || t.includes("STORM") || t.includes("SKYNET")) return "Network Infrastructure";
