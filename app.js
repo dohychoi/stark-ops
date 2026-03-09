@@ -667,9 +667,9 @@ loadData().then(() => {
   renderMap();
   renderSubGeoCards();
   renderTeamFilters();
+  renderNewsFeed();
+  renderChart();
 });
-renderNewsFeed();
-renderChart();
 
 // Auto-refresh data every 5 minutes (picks up new syncs from GitHub Pages)
 setInterval(() => {
