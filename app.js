@@ -93,6 +93,7 @@ setInterval(updateClock, 1000);
 updateClock();
 
 // ===== PAGE NAV =====
+let chartRendered = false;
 function showPage(page, btn) {
   ["chat", "news", "dashboard", "settings"].forEach(p =>
     document.getElementById(`page-${p}`).classList.toggle("hidden", p !== page)
@@ -102,6 +103,9 @@ function showPage(page, btn) {
     b.classList.add("text-slate-500", "dark:text-gray-500");
   });
   if (btn) { btn.classList.add("active"); btn.classList.remove("text-slate-500", "dark:text-gray-500"); }
+  if (page === "dashboard" && !chartRendered && Object.keys(CLUSTERS).length > 0) {
+    setTimeout(() => { renderChart(); chartRendered = true; }, 100);
+  }
 }
 
 // ===== GREETING =====
@@ -668,7 +672,6 @@ loadData().then(() => {
   renderSubGeoCards();
   renderTeamFilters();
   renderNewsFeed();
-  renderChart();
 });
 
 // Auto-refresh data every 5 minutes (picks up new syncs from GitHub Pages)
