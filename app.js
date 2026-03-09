@@ -511,6 +511,11 @@ async function sendMessage() {
     const site = s.site || "ICN81";
     const team = s.team || "DCO";
 
+    // Sync freshness
+    const lastSync = window._lastSync;
+    const syncAge = lastSync ? Math.round((Date.now() - new Date(lastSync).getTime()) / 3600000) : null;
+    const syncLabel = syncAge !== null ? (syncAge < 1 ? "방금 전" : `${syncAge}시간 전`) : "알 수 없음";
+
     // Open tickets filtered by user's site, sorted by IBU
     const openTickets = TICKET_UPDATES.filter(t => (t.status === "Open" || t.status === "Pending" || t.status === "Assigned") && (t.cluster || "").toUpperCase().includes(site.toUpperCase()));
     openTickets.sort((a, b) => (a.ibu ?? 999) - (b.ibu ?? 999));
@@ -526,7 +531,7 @@ async function sendMessage() {
     const highEmails = visibleEmails.filter(e => e.priority === "high");
     const lowEmails = visibleEmails.filter(e => e.priority !== "high");
 
-    let briefing = `☀️ ${site} ${team} Daily Briefing\n\n`;
+    let briefing = `☀️ ${site} ${team} Daily Briefing\n🔄 데이터 기준: ${syncLabel} (Kiro에서 "sync" 실행으로 업데이트)\n\n`;
 
     // Section 1: Open Tickets
     briefing += `🎫 Open 티켓 (${openTickets.length}건)\n`;
@@ -615,6 +620,7 @@ async function loadData() {
     TICKET_UPDATES = d.TICKET_UPDATES;
     GLOBAL_TEAMS = d.GLOBAL_TEAMS;
     SUB_GEOS = d.SUB_GEOS;
+    window._lastSync = d.lastSync;
   } catch(e) {
     console.error("Failed to load data:", e);
   }
