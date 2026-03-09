@@ -693,3 +693,8 @@ loadData().then(() => {
 });
 renderNewsFeed();
 renderChart();
+
+// Auto-refresh data every 5 minutes (picks up new syncs from GitHub Pages)
+setInterval(() => {
+  loadData().then(() => { console.log('[auto-refresh]', new Date().toISOString()); });
+}, 5 * 60 * 1000);
