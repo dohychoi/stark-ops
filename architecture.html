@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stark - Architecture Diagram</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #0f172a; color: #e2e8f0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; padding: 40px; }
+    h1 { text-align: center; font-size: 28px; margin-bottom: 8px; }
+    h1 span { color: #3b82f6; }
+    .subtitle { text-align: center; color: #64748b; font-size: 14px; margin-bottom: 40px; }
+    svg { display: block; margin: 0 auto; }
+    .box { rx: 12; ry: 12; }
+    .label { font-size: 13px; fill: #e2e8f0; font-weight: 600; text-anchor: middle; }
+    .sublabel { font-size: 10px; fill: #94a3b8; text-anchor: middle; }
+    .arrow { stroke: #475569; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    .arrow-future { stroke: #475569; stroke-width: 2; fill: none; stroke-dasharray: 6,4; marker-end: url(#arrowhead); }
+    .phase { font-size: 11px; font-weight: 700; text-anchor: middle; }
+    .badge { rx: 8; ry: 8; }
+  </style>
+</head>
+<body>
+  <h1>🦾 <span>Stark</span> — Architecture</h1>
+  <p class="subtitle">AI-Powered Operations Assistant for APMEA | AWS AI-novate Hackathon 2026</p>
+
+  <svg width="900" height="680" viewBox="0 0 900 680">
+    <defs>
+      <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+        <polygon points="0 0, 8 3, 0 6" fill="#475569"/>
+      </marker>
+    </defs>
+
+    <!-- Phase Labels -->
+    <rect x="20" y="15" width="860" height="30" rx="6" fill="#1e293b"/>
+    <text x="200" y="35" class="phase" fill="#3b82f6">MVP (Current)</text>
+    <text x="700" y="35" class="phase" fill="#f59e0b">Future (Post-Hackathon)</text>
+    <line x1="450" y1="15" x2="450" y2="45" stroke="#334155" stroke-width="1"/>
+
+    <!-- ===== LEFT: MVP ===== -->
+
+    <!-- User Browser -->
+    <rect x="60" y="70" width="180" height="60" class="box" fill="#1e3a5f"/>
+    <text x="150" y="97" class="label">🌐 Browser (User)</text>
+    <text x="150" y="113" class="sublabel">GitHub Pages / DevSpaces</text>
+
+    <!-- Frontend -->
+    <rect x="30" y="170" width="240" height="80" class="box" fill="#1e293b" stroke="#3b82f6" stroke-width="2"/>
+    <text x="150" y="195" class="label">📱 Frontend (Static)</text>
+    <text x="150" y="212" class="sublabel">HTML + Tailwind + Chart.js</text>
+    <text x="150" y="226" class="sublabel">fetch('data.json')</text>
+
+    <!-- data.json -->
+    <rect x="70" y="290" width="160" height="55" class="box" fill="#1e3a5f"/>
+    <text x="150" y="313" class="label">📄 data.json</text>
+    <text x="150" y="328" class="sublabel">Tickets + Emails + Clusters</text>
+
+    <!-- Cognito -->
+    <rect x="310" y="170" width="160" height="60" class="box" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="390" y="197" class="label">🔐 Cognito</text>
+    <text x="390" y="213" class="sublabel">Identity Pool (Guest)</text>
+
+    <!-- Bedrock -->
+    <rect x="310" y="270" width="160" height="60" class="box" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+    <text x="390" y="297" class="label">🧠 Amazon Bedrock</text>
+    <text x="390" y="313" class="sublabel">Claude 3.5 Haiku</text>
+
+    <!-- Kiro -->
+    <rect x="70" y="390" width="160" height="55" class="box" fill="#1e293b" stroke="#8b5cf6" stroke-width="1.5"/>
+    <text x="150" y="413" class="label">🤖 Kiro (MCP)</text>
+    <text x="150" y="428" class="sublabel">Manual Sync</text>
+
+    <!-- Outlook -->
+    <rect x="30" y="490" width="120" height="50" class="box" fill="#1e3a5f"/>
+    <text x="90" y="513" class="label">📧 Outlook</text>
+    <text x="90" y="528" class="sublabel">Email API</text>
+
+    <!-- TT -->
+    <rect x="170" y="490" width="120" height="50" class="box" fill="#1e3a5f"/>
+    <text x="230" y="513" class="label">🎫 TT System</text>
+    <text x="230" y="528" class="sublabel">t.corp Tickets</text>
+
+    <!-- MVP Arrows -->
+    <line x1="150" y1="130" x2="150" y2="170" class="arrow"/>
+    <line x1="150" y1="250" x2="150" y2="290" class="arrow"/>
+    <line x1="270" y1="210" x2="310" y2="210" class="arrow"/>
+    <line x1="390" y1="230" x2="390" y2="270" class="arrow"/>
+    <line x1="150" y1="345" x2="150" y2="390" class="arrow"/>
+    <line x1="100" y1="445" x2="90" y2="490" class="arrow"/>
+    <line x1="200" y1="445" x2="230" y2="490" class="arrow"/>
+
+    <!-- ===== RIGHT: FUTURE ===== -->
+
+    <!-- EventBridge -->
+    <rect x="550" y="80" width="180" height="55" class="box" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="6,4"/>
+    <text x="640" y="103" class="label">⏰ EventBridge</text>
+    <text x="640" y="118" class="sublabel">Scheduler (1h / 10min)</text>
+
+    <!-- Lambda Email -->
+    <rect x="520" y="175" width="140" height="55" class="box" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="6,4"/>
+    <text x="590" y="198" class="label">λ Email Sync</text>
+    <text x="590" y="213" class="sublabel">Every 1 hour</text>
+
+    <!-- Lambda Ticket -->
+    <rect x="690" y="175" width="140" height="55" class="box" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="6,4"/>
+    <text x="760" y="198" class="label">λ Ticket Sync</text>
+    <text x="760" y="213" class="sublabel">Every 10 min</text>
+
+    <!-- S3 -->
+    <rect x="590" y="280" width="180" height="60" class="box" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="6,4"/>
+    <text x="680" y="305" class="label">🪣 S3 Bucket</text>
+    <text x="680" y="322" class="sublabel">data.json (auto-updated)</text>
+
+    <!-- API GW -->
+    <rect x="590" y="385" width="180" height="55" class="box" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="6,4"/>
+    <text x="680" y="408" class="label">🌐 API Gateway</text>
+    <text x="680" y="423" class="sublabel">REST API + CORS</text>
+
+    <!-- Midway -->
+    <rect x="590" y="485" width="180" height="55" class="box" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="6,4"/>
+    <text x="680" y="508" class="label">🔑 Midway Auth</text>
+    <text x="680" y="523" class="sublabel">User Identity + SSO</text>
+
+    <!-- Future Arrows -->
+    <line x1="640" y1="135" x2="590" y2="175" class="arrow-future"/>
+    <line x1="640" y1="135" x2="760" y2="175" class="arrow-future"/>
+    <line x1="590" y1="230" x2="640" y2="280" class="arrow-future"/>
+    <line x1="760" y1="230" x2="720" y2="280" class="arrow-future"/>
+    <line x1="680" y1="340" x2="680" y2="385" class="arrow-future"/>
+    <line x1="680" y1="440" x2="680" y2="485" class="arrow-future"/>
+
+    <!-- Cross arrow: Frontend → S3/API -->
+    <path d="M 270 220 Q 430 280 590 310" class="arrow-future"/>
+
+    <!-- Legend -->
+    <rect x="30" y="580" width="840" height="80" rx="10" fill="#1e293b"/>
+    <text x="50" y="605" class="sublabel" text-anchor="start" style="font-size:12px; fill:#e2e8f0; font-weight:600">Legend:</text>
+    <line x1="50" y1="625" x2="90" y2="625" stroke="#3b82f6" stroke-width="2"/>
+    <text x="95" y="629" class="sublabel" text-anchor="start">MVP (Working)</text>
+    <line x1="200" y1="625" x2="240" y2="625" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6,4"/>
+    <text x="245" y="629" class="sublabel" text-anchor="start">Future (Planned)</text>
+    <rect x="370" y="618" width="14" height="14" rx="3" fill="#1e293b" stroke="#8b5cf6" stroke-width="1.5"/>
+    <text x="390" y="629" class="sublabel" text-anchor="start">Kiro MCP Integration</text>
+    <rect x="540" y="618" width="14" height="14" rx="3" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+    <text x="560" y="629" class="sublabel" text-anchor="start">Amazon Bedrock AI</text>
+
+    <text x="50" y="650" class="sublabel" text-anchor="start" style="font-size:11px">Cost: ~$0 (Cognito free tier + Bedrock on-demand + S3 free tier) | Stack: HTML/JS + Tailwind + Chart.js + AWS SDK v3</text>
+  </svg>
+</body>
+</html>
