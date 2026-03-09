@@ -351,6 +351,29 @@ function categorizeTicket(title) {
   return "Other";
 }
 
+// Auto-calculate priority score (lower = higher priority, like Malt IBU)
+function calcPriority(ticket) {
+  const t = ticket.title.toUpperCase();
+  let score = 100;
+  // Severity: sev3=0, sev5=+20
+  if (ticket.severity === "LOW" || (ticket.extensions?.tt?.impact || 3) <= 3) score += 0;
+  else score += 20;
+  // Blocked/MF-S = deprioritize
+  if (t.includes("MF-S") || t.includes("BLOCKED")) score += 50;
+  // RPO tag = urgent, lower number = more urgent
+  const rpo = t.match(/RPO_(\d+)/);
+  if (rpo) score -= (10 - parseInt(rpo[1])) * 5; // RPO_1=-45, RPO_2=-40, RPO_3=-35
+  // BP priority: BP_1 > BP_2 > BP_3 > BP_4
+  const bp = t.match(/BP_(\d+)/);
+  if (bp) score += parseInt(bp[1]) * 3; // BP_1=+3, BP_4=+12
+  // Compliance/Drills = low priority
+  if (/DRILL|COMPLIANCE|REMINDER/i.test(t)) score += 80;
+  // Older tickets = slightly higher priority
+  const age = (Date.now() - new Date(ticket.date || ticket.createDate).getTime()) / 86400000;
+  score -= Math.min(age, 14); // max 14 days bonus
+  return Math.round(score);
+}
+
 function buildTicketStats() {
   const cats = {}, statuses = {}, open = [];
   TICKET_UPDATES.forEach(t => {
@@ -516,9 +539,10 @@ async function sendMessage() {
     const syncAge = lastSync ? Math.round((Date.now() - new Date(lastSync).getTime()) / 3600000) : null;
     const syncLabel = syncAge !== null ? (syncAge < 1 ? "방금 전" : `${syncAge}시간 전`) : "알 수 없음";
 
-    // Open tickets filtered by user's site, sorted by IBU (exclude compliance reminders)
+    // Open tickets filtered by user's site, sorted by auto-calculated priority
     const openTickets = TICKET_UPDATES.filter(t => (t.status === "Open" || t.status === "Pending" || t.status === "Assigned") && (t.cluster || "").toUpperCase().includes(site.toUpperCase()) && !t.excludeFromBriefing);
-    openTickets.sort((a, b) => (a.ibu ?? 999) - (b.ibu ?? 999));
+    openTickets.forEach(t => t._priority = calcPriority(t));
+    openTickets.sort((a, b) => a._priority - b._priority);
     const cats = {};
     openTickets.forEach(t => { const c = categorizeTicket(t.title); cats[c] = (cats[c]||0)+1; });
 
@@ -537,10 +561,9 @@ async function sendMessage() {
     briefing += `🎫 Open 티켓 (${openTickets.length}건)\n`;
     Object.entries(cats).sort((a,b)=>b[1]-a[1]).forEach(([k,v]) => { briefing += `  • ${k}: ${v}건\n`; });
     briefing += `\n`;
-    openTickets.forEach(t => {
-      const ibuLabel = t.ibu !== undefined ? `#${t.ibu}` : '';
+    openTickets.forEach((t, i) => {
       const linkId = t.shortId || t.id;
-      briefing += `  📌 ${ibuLabel} ${t.title.substring(0,65)}\n     → https://t.corp.amazon.com/${linkId}\n`;
+      briefing += `  📌 ${i+1}. ${t.title.substring(0,65)}\n     → https://t.corp.amazon.com/${linkId}\n`;
     });
 
     // Section 2: High Priority Emails
