@@ -352,7 +352,7 @@ function buildTicketStats() {
   let summary = `Total: ${TICKET_UPDATES.length} tickets\n`;
   summary += `Status: ${Object.entries(statuses).map(([k,v]) => `${k}=${v}`).join(", ")}\n`;
   summary += `\nBy Category:\n${Object.entries(cats).sort((a,b) => b[1]-a[1]).map(([k,v]) => `  ${k}: ${v}`).join("\n")}`;
-  if (open.length) summary += `\n\nOpen Tickets (${open.length}):\n${open.map(t => `  "${t.title}" (${t.date}) link: https://t.corp.amazon.com/${t.id}`).join("\n")}`;
+  if (open.length) summary += `\n\nOpen Tickets (${open.length}):\n${open.map(t => `  [${t.shortId||t.id}] "${t.title}" (${t.date}) link: https://t.corp.amazon.com/${t.shortId||t.id}`).join("\n")}`;
   return summary;
 }
 
@@ -397,9 +397,10 @@ When user asks for a graph, chart, or visual summary, include a JSON code block 
 \`\`\`
 Supported chart types: bar, doughnut, pie. Always include a text summary alongside the chart.
 
-IMPORTANT - Ticket links: The real ticket URL format is https://t.corp.amazon.com/FULL_UUID
-Example: https://t.corp.amazon.com/a674e3b9-bb0f-4b38-9ed0-94e8a70ef511
-ALWAYS use the full UUID (with dashes) for links. NEVER make up fake URLs.
+IMPORTANT - Ticket links: Use https://t.corp.amazon.com/SHORT_ID format.
+Example: https://t.corp.amazon.com/D404855598
+Each ticket has a "shortId" field (like D404855598 or V2124990152). Use shortId for links. If no shortId, use the full UUID.
+NEVER make up fake URLs.
 
 Target adoption 2026: 80%. Current avg: 30.56%.
 Be concise. Use bullet points. Reference IDs. For "my" queries, filter by user's cluster/team. Distinguish global vs local scope announcements.`;
@@ -499,8 +500,9 @@ async function sendMessage() {
     const site = s.site || "ICN81";
     const team = s.team || "DCO";
 
-    // Open tickets
-    const openTickets = TICKET_UPDATES.filter(t => t.status === "Open");
+    // Open tickets sorted by IBU (lower = higher priority)
+    const openTickets = TICKET_UPDATES.filter(t => t.status === "Open" || t.status === "Pending" || t.status === "Assigned");
+    openTickets.sort((a, b) => (a.ibu ?? 999) - (b.ibu ?? 999));
     const cats = {};
     openTickets.forEach(t => { const c = categorizeTicket(t.title); cats[c] = (cats[c]||0)+1; });
 
@@ -519,7 +521,11 @@ async function sendMessage() {
     briefing += `🎫 Open 티켓 (${openTickets.length}건)\n`;
     Object.entries(cats).sort((a,b)=>b[1]-a[1]).forEach(([k,v]) => { briefing += `  • ${k}: ${v}건\n`; });
     briefing += `\n`;
-    openTickets.forEach(t => { briefing += `  📌 ${t.title.substring(0,70)}\n     → https://t.corp.amazon.com/${t.id}\n`; });
+    openTickets.forEach(t => {
+      const ibuLabel = t.ibu !== undefined ? `#${t.ibu}` : '';
+      const linkId = t.shortId || t.id;
+      briefing += `  📌 ${ibuLabel} ${t.title.substring(0,65)}\n     → https://t.corp.amazon.com/${linkId}\n`;
+    });
 
     // Section 2: High Priority Emails
     briefing += `\n🚨 Important email (${highEmails.length}건)\n`;

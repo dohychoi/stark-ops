@@ -1449,16 +1449,70 @@
   ],
   "TICKET_UPDATES": [
     {
+      "id": "V2132902845",
+      "shortId": "V2132902845",
+      "ibu": 15,
+      "severity": "LOW",
+      "status": "Assigned",
+      "title": "[Drills][DCO][ICN81] Weekly Compliance Reminder (Mar 8)",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-03-09"
+    },
+    {
+      "id": "D405633198",
+      "shortId": "D405633198",
+      "ibu": 13,
+      "severity": "LOW",
+      "status": "Pending",
+      "title": "[RPO_1][EC2_BP_4] Repair VFM_AL_K2_ALL_PCIE_PORTS_FAILED - FOX.5HPK51770328 [EC2R7IK21]",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-03-09"
+    },
+    {
+      "id": "D404898076",
+      "shortId": "D404898076",
+      "ibu": 9,
+      "severity": "LOW",
+      "status": "Pending",
+      "title": "[EC2_BP_2] Repair VFM_AL_K2_PCIE_LINK_EP - FOX.2M0555370369 [EC2R8G23]",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-03-09"
+    },
+    {
+      "id": "D404957091",
+      "shortId": "D404957091",
+      "ibu": 8,
+      "severity": "LOW",
+      "status": "Pending",
+      "title": "[EC2_BP_4] Repair VETTING_CBP_MEMORY - ZT.210546710015 [EC2M7IK21]",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-03-09"
+    },
+    {
       "id": "6fd4d6db-240d-4241-a5d8-4e17531168a9",
       "severity": "LOW",
-      "status": "Open",
+      "status": "Pending",
       "title": "[RPO_2][EC2_BP_4] Repair VETTING_CBP_VFM - FOX.BRN155170017 [EC2I419]",
       "summary": "",
       "cluster": "ICN81",
       "team": "DCO",
       "from": "boost-ticket-processor",
       "date": "2026-03-07",
-      "alias": "D404855598"
+      "alias": "D404855598",
+      "ibu": 10,
+      "shortId": "D404855598"
     },
     {
       "id": "6f2cbb6e-3ed3-4092-a9b4-a2ca284d53dd",
@@ -1691,14 +1745,16 @@
     {
       "id": "a674e3b9-bb0f-4b38-9ed0-94e8a70ef511",
       "severity": "LOW",
-      "status": "Open",
+      "status": "Pending",
       "title": "[MF-S][EC2_BP_1] Repair VETTING_CBP_VFM - FOX.1HPK52970868 [EC2C7IK21]",
       "summary": "",
       "cluster": "ICN81",
       "team": "DCO",
       "from": "boost-ticket-processor",
       "date": "2026-03-02",
-      "alias": "D401489664"
+      "alias": "D401489664",
+      "ibu": 1,
+      "shortId": "D401489664"
     },
     {
       "id": "5b2e53cf-2888-4179-a6b8-9aff47317f1c",
@@ -1811,14 +1867,16 @@
     {
       "id": "aa0a9619-f6d5-4d68-a177-b879f83b72ba",
       "severity": "LOW",
-      "status": "Open",
+      "status": "Assigned",
       "title": "[Drills][DCO][ICN81] Weekly Compliance Reminder",
       "summary": "",
       "cluster": "ICN81",
       "team": "DCO",
       "from": "rackdown_workflow",
       "date": "2026-03-01",
-      "alias": "V2124990152"
+      "alias": "V2124990152",
+      "ibu": 14,
+      "shortId": "V2124990152"
     },
     {
       "id": "d85482ba-0b35-4a9d-9a2e-443bde2d3dff",
