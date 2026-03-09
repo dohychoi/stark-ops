@@ -335,19 +335,26 @@ async function getClient() {
 
 function categorizeTicket(title) {
   const t = title.toUpperCase();
+  if (t.includes("DRILL") || t.includes("COMPLIANCE")) return "Compliance/Drills";
+  if (/\bMF-[SH]\b/.test(t) || t.includes("[MEDIA]")) return "Media Fix";
   if (t.includes("POWERSHELF")) return "PowerShelf Repair";
-  if (t.includes("MEMORY")) return "Memory Repair";
+  if (t.includes("MEMORY") || t.includes("VETTING_MEMORY")) return "Memory Repair";
   if (t.includes("CONSOLE") || t.includes("CPLD")) return "Console/CPLD Repair";
-  if (t.includes("VFM") || t.includes("VETTING_CBP")) return "CBP Vetting";
+  if (t.includes("VETTING_CBP") || (t.includes("VFM") && !t.includes("POWERSHELF"))) return "CBP Vetting";
   if (t.includes("PCIE") || t.includes("NVME") || t.includes("SPI_FLASH") || t.includes("HBER") || t.includes("HUM_")) return "Hardware Component Repair";
   if (t.includes("FIRMWARE") || t.includes("BBU")) return "Firmware/BBU Upgrade";
   if (t.includes("JOHNNY 5") || t.includes("NETWORK_BP") || t.includes("STORM") || t.includes("SKYNET")) return "Network Infrastructure";
   if (t.includes("PAGER TEST")) return "Pager Test";
-  if (t.includes("DRILL") || t.includes("COMPLIANCE")) return "Compliance/Drills";
   if (t.includes("RED ZONE") || t.includes("RZE")) return "Red Zone Entry";
-  if (t.includes("MEDIA DESTRUCTION") || t.includes("MEDIA AUDIT")) return "Media Destruction";
-  if (t.includes("HANDOFF") || t.includes("HAND OFF") || t.includes("CBP][")) return "Host Handoff Failure";
-  if (t.includes("CABLE") || t.includes("RACK INSTALL")) return "Rack Install/Cabling";
+  if (t.includes("HDD DESTRUCTION") || t.includes("MEDIA DESTRUCTION") || t.includes("MEDIA AUDIT")) return "Media Destruction";
+  if (t.includes("SDO_")) return "SDO Diagnostic";
+  if (t.includes("S3DRIVE") || t.includes("S3 DRIVE")) return "S3 Drive Replacement";
+  if (t.includes("BOOT")) return "Boot Repair";
+  if (t.includes("HWMON")) return "HWMON Repair";
+  if (t.includes("PROJECT COMPLETION") || t.includes("[STAGE1]")) return "ID Project";
+  if (t.includes("WALKTHROUGH") || t.includes("7S")) return "Site Walkthrough";
+  if (t.includes("RACK DELIVERY")) return "Rack Delivery";
+  if (t.includes("ACME")) return "ACME Update";
   return "Other";
 }
 
@@ -355,22 +362,26 @@ function categorizeTicket(title) {
 function calcPriority(ticket) {
   const t = ticket.title.toUpperCase();
   let score = 100;
-  // Severity: sev3=0, sev5=+20
-  if (ticket.severity === "LOW" || (ticket.extensions?.tt?.impact || 3) <= 3) score += 0;
-  else score += 20;
-  // Blocked/MF-S = deprioritize
-  if (t.includes("MF-S") || t.includes("BLOCKED")) score += 50;
+  // Severity: sev5=+30 (low prio tasks like walkthrough, tracking)
+  const sev = ticket.extensions?.tt?.impact || 3;
+  if (sev >= 5) score += 30;
+  // MF (Media Fix) = deprioritized
+  if (t.includes('MF-S') || t.includes('MF-H') || t.includes('[MEDIA]')) score += 40;
+  // SDO = low priority diagnostic
+  if (t.includes('SDO_')) score += 60;
   // RPO tag = urgent, lower number = more urgent
   const rpo = t.match(/RPO_(\d+)/);
-  if (rpo) score -= (10 - parseInt(rpo[1])) * 5; // RPO_1=-45, RPO_2=-40, RPO_3=-35
-  // BP priority: BP_1 > BP_2 > BP_3 > BP_4
-  const bp = t.match(/BP_(\d+)/);
-  if (bp) score += parseInt(bp[1]) * 3; // BP_1=+3, BP_4=+12
-  // Compliance/Drills = low priority
-  if (/DRILL|COMPLIANCE|REMINDER/i.test(t)) score += 80;
-  // Older tickets = slightly higher priority
+  if (rpo) score -= (5 - parseInt(rpo[1])) * 15; // RPO_1=-60, RPO_2=-45, RPO_3=-30
+  // BP priority: lower BP = higher priority
+  const bp = t.match(/(?:EC2|EBS|S3_\w+|NETWORK|POWERSHELF|SDO)_BP_(\d+)/);
+  if (bp) { const n = parseInt(bp[1]); score += (n - 1) * 8; } // BP_1=+0, BP_2=+8, BP_4=+24
+  // CBP vetting = slightly higher than plain vetting
+  if (t.includes('VETTING_CBP')) score -= 5;
+  // Compliance/Drills = lowest
+  if (/DRILL|COMPLIANCE|REMINDER/i.test(t)) score += 300;
+  // Older tickets = slightly higher priority (max 14 days)
   const age = (Date.now() - new Date(ticket.date || ticket.createDate).getTime()) / 86400000;
-  score -= Math.min(age, 14); // max 14 days bonus
+  score -= Math.min(age, 14);
   return Math.round(score);
 }
 
