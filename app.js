@@ -352,7 +352,7 @@ function buildTicketStats() {
   let summary = `Total: ${TICKET_UPDATES.length} tickets\n`;
   summary += `Status: ${Object.entries(statuses).map(([k,v]) => `${k}=${v}`).join(", ")}\n`;
   summary += `\nBy Category:\n${Object.entries(cats).sort((a,b) => b[1]-a[1]).map(([k,v]) => `  ${k}: ${v}`).join("\n")}`;
-  if (open.length) summary += `\n\nOpen Tickets (${open.length}):\n${open.map(t => `  [${t.id}] "${t.title}" (${t.date}, from: ${t.from})`).join("\n")}`;
+  if (open.length) summary += `\n\nOpen Tickets (${open.length}):\n${open.map(t => `  "${t.title}" (${t.date}) link: https://t.corp.amazon.com/${t.id}`).join("\n")}`;
   return summary;
 }
 
@@ -397,9 +397,9 @@ When user asks for a graph, chart, or visual summary, include a JSON code block 
 \`\`\`
 Supported chart types: bar, doughnut, pie. Always include a text summary alongside the chart.
 
-IMPORTANT - Ticket links: The real ticket URL format is https://t.corp.amazon.com/issues/TICKET_UUID
-Example: for TT-6fd4d6db the link is https://t.corp.amazon.com/issues/6fd4d6db-240d-4241-a5d8-4e17531168a9
-NEVER make up fake URLs. If you don't have the full UUID, just show the ticket ID without a link.
+IMPORTANT - Ticket links: The real ticket URL format is https://t.corp.amazon.com/FULL_UUID
+Example: https://t.corp.amazon.com/a674e3b9-bb0f-4b38-9ed0-94e8a70ef511
+ALWAYS use the full UUID (with dashes) for links. NEVER make up fake URLs.
 
 Target adoption 2026: 80%. Current avg: 30.56%.
 Be concise. Use bullet points. Reference IDs. For "my" queries, filter by user's cluster/team. Distinguish global vs local scope announcements.`;
@@ -519,7 +519,7 @@ async function sendMessage() {
     briefing += `🎫 Open 티켓 (${openTickets.length}건)\n`;
     Object.entries(cats).sort((a,b)=>b[1]-a[1]).forEach(([k,v]) => { briefing += `  • ${k}: ${v}건\n`; });
     briefing += `\n`;
-    openTickets.forEach(t => { briefing += `  📌 ${t.title.substring(0,70)}\n     → https://t.corp.amazon.com/issues/${t.id}\n`; });
+    openTickets.forEach(t => { briefing += `  📌 ${t.title.substring(0,70)}\n     → https://t.corp.amazon.com/${t.id}\n`; });
 
     // Section 2: High Priority Emails
     briefing += `\n🚨 Important email (${highEmails.length}건)\n`;
