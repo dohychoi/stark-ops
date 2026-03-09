@@ -183,6 +183,11 @@ function showPage(page, btn) {
   });
   if (btn) { btn.classList.add("active"); btn.classList.remove("text-slate-500", "dark:text-gray-500"); }
   if (page === "dashboard" && !chartRendered && Object.keys(CLUSTERS).length > 0) {
+    const cl = Object.keys(CLUSTERS).length;
+    const si = Object.values(CLUSTERS).reduce((s,c)=>s+c.sites,0);
+    const co = new Set(Object.values(CLUSTERS).map(c=>c.country)).size;
+    const card = (label,val,color) => `<div class="bg-white dark:bg-gray-900 rounded-xl p-4 border border-slate-200 dark:border-gray-800 shadow-sm"><div class="text-slate-400 dark:text-gray-400 text-xs mb-1">${label}</div><div class="text-2xl font-bold ${color}">${val}</div></div>`;
+    document.getElementById("dashboard-stats").innerHTML = card("Clusters",cl,"")+card("Total Sites",si,"text-blue-500")+card("Countries",co,"text-green-500")+card("Open Tickets",TICKET_UPDATES.filter(t=>!["Resolved","Closed"].includes(t.status)).length,"text-amber-500");
     setTimeout(() => { renderChart(); chartRendered = true; }, 100);
   }
 }
@@ -259,15 +264,28 @@ function renderMap() {
 // ===== SUB-GEO CARDS =====
 function renderSubGeoCards() {
   const container = document.getElementById("subgeo-cards");
-  Object.entries(SUB_GEOS).forEach(([name, info]) => {
-    const clusters = Object.entries(CLUSTERS).filter(([, c]) => c.subGeo === name);
-    const avg = clusters.length ? (clusters.reduce((s, [, c]) => s + c.adoption, 0) / clusters.length).toFixed(1) : 0;
+  const geoMap = {
+    "South Korea": "Greater Korea", "Japan": "Japan",
+    "India": "India", "Singapore": "Southeast Asia", "Indonesia": "Southeast Asia",
+    "Thailand": "Southeast Asia", "Australia": "ANZ",
+    "Hong Kong": "Greater China", "UAE": "Middle East", "Bahrain": "Middle East", "Israel": "Middle East"
+  };
+  const geoEmoji = {"Greater Korea":"🇰🇷","Japan":"🇯🇵","India":"🇮🇳","Southeast Asia":"🌏","ANZ":"🇦🇺","Greater China":"🇭🇰","Middle East":"🕌"};
+  const groups = {};
+  Object.entries(CLUSTERS).forEach(([code, c]) => {
+    const geo = geoMap[c.country] || "Other";
+    if (!groups[geo]) groups[geo] = [];
+    groups[geo].push([code, c]);
+  });
+  container.innerHTML = '';
+  Object.entries(groups).forEach(([name, clusters]) => {
+    const totalSites = clusters.reduce((s, [, c]) => s + c.sites, 0);
     container.innerHTML += `
       <div class="bg-white dark:bg-gray-900 rounded-xl p-4 border border-slate-200 dark:border-gray-800 shadow-sm">
-        <div class="flex items-center gap-2 mb-2"><span class="text-lg">${info.emoji}</span><span class="text-sm font-semibold">${name}</span></div>
-        <div class="text-2xl font-bold mb-2">${avg}%</div>
+        <div class="flex items-center gap-2 mb-2"><span class="text-lg">${geoEmoji[name]||'🌐'}</span><span class="text-sm font-semibold">${name}</span></div>
+        <div class="text-2xl font-bold mb-2">${totalSites} <span class="text-xs font-normal text-slate-400">sites</span></div>
         <div class="space-y-1">${clusters.map(([code, c]) => `
-          <div class="flex justify-between text-xs"><span>${c.flag} ${code}</span><span style="color:${statusColor(c.status)}">${c.adoption}%</span></div>
+          <div class="flex justify-between text-xs"><span>${c.flag} ${code}</span><span style="color:${statusColor(c.status)}">${c.sites} sites</span></div>
         `).join("")}</div>
       </div>`;
   });
@@ -476,7 +494,7 @@ function buildTicketStats() {
 function buildSystemPrompt() {
   const s = loadSettings();
   const clusterSummary = Object.entries(CLUSTERS).map(([code, c]) => {
-    let info = `${code} (${c.name}, ${c.flag}): adoption=${c.adoption}%, status=${c.status}, subGeo=${c.subGeo}`;
+    let info = `${code} (${c.name}, ${c.flag}): sites=${c.sites}, status=${c.status}, region=${c.region}, country=${c.country}`;
     if (c.capacity) info += `, servers=${c.capacity.servers}, utilization=${c.capacity.utilization}%, uptime=${c.capacity.uptime}%`;
     if (c.recentTickets?.length) info += `\n  Tickets: ${c.recentTickets.map(t => `[${t.id}] ${t.severity} "${t.title}" (${t.status}, ${t.date})`).join("; ")}`;
     if (c.securityIssues?.length) info += `\n  Security: ${c.securityIssues.map(si => `[${si.id}] ${si.type} "${si.title}" (${si.status}, ${si.date})`).join("; ")}`;
