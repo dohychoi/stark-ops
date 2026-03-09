@@ -228,22 +228,19 @@ function statusColor(s) {
 // ===== MAP =====
 function renderMap() {
   const container = document.getElementById("map-container");
-  // APMEA bounding box: lat -45~45, lng 25~180
-  const minLat=-45, maxLat=45, minLng=25, maxLng=180;
+  // World map image is Equirectangular: x=0 at lng -180, x=100% at lng 180, y=0 at lat 90, y=100% at lat -90
+  // We crop to APMEA via CSS, so we need absolute % positions on the full world map
   Object.entries(CLUSTERS).forEach(([code, c]) => {
-    if (c.lng < minLng || c.lng > maxLng || c.lat < minLat || c.lat > maxLat) return; // skip non-APMEA
-    const x = ((c.lng - minLng) / (maxLng - minLng)) * 100;
-    const y = ((maxLat - c.lat) / (maxLat - minLat)) * 100;
+    const x = ((c.lng + 180) / 360) * 100;
+    const y = ((90 - c.lat) / 180) * 100;
     const dot = document.createElement("div");
-    dot.className = "cluster-dot absolute rounded-full border-2 border-white cursor-pointer";
     const sz = code === "ICN" ? "w-5 h-5" : "w-3.5 h-3.5";
-    dot.className += " " + sz;
+    dot.className = `cluster-dot absolute rounded-full border-2 border-white cursor-pointer ${sz}`;
     dot.style.cssText = `left:${x}%;top:${y}%;background:${statusColor(c.status)};transform:translate(-50%,-50%);z-index:10`;
-    dot.title = `${code} - ${c.name} (${c.flag}) Adoption: ${c.adoption}%`;
-    // Label
+    dot.title = `${c.flag} ${code} - ${c.name} | ${c.sites} sites | ${c.region}`;
     const label = document.createElement("div");
     label.className = "absolute text-[9px] font-bold text-white whitespace-nowrap pointer-events-none";
-    label.style.cssText = `left:${x}%;top:${y+3}%;transform:translateX(-50%);z-index:11;text-shadow:0 1px 2px rgba(0,0,0,0.8)`;
+    label.style.cssText = `left:${x}%;top:${y+1.5}%;transform:translateX(-50%);z-index:11;text-shadow:0 1px 3px rgba(0,0,0,0.9)`;
     label.textContent = code;
     container.appendChild(dot);
     container.appendChild(label);
@@ -269,14 +266,14 @@ function renderSubGeoCards() {
 
 // ===== CHART =====
 function renderChart() {
-  const sorted = Object.entries(CLUSTERS).sort((a, b) => b[1].adoption - a[1].adoption);
+  const sorted = Object.entries(CLUSTERS).sort((a, b) => b[1].sites - a[1].sites);
   new Chart(document.getElementById("adoptionChart"), {
     type: "bar",
     data: {
       labels: sorted.map(([code, c]) => `${c.flag} ${code}`),
-      datasets: [{ data: sorted.map(([, c]) => c.adoption), backgroundColor: sorted.map(([, c]) => statusColor(c.status) + "99"), borderColor: sorted.map(([, c]) => statusColor(c.status)), borderWidth: 1 }]
+      datasets: [{ label: "Sites", data: sorted.map(([, c]) => c.sites), backgroundColor: sorted.map(([, c]) => statusColor(c.status) + "99"), borderColor: sorted.map(([, c]) => statusColor(c.status)), borderWidth: 1 }]
     },
-    options: { responsive: true, plugins: { legend: { display: false } }, scales: { y: { max: 100, grid: { color: "#1f2937" }, ticks: { color: "#9ca3af" } }, x: { grid: { display: false }, ticks: { color: "#9ca3af", font: { size: 10 } } } } }
+    options: { responsive: true, plugins: { legend: { display: false }, title: { display: true, text: "Sites per Cluster", color: "#9ca3af" } }, scales: { y: { grid: { color: "#1f2937" }, ticks: { color: "#9ca3af" } }, x: { grid: { display: false }, ticks: { color: "#9ca3af", font: { size: 10 } } } } }
   });
 }
 
