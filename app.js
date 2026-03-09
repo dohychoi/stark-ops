@@ -362,26 +362,27 @@ function categorizeTicket(title) {
 function calcPriority(ticket) {
   const t = ticket.title.toUpperCase();
   let score = 100;
-  // Severity: sev5=+30 (low prio tasks like walkthrough, tracking)
+  // Severity: sev5=+50 (low prio tasks like walkthrough, tracking, ID projects)
   const sev = ticket.extensions?.tt?.impact || 3;
-  if (sev >= 5) score += 30;
-  // MF (Media Fix) = deprioritized
+  if (sev >= 5) score += 50;
+  // No BP tag = low priority (Malt always ranks BP-tagged above non-BP)
+  const bp = t.match(/(?:EC2|EBS|S3_\w+|NETWORK|POWERSHELF|SDO)_BP_(\d+)/);
+  if (!bp) score += 80;
+  else score += (parseInt(bp[1]) - 1) * 8; // BP_1=+0, BP_2=+8, BP_3=+16, BP_4=+24
+  // MF (Media Fix) = deprioritized within BP tier
   if (t.includes('MF-S') || t.includes('MF-H') || t.includes('[MEDIA]')) score += 40;
   // SDO = low priority diagnostic
   if (t.includes('SDO_')) score += 60;
   // RPO tag = urgent, lower number = more urgent
   const rpo = t.match(/RPO_(\d+)/);
   if (rpo) score -= (5 - parseInt(rpo[1])) * 15; // RPO_1=-60, RPO_2=-45, RPO_3=-30
-  // BP priority: lower BP = higher priority
-  const bp = t.match(/(?:EC2|EBS|S3_\w+|NETWORK|POWERSHELF|SDO)_BP_(\d+)/);
-  if (bp) { const n = parseInt(bp[1]); score += (n - 1) * 8; } // BP_1=+0, BP_2=+8, BP_4=+24
   // CBP vetting = slightly higher than plain vetting
   if (t.includes('VETTING_CBP')) score -= 5;
   // Compliance/Drills = lowest
   if (/DRILL|COMPLIANCE|REMINDER/i.test(t)) score += 300;
-  // Older tickets = slightly higher priority (max 14 days)
+  // Age tiebreaker only (max 5 days bonus, not enough to jump tiers)
   const age = (Date.now() - new Date(ticket.date || ticket.createDate).getTime()) / 86400000;
-  score -= Math.min(age, 14);
+  score -= Math.min(age * 0.3, 5);
   return Math.round(score);
 }
 
