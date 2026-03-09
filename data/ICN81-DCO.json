@@ -2819,6 +2819,150 @@
       "team": "DCO",
       "from": "boost-ticket-processor",
       "excludeFromBriefing": false
+    },
+    {
+      "id": "4694c0d7-e663-4a87-9c4c-4d38b10e7604",
+      "shortId": "V2128541464",
+      "title": "[SDO_BP_4][ICN80 6-1 12505]Please diagnose icn80-80-es-svc-c40314.icn",
+      "status": "Pending",
+      "date": "2026-03-04",
+      "cluster": "ICN80",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "3f3d6b15-e42e-462f-8934-5b6918fe8f30",
+      "shortId": "D403603950",
+      "title": "[EC2_BP_4][ICN80 8-2 22019] Please repair VETTING_VFM problem with SNX.CN16BW022110004 [EC2C5N16]",
+      "status": "Pending",
+      "date": "2026-03-05",
+      "cluster": "ICN80",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "3da3651f-e450-4756-8d69-144d7e1a24c1",
+      "shortId": "D397152665",
+      "title": "[MF-S][EC2_BP_4][ICN80 8-2 21014] Please repair HWMON problem with SNX.TREK4W092102805 [EC2M5D16C]",
+      "status": "Pending",
+      "date": "2026-02-23",
+      "cluster": "ICN80",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "7e6ff4e5-ef0b-43b2-986b-8546dc520c4a",
+      "shortId": "D399793700",
+      "title": "[MF-S][EC2_BP_4][ICN80 8-2 21014] Please repair HWMON problem with SNX.TREK4W092102810 [EC2M5D16C]",
+      "status": "Pending",
+      "date": "2026-02-27",
+      "cluster": "ICN80",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "43482b07-2d2e-4a2c-ae19-145756599751",
+      "shortId": "D401545083",
+      "title": "[MF-S][EBS_BP_3][ICN80 6-1 10304] Please repair VETTING_VFM problem with QCI.QTFCS19390022 [EBSFLASH16]",
+      "status": "Pending",
+      "date": "2026-03-02",
+      "cluster": "ICN80",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "ba3ecbf6-a06c-488e-98c5-51f97196750b",
+      "shortId": "D402795919",
+      "title": "[MF-S][EC2_BP_4][ICN80 8-2 21207] Please repair HWMON problem with FOX.T06A14670084 [EC2R5D16C]",
+      "status": "Pending",
+      "date": "2026-03-04",
+      "cluster": "ICN80",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "1081c0a7-0588-4d4e-8984-9c8fc1c00242",
+      "shortId": "D405198381",
+      "title": "[EC2_BP_2][ICN80 6-3 31407] Please repair VETTING_CBP_VFM problem with FOX.3HOP35270046 [EC2M7I21]",
+      "status": "Pending",
+      "date": "2026-03-08",
+      "cluster": "ICN80",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "0b01c873-3d77-4614-ba0c-6deeaf1fb03e",
+      "shortId": "V2132902555",
+      "title": "[Drills][DCO][ICN80] Weekly Compliance Reminder",
+      "status": "Assigned",
+      "date": "2026-03-08",
+      "cluster": "ICN80",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": true
+    },
+    {
+      "id": "a7117c72-a542-408c-bf63-15a81187ca93",
+      "shortId": "V1946214003",
+      "title": "ICN57-P1 Host: QTFCS1130001A not SSHable POP: ICN57-P1",
+      "status": "Pending",
+      "date": "2025-09-24",
+      "cluster": "ICN57",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "5cb72100-5bff-46e9-b5f4-29d113c808cf",
+      "shortId": "V1946216851",
+      "title": "ICN57-P1 Host: QTFCS112903F8 not SSHable POP: ICN57-P1",
+      "status": "Pending",
+      "date": "2025-09-24",
+      "cluster": "ICN57",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "624cc1e3-bfb5-4203-8882-c17ce79bd5ff",
+      "shortId": "P192083723",
+      "title": "[Stage1][ID][ICN57][Border] New Span deployment between ICN54-ICN57",
+      "status": "Assigned",
+      "date": "2025-01-22",
+      "cluster": "ICN57",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "5ca09385-8f86-4352-ad44-5f14bcc3518b",
+      "shortId": "P192076958",
+      "title": "[Stage1][ID][ICN57][Border] ICN57 FNC LLE",
+      "status": "Assigned",
+      "date": "2025-01-22",
+      "cluster": "ICN57",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
     }
   ],
   "GLOBAL_TEAMS": [
@@ -2857,7 +3001,7 @@
       "emoji": "🇺🇸"
     }
   },
-  "lastSync": "2026-03-09T08:13:18.177Z",
+  "lastSync": "2026-03-09T08:32:14.853Z",
   "AZ_MAP": {
     "ICN52AZ": {
       "sites": [
