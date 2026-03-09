@@ -59,6 +59,14 @@ function deleteChat(id, e) {
   renderChatHistory();
 }
 
+function renameChat(id, e) {
+  e.stopPropagation();
+  const session = chatSessions.find(s => s.id === id);
+  if (!session) return;
+  const name = prompt('Chat name:', session.title);
+  if (name && name.trim()) { session.title = name.trim(); saveChatSessions(); renderChatHistory(); }
+}
+
 function renderChatHistory() {
   const list = document.getElementById('chat-history-list');
   if (!list) return;
@@ -68,7 +76,8 @@ function renderChatHistory() {
     return `<div onclick="loadChat('${s.id}')" class="group flex items-center gap-1 px-2 py-1.5 rounded-lg cursor-pointer text-xs ${active ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300' : 'text-slate-600 dark:text-gray-400 hover:bg-slate-100 dark:hover:bg-gray-800'}">
       <span class="flex-1 truncate">${s.title}</span>
       <span class="text-[10px] text-slate-400 dark:text-gray-600 shrink-0">${date}</span>
-      <button onclick="deleteChat('${s.id}',event)" class="opacity-0 group-hover:opacity-100 text-slate-400 hover:text-red-500 shrink-0">×</button>
+      <button onclick="renameChat('${s.id}',event)" class="opacity-0 group-hover:opacity-100 text-slate-400 hover:text-blue-500 shrink-0" title="Rename">✏️</button>
+      <button onclick="deleteChat('${s.id}',event)" class="opacity-0 group-hover:opacity-100 text-slate-400 hover:text-red-500 shrink-0" title="Delete">×</button>
     </div>`;
   }).join('');
 }
