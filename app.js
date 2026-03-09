@@ -46,11 +46,21 @@ function getVisibleTeams() {
   (s.followedTeams || []).forEach(t => teams.add(t));
   return teams;
 }
+// Map site+role to resolver group
+function getResolverGroup(site, role) {
+  if (!site || !role) return null;
+  const s = site.toUpperCase();
+  const map = { DCO: "Data Tech", DCEO: "DCEO", Security: "Security", Logistics: "Logistics" };
+  return map[role] ? `${s} ${map[role]}` : `${s} ${role}`;
+}
 function applySettings() {
   const s = loadSettings();
   document.getElementById("cluster-select").value = s.cluster;
   document.getElementById("team-select").value = s.team;
   document.getElementById("site-input").value = s.site || "";
+  const rg = getResolverGroup(s.site, s.team);
+  const rgEl = document.getElementById("resolver-group-display");
+  if (rgEl) rgEl.textContent = rg ? `→ Resolver Group: ${rg}` : "";
   const c = CLUSTERS[s.cluster];
   document.getElementById("cluster-badge").textContent = c
     ? `${c.flag} ${s.site || s.cluster}`
