@@ -1,0 +1,4187 @@
+{
+  "CLUSTERS": {
+    "ICN": {
+      "name": "Seoul",
+      "flag": "🇰🇷",
+      "subGeo": "Greater China",
+      "lat": 37.5,
+      "lng": 127,
+      "adoption": 82,
+      "status": "healthy",
+      "leader": "N/A",
+      "capacity": {
+        "servers": 1250,
+        "utilization": 78,
+        "uptime": 99.97
+      },
+      "recentTickets": [
+        {
+          "id": "TT-40231",
+          "severity": "SEV3",
+          "title": "Network latency spike in AZ-2",
+          "status": "Resolved",
+          "date": "2026-03-05"
+        },
+        {
+          "id": "TT-40198",
+          "severity": "SEV4",
+          "title": "Disk usage alert on storage cluster B",
+          "status": "Resolved",
+          "date": "2026-03-04"
+        },
+        {
+          "id": "TT-40112",
+          "severity": "SEV3",
+          "title": "Cooling unit maintenance Zone C",
+          "status": "Open",
+          "date": "2026-03-03"
+        },
+        {
+          "id": "TT-40087",
+          "severity": "SEV5",
+          "title": "Badge reader firmware update needed",
+          "status": "Open",
+          "date": "2026-03-02"
+        },
+        {
+          "id": "TT-40045",
+          "severity": "SEV2",
+          "title": "Power redundancy failover test failure",
+          "status": "Resolved",
+          "date": "2026-02-28"
+        }
+      ],
+      "securityIssues": [
+        {
+          "id": "SEC-1021",
+          "type": "Access Control",
+          "title": "Expired badge access found for 3 contractors",
+          "status": "Remediated",
+          "date": "2026-03-01"
+        },
+        {
+          "id": "SEC-1018",
+          "type": "Compliance",
+          "title": "Quarterly security audit completed - 2 minor findings",
+          "status": "In Progress",
+          "date": "2026-02-20"
+        }
+      ]
+    },
+    "KUL": {
+      "name": "Kuala Lumpur",
+      "flag": "🇲🇾",
+      "subGeo": "Greater China",
+      "lat": 3.1,
+      "lng": 101.7,
+      "adoption": 67.6,
+      "status": "healthy",
+      "leader": "hcyeoh",
+      "capacity": {
+        "servers": 890,
+        "utilization": 72,
+        "uptime": 99.95
+      },
+      "recentTickets": [
+        {
+          "id": "TT-38901",
+          "severity": "SEV3",
+          "title": "UPS battery replacement scheduled",
+          "status": "Open",
+          "date": "2026-03-06"
+        },
+        {
+          "id": "TT-38876",
+          "severity": "SEV4",
+          "title": "HVAC sensor calibration drift",
+          "status": "Resolved",
+          "date": "2026-03-04"
+        },
+        {
+          "id": "TT-38812",
+          "severity": "SEV3",
+          "title": "Fiber optic link degradation MDF-3",
+          "status": "Resolved",
+          "date": "2026-03-02"
+        },
+        {
+          "id": "TT-38790",
+          "severity": "SEV5",
+          "title": "Rack labeling update request",
+          "status": "Open",
+          "date": "2026-03-01"
+        },
+        {
+          "id": "TT-38745",
+          "severity": "SEV4",
+          "title": "Generator fuel level monitoring alert",
+          "status": "Resolved",
+          "date": "2026-02-27"
+        }
+      ],
+      "securityIssues": [
+        {
+          "id": "SEC-982",
+          "type": "Physical",
+          "title": "Tailgating incident at loading dock",
+          "status": "Remediated",
+          "date": "2026-02-25"
+        }
+      ]
+    },
+    "SYD": {
+      "name": "Sydney",
+      "flag": "🇦🇺",
+      "subGeo": "South Asia & ANZ",
+      "lat": -33.9,
+      "lng": 151.2,
+      "adoption": 66,
+      "status": "healthy",
+      "leader": "simontan",
+      "capacity": {
+        "servers": 1100,
+        "utilization": 81,
+        "uptime": 99.98
+      },
+      "recentTickets": [
+        {
+          "id": "TT-39501",
+          "severity": "SEV2",
+          "title": "Core switch failover event - traffic rerouted",
+          "status": "Resolved",
+          "date": "2026-03-06"
+        },
+        {
+          "id": "TT-39478",
+          "severity": "SEV3",
+          "title": "Fire suppression system quarterly test",
+          "status": "Open",
+          "date": "2026-03-05"
+        },
+        {
+          "id": "TT-39432",
+          "severity": "SEV4",
+          "title": "PDU firmware update rollout",
+          "status": "Resolved",
+          "date": "2026-03-03"
+        },
+        {
+          "id": "TT-39401",
+          "severity": "SEV3",
+          "title": "Elevated temperature in hot aisle Row 12",
+          "status": "Resolved",
+          "date": "2026-03-01"
+        },
+        {
+          "id": "TT-39367",
+          "severity": "SEV5",
+          "title": "Cable management cleanup request",
+          "status": "Open",
+          "date": "2026-02-28"
+        }
+      ],
+      "securityIssues": [
+        {
+          "id": "SEC-1005",
+          "type": "Network",
+          "title": "Unauthorized port scan detected from internal host",
+          "status": "Investigating",
+          "date": "2026-03-04"
+        },
+        {
+          "id": "SEC-998",
+          "type": "Compliance",
+          "title": "SOC2 audit preparation - documentation gap",
+          "status": "In Progress",
+          "date": "2026-02-18"
+        }
+      ]
+    },
+    "HYD": {
+      "name": "Hyderabad",
+      "flag": "🇮🇳",
+      "subGeo": "India",
+      "lat": 17.4,
+      "lng": 78.5,
+      "adoption": 65,
+      "status": "healthy",
+      "leader": "achowdhr",
+      "capacity": {
+        "servers": 950,
+        "utilization": 85,
+        "uptime": 99.94
+      },
+      "recentTickets": [
+        {
+          "id": "TT-37801",
+          "severity": "SEV2",
+          "title": "Power grid fluctuation - switched to generator",
+          "status": "Resolved",
+          "date": "2026-03-06"
+        },
+        {
+          "id": "TT-37789",
+          "severity": "SEV3",
+          "title": "Water leak detected in sub-floor plenum",
+          "status": "Resolved",
+          "date": "2026-03-05"
+        },
+        {
+          "id": "TT-37756",
+          "severity": "SEV3",
+          "title": "Server decommission batch - 45 units",
+          "status": "Open",
+          "date": "2026-03-03"
+        },
+        {
+          "id": "TT-37721",
+          "severity": "SEV4",
+          "title": "CCTV camera offline in corridor B2",
+          "status": "Resolved",
+          "date": "2026-03-01"
+        },
+        {
+          "id": "TT-37698",
+          "severity": "SEV5",
+          "title": "Visitor parking allocation request",
+          "status": "Open",
+          "date": "2026-02-27"
+        }
+      ],
+      "securityIssues": [
+        {
+          "id": "SEC-991",
+          "type": "Physical",
+          "title": "Perimeter fence sensor malfunction - Zone 4",
+          "status": "Remediated",
+          "date": "2026-03-02"
+        }
+      ]
+    },
+    "BOM": {
+      "name": "Mumbai",
+      "flag": "🇮🇳",
+      "subGeo": "India",
+      "lat": 19.1,
+      "lng": 72.9,
+      "adoption": 65,
+      "status": "healthy",
+      "leader": "achowdhr",
+      "capacity": {
+        "servers": 870,
+        "utilization": 88,
+        "uptime": 99.92
+      },
+      "recentTickets": [
+        {
+          "id": "TT-37201",
+          "severity": "SEV2",
+          "title": "Monsoon preparation - drainage system check",
+          "status": "Open",
+          "date": "2026-03-06"
+        },
+        {
+          "id": "TT-37189",
+          "severity": "SEV3",
+          "title": "Rack power distribution imbalance",
+          "status": "Resolved",
+          "date": "2026-03-04"
+        },
+        {
+          "id": "TT-37145",
+          "severity": "SEV3",
+          "title": "ISP link degradation - backup active",
+          "status": "Resolved",
+          "date": "2026-03-02"
+        },
+        {
+          "id": "TT-37112",
+          "severity": "SEV4",
+          "title": "Environmental monitoring sensor replacement",
+          "status": "Open",
+          "date": "2026-03-01"
+        },
+        {
+          "id": "TT-37089",
+          "severity": "SEV5",
+          "title": "Documentation update for rack layout",
+          "status": "Open",
+          "date": "2026-02-26"
+        }
+      ],
+      "securityIssues": [
+        {
+          "id": "SEC-987",
+          "type": "Access Control",
+          "title": "Biometric reader calibration needed - Entry 3",
+          "status": "In Progress",
+          "date": "2026-02-28"
+        }
+      ]
+    },
+    "BizOps": {
+      "name": "BizOps",
+      "flag": "💼",
+      "subGeo": "Global Services",
+      "lat": 38.9,
+      "lng": -77.4,
+      "adoption": 52.17,
+      "status": "moderate",
+      "leader": "stutip",
+      "capacity": {
+        "servers": 320,
+        "utilization": 65,
+        "uptime": 99.99
+      },
+      "recentTickets": [
+        {
+          "id": "TT-36501",
+          "severity": "SEV4",
+          "title": "Dashboard reporting delay",
+          "status": "Resolved",
+          "date": "2026-03-05"
+        },
+        {
+          "id": "TT-36478",
+          "severity": "SEV3",
+          "title": "Data pipeline sync failure",
+          "status": "Resolved",
+          "date": "2026-03-03"
+        },
+        {
+          "id": "TT-36445",
+          "severity": "SEV5",
+          "title": "New team onboarding access request",
+          "status": "Open",
+          "date": "2026-03-01"
+        },
+        {
+          "id": "TT-36412",
+          "severity": "SEV4",
+          "title": "Report generation timeout",
+          "status": "Resolved",
+          "date": "2026-02-28"
+        },
+        {
+          "id": "TT-36389",
+          "severity": "SEV5",
+          "title": "Quarterly metrics review preparation",
+          "status": "Open",
+          "date": "2026-02-25"
+        }
+      ],
+      "securityIssues": []
+    },
+    "IAD": {
+      "name": "Virginia",
+      "flag": "🇺🇸",
+      "subGeo": "Global Services",
+      "lat": 38.9,
+      "lng": -77,
+      "adoption": 44,
+      "status": "moderate",
+      "leader": "buccella",
+      "capacity": {
+        "servers": 2100,
+        "utilization": 74,
+        "uptime": 99.96
+      },
+      "recentTickets": [
+        {
+          "id": "TT-41001",
+          "severity": "SEV2",
+          "title": "BGP route leak affecting east coast traffic",
+          "status": "Resolved",
+          "date": "2026-03-06"
+        },
+        {
+          "id": "TT-40987",
+          "severity": "SEV3",
+          "title": "Chiller plant capacity expansion",
+          "status": "Open",
+          "date": "2026-03-05"
+        },
+        {
+          "id": "TT-40945",
+          "severity": "SEV3",
+          "title": "DNS resolution intermittent failures",
+          "status": "Resolved",
+          "date": "2026-03-03"
+        },
+        {
+          "id": "TT-40912",
+          "severity": "SEV4",
+          "title": "Rack power metering discrepancy",
+          "status": "Open",
+          "date": "2026-03-01"
+        },
+        {
+          "id": "TT-40878",
+          "severity": "SEV5",
+          "title": "Asset inventory reconciliation",
+          "status": "Open",
+          "date": "2026-02-27"
+        }
+      ],
+      "securityIssues": [
+        {
+          "id": "SEC-1030",
+          "type": "Network",
+          "title": "DDoS mitigation triggered - traffic anomaly",
+          "status": "Monitoring",
+          "date": "2026-03-05"
+        },
+        {
+          "id": "SEC-1025",
+          "type": "Compliance",
+          "title": "FedRAMP control review - 1 finding",
+          "status": "In Progress",
+          "date": "2026-02-22"
+        }
+      ]
+    },
+    "SIN": {
+      "name": "Singapore",
+      "flag": "🇸🇬",
+      "subGeo": "South Asia & ANZ",
+      "lat": 1.3,
+      "lng": 103.8,
+      "adoption": 43,
+      "status": "moderate",
+      "leader": "simontan",
+      "capacity": {
+        "servers": 780,
+        "utilization": 82,
+        "uptime": 99.95
+      },
+      "recentTickets": [
+        {
+          "id": "TT-35901",
+          "severity": "SEV3",
+          "title": "Cross-connect installation delay",
+          "status": "Open",
+          "date": "2026-03-06"
+        },
+        {
+          "id": "TT-35878",
+          "severity": "SEV3",
+          "title": "Humidity control drift in Hall B",
+          "status": "Resolved",
+          "date": "2026-03-04"
+        },
+        {
+          "id": "TT-35845",
+          "severity": "SEV4",
+          "title": "Network switch EOL replacement plan",
+          "status": "Open",
+          "date": "2026-03-02"
+        },
+        {
+          "id": "TT-35812",
+          "severity": "SEV4",
+          "title": "Backup generator load test scheduled",
+          "status": "Resolved",
+          "date": "2026-02-28"
+        },
+        {
+          "id": "TT-35789",
+          "severity": "SEV5",
+          "title": "Vendor access badge renewal batch",
+          "status": "Open",
+          "date": "2026-02-26"
+        }
+      ],
+      "securityIssues": [
+        {
+          "id": "SEC-975",
+          "type": "Physical",
+          "title": "CCTV blind spot identified in loading area",
+          "status": "Remediated",
+          "date": "2026-02-20"
+        }
+      ]
+    },
+    "KIX": {
+      "name": "Osaka",
+      "flag": "🇯🇵",
+      "subGeo": "Japan",
+      "lat": 34.7,
+      "lng": 135.5,
+      "adoption": 40,
+      "status": "moderate",
+      "leader": "timrex",
+      "capacity": {
+        "servers": 680,
+        "utilization": 71,
+        "uptime": 99.97
+      },
+      "recentTickets": [
+        {
+          "id": "TT-34501",
+          "severity": "SEV3",
+          "title": "Seismic sensor calibration check",
+          "status": "Resolved",
+          "date": "2026-03-05"
+        },
+        {
+          "id": "TT-34478",
+          "severity": "SEV3",
+          "title": "Power distribution unit upgrade",
+          "status": "Open",
+          "date": "2026-03-03"
+        },
+        {
+          "id": "TT-34445",
+          "severity": "SEV4",
+          "title": "Floor tile replacement in cold aisle",
+          "status": "Resolved",
+          "date": "2026-03-01"
+        },
+        {
+          "id": "TT-34412",
+          "severity": "SEV4",
+          "title": "Fiber patch panel reorganization",
+          "status": "Open",
+          "date": "2026-02-28"
+        },
+        {
+          "id": "TT-34389",
+          "severity": "SEV5",
+          "title": "Emergency exit signage inspection",
+          "status": "Resolved",
+          "date": "2026-02-25"
+        }
+      ],
+      "securityIssues": []
+    },
+    "HKG": {
+      "name": "Hong Kong",
+      "flag": "🇭🇰",
+      "subGeo": "Greater China",
+      "lat": 22.3,
+      "lng": 114.2,
+      "adoption": 35.51,
+      "status": "moderate",
+      "leader": "hcyeoh",
+      "capacity": {
+        "servers": 560,
+        "utilization": 79,
+        "uptime": 99.93
+      },
+      "recentTickets": [
+        {
+          "id": "TT-33901",
+          "severity": "SEV2",
+          "title": "Typhoon preparation - emergency protocol activated",
+          "status": "Resolved",
+          "date": "2026-03-06"
+        },
+        {
+          "id": "TT-33878",
+          "severity": "SEV3",
+          "title": "Cooling tower maintenance window",
+          "status": "Open",
+          "date": "2026-03-04"
+        },
+        {
+          "id": "TT-33845",
+          "severity": "SEV3",
+          "title": "Network backbone capacity upgrade",
+          "status": "Open",
+          "date": "2026-03-02"
+        },
+        {
+          "id": "TT-33812",
+          "severity": "SEV4",
+          "title": "Access card system firmware update",
+          "status": "Resolved",
+          "date": "2026-02-28"
+        },
+        {
+          "id": "TT-33789",
+          "severity": "SEV5",
+          "title": "Quarterly fire drill scheduling",
+          "status": "Open",
+          "date": "2026-02-26"
+        }
+      ],
+      "securityIssues": [
+        {
+          "id": "SEC-968",
+          "type": "Access Control",
+          "title": "After-hours access anomaly detected",
+          "status": "Investigating",
+          "date": "2026-03-03"
+        }
+      ]
+    },
+    "MEL": {
+      "name": "Melbourne",
+      "flag": "🇦🇺",
+      "subGeo": "South Asia & ANZ",
+      "lat": -37.8,
+      "lng": 145,
+      "adoption": 35,
+      "status": "moderate",
+      "leader": "simontan",
+      "capacity": {
+        "servers": 520,
+        "utilization": 68,
+        "uptime": 99.96
+      },
+      "recentTickets": [
+        {
+          "id": "TT-33201",
+          "severity": "SEV3",
+          "title": "UPS module replacement",
+          "status": "Resolved",
+          "date": "2026-03-05"
+        },
+        {
+          "id": "TT-33178",
+          "severity": "SEV4",
+          "title": "Network monitoring tool upgrade",
+          "status": "Open",
+          "date": "2026-03-03"
+        },
+        {
+          "id": "TT-33145",
+          "severity": "SEV4",
+          "title": "Raised floor inspection",
+          "status": "Resolved",
+          "date": "2026-03-01"
+        },
+        {
+          "id": "TT-33112",
+          "severity": "SEV5",
+          "title": "Spare parts inventory check",
+          "status": "Open",
+          "date": "2026-02-27"
+        },
+        {
+          "id": "TT-33089",
+          "severity": "SEV5",
+          "title": "New rack installation request",
+          "status": "Open",
+          "date": "2026-02-25"
+        }
+      ],
+      "securityIssues": []
+    },
+    "NRT": {
+      "name": "Tokyo",
+      "flag": "🇯🇵",
+      "subGeo": "Japan",
+      "lat": 35.7,
+      "lng": 139.7,
+      "adoption": 35,
+      "status": "moderate",
+      "leader": "timrex",
+      "capacity": {
+        "servers": 1450,
+        "utilization": 76,
+        "uptime": 99.98
+      },
+      "recentTickets": [
+        {
+          "id": "TT-34901",
+          "severity": "SEV2",
+          "title": "Earthquake early warning system triggered",
+          "status": "Resolved",
+          "date": "2026-03-06"
+        },
+        {
+          "id": "TT-34878",
+          "severity": "SEV3",
+          "title": "Redundant cooling path validation",
+          "status": "Open",
+          "date": "2026-03-04"
+        },
+        {
+          "id": "TT-34845",
+          "severity": "SEV3",
+          "title": "Optical transport network upgrade",
+          "status": "Open",
+          "date": "2026-03-02"
+        },
+        {
+          "id": "TT-34812",
+          "severity": "SEV4",
+          "title": "BMS integration testing",
+          "status": "Resolved",
+          "date": "2026-02-28"
+        },
+        {
+          "id": "TT-34789",
+          "severity": "SEV5",
+          "title": "Staff training schedule update",
+          "status": "Open",
+          "date": "2026-02-26"
+        }
+      ],
+      "securityIssues": [
+        {
+          "id": "SEC-1012",
+          "type": "Compliance",
+          "title": "ISMS audit finding - log retention policy",
+          "status": "In Progress",
+          "date": "2026-02-15"
+        }
+      ]
+    },
+    "CPT": {
+      "name": "Cape Town",
+      "flag": "🇿🇦",
+      "subGeo": "Middle East & Africa",
+      "lat": -33.9,
+      "lng": 18.4,
+      "adoption": 30,
+      "status": "low",
+      "leader": "alashqar",
+      "capacity": {
+        "servers": 340,
+        "utilization": 58,
+        "uptime": 99.91
+      },
+      "recentTickets": [
+        {
+          "id": "TT-32501",
+          "severity": "SEV2",
+          "title": "Load shedding - generator runtime extended",
+          "status": "Resolved",
+          "date": "2026-03-06"
+        },
+        {
+          "id": "TT-32478",
+          "severity": "SEV3",
+          "title": "Diesel fuel delivery delayed",
+          "status": "Open",
+          "date": "2026-03-04"
+        },
+        {
+          "id": "TT-32445",
+          "severity": "SEV3",
+          "title": "Network peering capacity review",
+          "status": "Open",
+          "date": "2026-03-02"
+        },
+        {
+          "id": "TT-32412",
+          "severity": "SEV4",
+          "title": "CRAC unit filter replacement",
+          "status": "Resolved",
+          "date": "2026-02-28"
+        },
+        {
+          "id": "TT-32389",
+          "severity": "SEV5",
+          "title": "Staff shift schedule optimization",
+          "status": "Open",
+          "date": "2026-02-25"
+        }
+      ],
+      "securityIssues": [
+        {
+          "id": "SEC-955",
+          "type": "Physical",
+          "title": "Perimeter lighting failure - Section E",
+          "status": "Remediated",
+          "date": "2026-02-22"
+        }
+      ]
+    },
+    "CGK": {
+      "name": "Jakarta",
+      "flag": "🇮🇩",
+      "subGeo": "South Asia & ANZ",
+      "lat": -6.2,
+      "lng": 106.8,
+      "adoption": 30,
+      "status": "low",
+      "leader": "simontan",
+      "capacity": {
+        "servers": 410,
+        "utilization": 73,
+        "uptime": 99.9
+      },
+      "recentTickets": [
+        {
+          "id": "TT-31901",
+          "severity": "SEV2",
+          "title": "Flooding risk assessment - rainy season",
+          "status": "Open",
+          "date": "2026-03-06"
+        },
+        {
+          "id": "TT-31878",
+          "severity": "SEV3",
+          "title": "Power transformer maintenance",
+          "status": "Open",
+          "date": "2026-03-04"
+        },
+        {
+          "id": "TT-31845",
+          "severity": "SEV3",
+          "title": "Fiber cut - alternate path activated",
+          "status": "Resolved",
+          "date": "2026-03-02"
+        },
+        {
+          "id": "TT-31812",
+          "severity": "SEV4",
+          "title": "Air handling unit vibration alert",
+          "status": "Resolved",
+          "date": "2026-02-28"
+        },
+        {
+          "id": "TT-31789",
+          "severity": "SEV5",
+          "title": "Vendor contract renewal review",
+          "status": "Open",
+          "date": "2026-02-26"
+        }
+      ],
+      "securityIssues": [
+        {
+          "id": "SEC-960",
+          "type": "Network",
+          "title": "Suspicious outbound traffic pattern detected",
+          "status": "Investigating",
+          "date": "2026-03-01"
+        }
+      ]
+    },
+    "TPE": {
+      "name": "Taipei",
+      "flag": "🇹🇼",
+      "subGeo": "Greater China",
+      "lat": 25,
+      "lng": 121.5,
+      "adoption": 0,
+      "status": "not_started",
+      "leader": "hcyeoh",
+      "capacity": {
+        "servers": 290,
+        "utilization": 45,
+        "uptime": 99.94
+      },
+      "recentTickets": [
+        {
+          "id": "TT-30501",
+          "severity": "SEV3",
+          "title": "Earthquake preparedness drill",
+          "status": "Open",
+          "date": "2026-03-05"
+        },
+        {
+          "id": "TT-30478",
+          "severity": "SEV4",
+          "title": "Network switch stack upgrade",
+          "status": "Open",
+          "date": "2026-03-03"
+        },
+        {
+          "id": "TT-30445",
+          "severity": "SEV4",
+          "title": "Cooling efficiency optimization",
+          "status": "Resolved",
+          "date": "2026-03-01"
+        },
+        {
+          "id": "TT-30412",
+          "severity": "SEV5",
+          "title": "Cable labeling standardization",
+          "status": "Open",
+          "date": "2026-02-27"
+        },
+        {
+          "id": "TT-30389",
+          "severity": "SEV5",
+          "title": "New hire orientation scheduling",
+          "status": "Open",
+          "date": "2026-02-25"
+        }
+      ],
+      "securityIssues": []
+    },
+    "AKL": {
+      "name": "Auckland",
+      "flag": "🇳🇿",
+      "subGeo": "South Asia & ANZ",
+      "lat": -36.8,
+      "lng": 174.8,
+      "adoption": 0,
+      "status": "not_started",
+      "leader": "simontan",
+      "capacity": {
+        "servers": 180,
+        "utilization": 42,
+        "uptime": 99.95
+      },
+      "recentTickets": [
+        {
+          "id": "TT-29901",
+          "severity": "SEV3",
+          "title": "ISP circuit upgrade planning",
+          "status": "Open",
+          "date": "2026-03-05"
+        },
+        {
+          "id": "TT-29878",
+          "severity": "SEV4",
+          "title": "Generator annual service",
+          "status": "Open",
+          "date": "2026-03-02"
+        },
+        {
+          "id": "TT-29845",
+          "severity": "SEV4",
+          "title": "Environmental monitoring expansion",
+          "status": "Resolved",
+          "date": "2026-02-28"
+        },
+        {
+          "id": "TT-29812",
+          "severity": "SEV5",
+          "title": "Spare parts order request",
+          "status": "Open",
+          "date": "2026-02-26"
+        },
+        {
+          "id": "TT-29789",
+          "severity": "SEV5",
+          "title": "Documentation translation project",
+          "status": "Open",
+          "date": "2026-02-24"
+        }
+      ],
+      "securityIssues": []
+    },
+    "ZHY": {
+      "name": "Zhongwei",
+      "flag": "🇨🇳",
+      "subGeo": "Greater China",
+      "lat": 37.5,
+      "lng": 105.2,
+      "adoption": 0,
+      "status": "not_started",
+      "leader": "hcyeoh",
+      "capacity": {
+        "servers": 450,
+        "utilization": 52,
+        "uptime": 99.93
+      },
+      "recentTickets": [
+        {
+          "id": "TT-29501",
+          "severity": "SEV3",
+          "title": "Sandstorm air filtration check",
+          "status": "Resolved",
+          "date": "2026-03-05"
+        },
+        {
+          "id": "TT-29478",
+          "severity": "SEV3",
+          "title": "Power grid stability monitoring",
+          "status": "Open",
+          "date": "2026-03-03"
+        },
+        {
+          "id": "TT-29445",
+          "severity": "SEV4",
+          "title": "Water cooling system inspection",
+          "status": "Resolved",
+          "date": "2026-03-01"
+        },
+        {
+          "id": "TT-29412",
+          "severity": "SEV4",
+          "title": "Remote hands staffing review",
+          "status": "Open",
+          "date": "2026-02-27"
+        },
+        {
+          "id": "TT-29389",
+          "severity": "SEV5",
+          "title": "Annual compliance documentation",
+          "status": "Open",
+          "date": "2026-02-25"
+        }
+      ],
+      "securityIssues": [
+        {
+          "id": "SEC-945",
+          "type": "Compliance",
+          "title": "Data sovereignty audit - pending review",
+          "status": "In Progress",
+          "date": "2026-02-18"
+        }
+      ]
+    },
+    "BJS": {
+      "name": "Beijing",
+      "flag": "🇨🇳",
+      "subGeo": "Greater China",
+      "lat": 39.9,
+      "lng": 116.4,
+      "adoption": 0,
+      "status": "not_started",
+      "leader": "hcyeoh",
+      "capacity": {
+        "servers": 620,
+        "utilization": 67,
+        "uptime": 99.94
+      },
+      "recentTickets": [
+        {
+          "id": "TT-29001",
+          "severity": "SEV3",
+          "title": "Air quality impact on HVAC filters",
+          "status": "Open",
+          "date": "2026-03-06"
+        },
+        {
+          "id": "TT-28978",
+          "severity": "SEV3",
+          "title": "Redundant power path testing",
+          "status": "Resolved",
+          "date": "2026-03-03"
+        },
+        {
+          "id": "TT-28945",
+          "severity": "SEV4",
+          "title": "BMS software update",
+          "status": "Open",
+          "date": "2026-03-01"
+        },
+        {
+          "id": "TT-28912",
+          "severity": "SEV4",
+          "title": "Structured cabling audit",
+          "status": "Resolved",
+          "date": "2026-02-27"
+        },
+        {
+          "id": "TT-28889",
+          "severity": "SEV5",
+          "title": "Vendor performance review",
+          "status": "Open",
+          "date": "2026-02-25"
+        }
+      ],
+      "securityIssues": [
+        {
+          "id": "SEC-940",
+          "type": "Compliance",
+          "title": "MLPS certification renewal",
+          "status": "In Progress",
+          "date": "2026-02-10"
+        }
+      ]
+    },
+    "BKK": {
+      "name": "Bangkok",
+      "flag": "🇹🇭",
+      "subGeo": "Greater China",
+      "lat": 13.8,
+      "lng": 100.5,
+      "adoption": 0,
+      "status": "not_started",
+      "leader": "hcyeoh",
+      "capacity": {
+        "servers": 350,
+        "utilization": 55,
+        "uptime": 99.92
+      },
+      "recentTickets": [
+        {
+          "id": "TT-28501",
+          "severity": "SEV3",
+          "title": "Monsoon season preparation",
+          "status": "Open",
+          "date": "2026-03-05"
+        },
+        {
+          "id": "TT-28478",
+          "severity": "SEV3",
+          "title": "Electrical panel thermal scan",
+          "status": "Resolved",
+          "date": "2026-03-03"
+        },
+        {
+          "id": "TT-28445",
+          "severity": "SEV4",
+          "title": "CCTV system storage expansion",
+          "status": "Open",
+          "date": "2026-03-01"
+        },
+        {
+          "id": "TT-28412",
+          "severity": "SEV4",
+          "title": "Network topology documentation",
+          "status": "Resolved",
+          "date": "2026-02-27"
+        },
+        {
+          "id": "TT-28389",
+          "severity": "SEV5",
+          "title": "Local vendor onboarding",
+          "status": "Open",
+          "date": "2026-02-25"
+        }
+      ],
+      "securityIssues": []
+    },
+    "BAH": {
+      "name": "Bahrain",
+      "flag": "🇧🇭",
+      "subGeo": "Middle East & Africa",
+      "lat": 26.2,
+      "lng": 50.6,
+      "adoption": 0,
+      "status": "not_started",
+      "leader": "alashqar",
+      "capacity": {
+        "servers": 280,
+        "utilization": 48,
+        "uptime": 99.95
+      },
+      "recentTickets": [
+        {
+          "id": "TT-28001",
+          "severity": "SEV3",
+          "title": "Dust storm air intake protection",
+          "status": "Resolved",
+          "date": "2026-03-05"
+        },
+        {
+          "id": "TT-27978",
+          "severity": "SEV3",
+          "title": "Cooling tower water treatment",
+          "status": "Open",
+          "date": "2026-03-03"
+        },
+        {
+          "id": "TT-27945",
+          "severity": "SEV4",
+          "title": "UPS battery health check",
+          "status": "Resolved",
+          "date": "2026-02-28"
+        },
+        {
+          "id": "TT-27912",
+          "severity": "SEV4",
+          "title": "Fire alarm panel testing",
+          "status": "Open",
+          "date": "2026-02-26"
+        },
+        {
+          "id": "TT-27889",
+          "severity": "SEV5",
+          "title": "Ramadan staffing schedule",
+          "status": "Open",
+          "date": "2026-02-24"
+        }
+      ],
+      "securityIssues": []
+    },
+    "DXB": {
+      "name": "Dubai",
+      "flag": "🇦🇪",
+      "subGeo": "Middle East & Africa",
+      "lat": 25.2,
+      "lng": 55.3,
+      "adoption": 0,
+      "status": "not_started",
+      "leader": "alashqar",
+      "capacity": {
+        "servers": 420,
+        "utilization": 51,
+        "uptime": 99.96
+      },
+      "recentTickets": [
+        {
+          "id": "TT-27501",
+          "severity": "SEV3",
+          "title": "Extreme heat cooling capacity test",
+          "status": "Open",
+          "date": "2026-03-06"
+        },
+        {
+          "id": "TT-27478",
+          "severity": "SEV3",
+          "title": "Solar panel array maintenance",
+          "status": "Resolved",
+          "date": "2026-03-03"
+        },
+        {
+          "id": "TT-27445",
+          "severity": "SEV4",
+          "title": "Network edge router upgrade",
+          "status": "Open",
+          "date": "2026-03-01"
+        },
+        {
+          "id": "TT-27412",
+          "severity": "SEV4",
+          "title": "Raised floor load assessment",
+          "status": "Resolved",
+          "date": "2026-02-27"
+        },
+        {
+          "id": "TT-27389",
+          "severity": "SEV5",
+          "title": "Staff certification tracking",
+          "status": "Open",
+          "date": "2026-02-25"
+        }
+      ],
+      "securityIssues": [
+        {
+          "id": "SEC-950",
+          "type": "Physical",
+          "title": "Unauthorized drone activity near facility",
+          "status": "Reported",
+          "date": "2026-02-28"
+        }
+      ]
+    },
+    "RUH": {
+      "name": "Riyadh",
+      "flag": "🇸🇦",
+      "subGeo": "Middle East & Africa",
+      "lat": 24.7,
+      "lng": 46.7,
+      "adoption": 0,
+      "status": "not_started",
+      "leader": "alashqar",
+      "capacity": {
+        "servers": 380,
+        "utilization": 47,
+        "uptime": 99.94
+      },
+      "recentTickets": [
+        {
+          "id": "TT-27001",
+          "severity": "SEV3",
+          "title": "Sandstorm damage assessment",
+          "status": "Resolved",
+          "date": "2026-03-05"
+        },
+        {
+          "id": "TT-26978",
+          "severity": "SEV3",
+          "title": "Diesel generator fuel quality test",
+          "status": "Open",
+          "date": "2026-03-03"
+        },
+        {
+          "id": "TT-26945",
+          "severity": "SEV4",
+          "title": "HVAC compressor replacement",
+          "status": "Open",
+          "date": "2026-03-01"
+        },
+        {
+          "id": "TT-26912",
+          "severity": "SEV4",
+          "title": "Fiber optic cable testing",
+          "status": "Resolved",
+          "date": "2026-02-27"
+        },
+        {
+          "id": "TT-26889",
+          "severity": "SEV5",
+          "title": "Vision 2030 compliance review",
+          "status": "Open",
+          "date": "2026-02-25"
+        }
+      ],
+      "securityIssues": [
+        {
+          "id": "SEC-948",
+          "type": "Compliance",
+          "title": "NCA cybersecurity framework assessment",
+          "status": "In Progress",
+          "date": "2026-02-20"
+        }
+      ]
+    }
+  },
+  "EMAIL_UPDATES": [
+    {
+      "id": "e1",
+      "from": "Choi, Lucas",
+      "subject": "ICN DCO KAIZEN NEWSLETTER#1 2026",
+      "date": "2026-03-09",
+      "preview": "2026 Q1 Newsletter - ICN DCO Kaizen Project 운영 변경 사항 안내",
+      "tag": "Announcement",
+      "important": true
+    },
+    {
+      "id": "e2",
+      "from": "Lee, Jung woong",
+      "subject": "[ICN] AI 해커톤 – 신청공지",
+      "date": "2026-03-06",
+      "preview": "ICN AI 해커톤 개최. AI 전문가/입문자 누구나 참여 가능. 전문 사용자 부문과 초급 사용자 부문 두 가지.",
+      "tag": "Event",
+      "important": true
+    },
+    {
+      "id": "e3",
+      "from": "Choi, Lucas",
+      "subject": "ICN81 and GND Cross Team Meeting",
+      "date": "2026-03-09",
+      "preview": "ICN81 and GND Cross Team Meeting 3/10 (Tue) 09:00AM. If you have any agenda, please fill out the blank.",
+      "tag": "Meeting",
+      "important": true
+    },
+    {
+      "id": "e4",
+      "from": "An, Kookhyun",
+      "subject": "[Stage1/2][ICN55][URGENT P0] Cross connect - KT APG Backbone 400G HKG54<>ICN55",
+      "date": "2026-03-09",
+      "preview": "Project Completion by GND team. DCO Team action required.",
+      "tag": "Project",
+      "important": true
+    },
+    {
+      "id": "e5",
+      "from": "An, Kookhyun",
+      "subject": "[Stage1/2][ICN55] Telstra Backbone 300G CBB ICN55<>SIN005",
+      "date": "2026-03-09",
+      "preview": "APAC Cross connect project completion by GND team.",
+      "tag": "Project",
+      "important": false
+    },
+    {
+      "id": "e6",
+      "from": "Choi, Lucas",
+      "subject": "[Action Required] Media Shredding Event Schedule Coordination",
+      "date": "2026-03-09",
+      "preview": "Media Shredding Event 일정 조율 관련 메일.",
+      "tag": "Action Required",
+      "important": true
+    },
+    {
+      "id": "e7",
+      "from": "Amazon AWS via Smartsheet",
+      "subject": "ICN HxH report",
+      "date": "2026-03-09",
+      "preview": "ICN HxH - Rack delivery report. Refer to dynamic view for the HxH report.",
+      "tag": "Report",
+      "important": false
+    },
+    {
+      "id": "e8",
+      "from": "Jung, Hwayoung",
+      "subject": "[Knowledge Share] AI Development & Practical Usage with Amazon Quick Suite",
+      "date": "2026-03-09",
+      "preview": "Two-part Knowledge Share series on how to build and use AI through Amazon Quick Suite.",
+      "tag": "Training",
+      "important": false
+    },
+    {
+      "id": "e9",
+      "from": "Rowan",
+      "subject": "COR Single Threaded Owner (STO) Program — Re-Launch",
+      "date": "2026-03-09",
+      "preview": "Central Operations Repair STO Program re-launch announcement from Jin Hwan Lee.",
+      "tag": "Announcement",
+      "important": false
+    },
+    {
+      "id": "e10",
+      "from": "Rowan",
+      "subject": "AWS Boost Introduction",
+      "date": "2026-03-09",
+      "preview": "AWS Boost Introduction announcement from Jin Hwan Lee. Distribution: ICN DCO/ID/Decom.",
+      "tag": "Announcement",
+      "important": false
+    },
+    {
+      "id": "e11",
+      "from": "Park, Jake",
+      "subject": "[IMPORTANT] Org Announcement",
+      "date": "2026-03-09",
+      "preview": "ICN Team 조직 변경 안내. ICN69 team will report directly to Minjung.",
+      "tag": "Org Change",
+      "important": true
+    },
+    {
+      "id": "e12",
+      "from": "Wang, Jie",
+      "subject": "Appsec Findings Hourly Detect - HC Org",
+      "date": "2026-03-09",
+      "preview": "Please set ECD ASAP for Appsec finding to avoid escalation to L8 manager.",
+      "tag": "Security",
+      "important": true
+    }
+  ],
+  "TICKET_UPDATES": [
+    {
+      "id": "V2132902845",
+      "shortId": "V2132902845",
+      "severity": "LOW",
+      "status": "Resolved",
+      "title": "[Drills][DCO][ICN81] Weekly Compliance Reminder (Mar 8)",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-03-09",
+      "excludeFromBriefing": true
+    },
+    {
+      "id": "D405633198",
+      "shortId": "D405633198",
+      "severity": "LOW",
+      "status": "Resolved",
+      "title": "[RPO_1][EC2_BP_4] Repair VFM_AL_K2_ALL_PCIE_PORTS_FAILED - FOX.5HPK51770328 [EC2R7IK21]",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-03-09",
+      "ibu": 11
+    },
+    {
+      "id": "D404898076",
+      "shortId": "D404898076",
+      "severity": "LOW",
+      "status": "Resolved",
+      "title": "[EC2_BP_2] Repair VFM_AL_K2_PCIE_LINK_EP - FOX.2M0555370369 [EC2R8G23]",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-03-09",
+      "ibu": 5
+    },
+    {
+      "id": "D404957091",
+      "shortId": "D404957091",
+      "severity": "LOW",
+      "status": "Resolved",
+      "title": "[EC2_BP_4] Repair VETTING_CBP_MEMORY - ZT.210546710015 [EC2M7IK21]",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-03-09",
+      "ibu": 8
+    },
+    {
+      "id": "6fd4d6db-240d-4241-a5d8-4e17531168a9",
+      "severity": "LOW",
+      "status": "Pending",
+      "title": "[RPO_2][EC2_BP_2][ICN81 6-3 06-03-015-19] Please repair VETTING_CBP_VFM problem with FOX.BRN155170017 [EC2I419] [ec2] [Vetting]",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-03-07",
+      "alias": "D404855598",
+      "shortId": "D404855598",
+      "lastUpdated": "2026-03-08T22:43:14Z",
+      "ibu": 6
+    },
+    {
+      "id": "6f2cbb6e-3ed3-4092-a9b4-a2ca284d53dd",
+      "severity": "LOW",
+      "status": "Resolved",
+      "title": "[POWERSHELF_BP_1] Repair VETTING_POWERSHELF - FOX.FFVT2530190966",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-03-06",
+      "alias": "D404153907",
+      "shortId": "D404153907"
+    },
+    {
+      "id": "3372780f-3aa4-4e47-afca-59c31b21c97d",
+      "severity": "LOW",
+      "status": "Resolved",
+      "title": "Pager test UPDATED - ICN81",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "tavern",
+      "date": "2026-03-05",
+      "alias": "V2129912513",
+      "shortId": "V2129912513"
+    },
+    {
+      "id": "c9104bb7-6cee-4fae-bc97-b2f08a066966",
+      "severity": "LOW",
+      "status": "Resolved",
+      "title": "[RPO_1][EC2_BP_2] Repair VETTING_CBP_VFM - FOX.BRN155170017 [EC2I419]",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-03-06",
+      "alias": "D403929823",
+      "shortId": "D403929823"
+    },
+    {
+      "id": "9a5a9c9f-a04e-47bb-8e09-56248c2a80f4",
+      "severity": "LOW",
+      "status": "Closed",
+      "title": "[RE-OPENED][S3_STORAGE_BP_1] Repair VFM+HBA_MISSING - FOX.1H8660470193",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-02-13",
+      "alias": "D392464547",
+      "shortId": "D392464547"
+    },
+    {
+      "id": "bb7eb011-e0fc-48ce-8d97-fe7b251a0a89",
+      "severity": "LOW",
+      "status": "Closed",
+      "title": "[EC2_BP_4] Repair VETTING_CBP_CONSOLE_CPLD - FOX.3H0351370017",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-02-19",
+      "alias": "D395233848",
+      "shortId": "D395233848"
+    },
+    {
+      "id": "58be40a3-bb30-4504-b97a-8673b6dc2e03",
+      "severity": "LOW",
+      "status": "Closed",
+      "title": "[EC2_BP_4] Repair VFM_EPS_MISSING_PSTORE - FOX.3H0351370017",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-02-18",
+      "alias": "D395007162",
+      "shortId": "D395007162"
+    },
+    {
+      "id": "a045eb86-c0d8-4157-bb90-b9220f69080d",
+      "severity": "LOW",
+      "status": "Resolved",
+      "title": "[RPO_3][EC2_BP_4] Repair VETTING_CBP_VFM - FOX.2M0660870151 [EC2R8GD23]",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-03-05",
+      "alias": "D403558069",
+      "shortId": "D403558069"
+    },
+    {
+      "id": "2fef0c14-e6fb-41ce-9f1f-cc25ee900ae2",
+      "severity": "LOW",
+      "status": "Closed",
+      "title": "[EC2_BP_4] Repair VFM_AL_1G_K2_MANAGED_PING_FAILED - FOX.2M0660870151",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-02-18",
+      "alias": "D394898266",
+      "shortId": "D394898266"
+    },
+    {
+      "id": "3b5e5450-294b-469c-b0b6-747597f98b86",
+      "severity": "LOW",
+      "status": "Resolved",
+      "title": "[EC2_BP_4] Repair VETTING_CBP_AL_K2_HBER_FAIL - FOX.2M0352670097",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-03-05",
+      "alias": "D403423055",
+      "shortId": "D403423055"
+    },
+    {
+      "id": "7f477f39-444a-4083-b061-6a5895a4196d",
+      "severity": "LOW",
+      "status": "Closed",
+      "title": "[POWERSHELF_BP_1] Repair CONSOLE - SNX.611531ADN01X6O3602W",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-02-18",
+      "alias": "D394753130",
+      "shortId": "D394753130"
+    },
+    {
+      "id": "ea4ad2e9-dd85-4c42-990d-836f520ac252",
+      "severity": "LOW",
+      "status": "Resolved",
+      "title": "[EC2_BP_4] Repair VETTING_CBP_VFM - FOX.NA0160870453 [EC2C8GC23]",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-03-02",
+      "alias": "D401265302",
+      "shortId": "D401265302"
+    },
+    {
+      "id": "ea4e5bb2-4229-4b77-87df-3ef54188da37",
+      "severity": "LOW",
+      "status": "Closed",
+      "title": "[EC2_BP_2] Repair VETTING_CBP_MEMORY - JBL.100003521238711 [EC2C6GN19]",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-02-18",
+      "alias": "D394705176",
+      "shortId": "D394705176"
+    },
+    {
+      "id": "3e65f10c-685c-4cb2-8011-65ac026d5824",
+      "severity": "LOW",
+      "status": "Resolved",
+      "title": "[ICN81] Red Zone Entry (RZE) Tracking - DH: 4-1",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "hyeongs",
+      "date": "2026-03-05",
+      "alias": "P393287301",
+      "shortId": "P393287301"
+    },
+    {
+      "id": "a0885c49-cc33-4161-bf02-53b860744cbe",
+      "severity": "LOW",
+      "status": "Resolved",
+      "title": "Media Destruction Consolidation Move - [ICN81] [03/05/2026]",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "jaehocho",
+      "date": "2026-03-03",
+      "alias": "P392161143",
+      "shortId": "P392161143"
+    },
+    {
+      "id": "ead36d09-99c3-4bd6-aef3-236e116988bc",
+      "severity": "LOW",
+      "status": "Resolved",
+      "title": "[EC2_BP_4] Repair VETTING_CBP_CONSOLE - FOX.5HPK51770328 [EC2R7IK21]",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-03-05",
+      "alias": "D403170024",
+      "shortId": "D403170024"
+    },
+    {
+      "id": "b738dc5c-2d68-4389-8526-3f409dd12b49",
+      "severity": "LOW",
+      "status": "Closed",
+      "title": "[TI-BUFFER-SUSPECT][POWERSHELF_BP_1] Repair FIRMWARE_UPGRADE_BBU",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2025-11-14",
+      "alias": "D341879060",
+      "shortId": "D341879060"
+    },
+    {
+      "id": "a1b04866-d240-4e33-ab04-961c1a8088ce",
+      "severity": "LOW",
+      "status": "Resolved",
+      "title": "[EC2_BP_2] Repair VFM_AL_K2_PCIE_LINK_EP - FOX.2M0555370350",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-03-04",
+      "alias": "D402888410",
+      "shortId": "D402888410"
+    },
+    {
+      "id": "141b9028-c92a-4f65-b0a0-847129c1c260",
+      "severity": "LOW",
+      "status": "Resolved",
+      "title": "[EC2_BP_4] Repair VETTING_CBP_VFM - QCI.QMNUX25341995 [EC2M7AK21]",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-03-04",
+      "alias": "D402869737",
+      "shortId": "D402869737"
+    },
+    {
+      "id": "fca6afea-0377-4aae-bd13-ec8cbc2dc44c",
+      "severity": "LOW",
+      "status": "Closed",
+      "title": "[EC2_BP_4] Repair VETTING_CBP_VFM - FOX.2M0660870151 [EC2R8GD23]",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-02-17",
+      "alias": "D394382287",
+      "shortId": "D394382287"
+    },
+    {
+      "id": "a674e3b9-bb0f-4b38-9ed0-94e8a70ef511",
+      "severity": "LOW",
+      "status": "Pending",
+      "title": "[MF-S][EC2_BP_1][ICN81 5-2 05-02-012-38] Please repair VETTING_CBP_VFM problem with FOX.1HPK52970868 [EC2C7IK21] [ec2] [Vetting]",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-03-02",
+      "alias": "D401489664",
+      "shortId": "D401489664",
+      "lastUpdated": "2026-03-09T05:11:19Z",
+      "ibu": 15
+    },
+    {
+      "id": "5b2e53cf-2888-4179-a6b8-9aff47317f1c",
+      "severity": "MEDIUM",
+      "status": "Resolved",
+      "title": "[POWERSHELF_BP_1] Repair VETTING_POWERSHELF - SNX.62153HANN010AP300G9",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-03-05",
+      "alias": "D403325790",
+      "shortId": "D403325790"
+    },
+    {
+      "id": "16163b52-6543-487d-a2a0-ddb9796259a6",
+      "severity": "LOW",
+      "status": "Resolved",
+      "title": "Rack install Mar-04: 2x internal cables TOR-Patch missing by vendor",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "hyeongs",
+      "date": "2026-03-04",
+      "alias": "P392765184",
+      "shortId": "P392765184"
+    },
+    {
+      "id": "11058da1-41be-40b4-a42d-56c87eec458a",
+      "severity": "LOW",
+      "status": "Resolved",
+      "title": "[MF-S][EC2_BP_1] Repair VETTING_CBP_VFM - JBL.100003521147289 [EC2C7IK21]",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-02-16",
+      "alias": "D393627186",
+      "shortId": "D393627186"
+    },
+    {
+      "id": "2a9bb30f-4298-4250-9d90-6a96976a17ce",
+      "severity": "LOW",
+      "status": "Closed",
+      "title": "[EC2_BP_1] Repair VETTING_CBP_CONSOLE_CPLD - FOX.2M0552670091",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-02-17",
+      "alias": "D394085624",
+      "shortId": "D394085624"
+    },
+    {
+      "id": "dee6bfed-e0f8-49ea-9e19-89afd69b6a6c",
+      "severity": "LOW",
+      "status": "Resolved",
+      "title": "[EC2_BP_4] Repair VETTING_CBP_VFM - FOX.5HPK51770328 [EC2R7IK21]",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-03-02",
+      "alias": "D401286149",
+      "shortId": "D401286149"
+    },
+    {
+      "id": "afefa6ba-1a2a-4d79-88e2-63830e3c4b6b",
+      "severity": "LOW",
+      "status": "Closed",
+      "title": "[EC2_BP_2] Repair VETTING_CBP_VFM - FOX.BRN155170017 [EC2I419]",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-02-16",
+      "alias": "D393644971",
+      "shortId": "D393644971"
+    },
+    {
+      "id": "c85bf043-40e3-4ece-91c8-6de74d7077bb",
+      "severity": "LOW",
+      "status": "Closed",
+      "title": "[NETWORK_BP_5] Johnny 5 icn80-81-es-e1-b3-t1-r5 link repair",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-02-16",
+      "alias": "D393555382",
+      "shortId": "D393555382"
+    },
+    {
+      "id": "d085c33f-e07a-4e4b-bed3-210b5631c7f8",
+      "severity": "LOW",
+      "status": "Closed",
+      "title": "[EC2_BP_4][CBP] Host asset 2316002216 failed handoff - rack 06-03-006-21",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-02-14",
+      "alias": "D392904724",
+      "shortId": "D392904724"
+    },
+    {
+      "id": "b6d610ad-6ff9-4964-9d05-8a2c7261edbb",
+      "severity": "LOW",
+      "status": "Resolved",
+      "title": "[RPO_2][EC2_BP_4] Repair VFM_AL_1G_K2_MANAGED_PING_FAILED - FOX.2M0660870151",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-02-26",
+      "alias": "D399128239",
+      "shortId": "D399128239"
+    },
+    {
+      "id": "aa0a9619-f6d5-4d68-a177-b879f83b72ba",
+      "severity": "LOW",
+      "status": "Assigned",
+      "title": "[Drills][DCO][ICN81] Weekly Compliance Reminder",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "rackdown_workflow",
+      "date": "2026-03-01",
+      "alias": "V2124990152",
+      "shortId": "V2124990152",
+      "lastUpdated": "2026-03-08T12:02:47Z",
+      "excludeFromBriefing": true
+    },
+    {
+      "id": "d85482ba-0b35-4a9d-9a2e-443bde2d3dff",
+      "severity": "LOW",
+      "status": "Closed",
+      "title": "[RPO_3][EC2_BP_1] Repair VETTING_CBP_AL_K2_LANE_MARGINING",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-02-14",
+      "alias": "D392947273",
+      "shortId": "D392947273"
+    },
+    {
+      "id": "a940ac94-4bec-4e9a-b073-7977b13fa02e",
+      "severity": "LOW",
+      "status": "Closed",
+      "title": "[NETWORK_BP_5] Johnny 5 link repair jrp15-2 <-> jrp31-2",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-02-13",
+      "alias": "D392435526",
+      "shortId": "D392435526"
+    },
+    {
+      "id": "6afd21f8-292a-4831-9957-ffda698065cd",
+      "severity": "LOW",
+      "status": "Closed",
+      "title": "[EC2_BP_4] Repair VFM_AL_1G_K2_MANAGED_PING_FAILED - FOX.2M0660870158",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-02-13",
+      "alias": "D392493998",
+      "shortId": "D392493998"
+    },
+    {
+      "id": "ed02f384-60ad-4b52-af31-a9b5239558be",
+      "severity": "LOW",
+      "status": "Closed",
+      "title": "Pager test UPDATED - ICN81 (Feb 12)",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "tavern",
+      "date": "2026-02-12",
+      "alias": "V2106911719",
+      "shortId": "V2106911719"
+    },
+    {
+      "id": "ad6f356b-d03d-47fe-bfd8-abbf1070e1a4",
+      "severity": "LOW",
+      "status": "Closed",
+      "title": "[NETWORK_BP_5] STORM Rack Audit - ICN81.6-3.HOTRACK",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-02-12",
+      "alias": "D391917377",
+      "shortId": "D391917377"
+    },
+    {
+      "id": "b1bd5a68-8a07-45c3-ae4c-c5a0eb344d3e",
+      "severity": "LOW",
+      "status": "Closed",
+      "title": "[NETWORK_BP_5] STORM Rack Audit - ICN81.7-4.HOTRACK",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-02-12",
+      "alias": "D391917443",
+      "shortId": "D391917443"
+    },
+    {
+      "id": "1032e54c-599f-43e0-b638-14f2149045b8",
+      "severity": "LOW",
+      "status": "Closed",
+      "title": "[NETWORK_BP_5] STORM Rack Audit - ICN81.5-2.HOTRACK",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-02-12",
+      "alias": "D391917373",
+      "shortId": "D391917373"
+    },
+    {
+      "id": "ad9e6d60-2ffd-42df-8d6d-59254a359b4e",
+      "severity": "LOW",
+      "status": "Closed",
+      "title": "[NETWORK_BP_5] STORM Rack Audit - ICN81.4-1.HOTRACK",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-02-12",
+      "alias": "D391917365",
+      "shortId": "D391917365"
+    },
+    {
+      "id": "e31c0720-295a-4d8c-9751-952b966964bd",
+      "severity": "LOW",
+      "status": "Closed",
+      "title": "[NETWORK_BP_5] STORM Rack Audit - ICN81.8-5.HOTRACK",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-02-12",
+      "alias": "D391917342",
+      "shortId": "D391917342"
+    },
+    {
+      "id": "88edfe27-9109-4ec4-a068-b07b94432c65",
+      "severity": "LOW",
+      "status": "Closed",
+      "title": "[NETWORK_BP_5] Skynet V2: device:unreachable on console.icn.network",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-02-11",
+      "alias": "D391029651",
+      "shortId": "D391029651"
+    },
+    {
+      "id": "6b7e0b8a-d8e3-4444-a428-1d2db15ab472",
+      "severity": "LOW",
+      "status": "Resolved",
+      "title": "Pager test UPDATED - ICN81 (Feb 26)",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "tavern",
+      "date": "2026-02-26",
+      "alias": "V2122045784",
+      "shortId": "V2122045784"
+    },
+    {
+      "id": "ed1986df-4818-4f2c-a15c-c4cba22c2b45",
+      "severity": "LOW",
+      "status": "Closed",
+      "title": "[Drills][DCO][ICN81] Weekly Compliance Reminder (Feb)",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "rackdown_workflow",
+      "date": "2026-02-01",
+      "alias": "V2094579064",
+      "shortId": "V2094579064",
+      "excludeFromBriefing": true
+    },
+    {
+      "id": "286712b8-781c-4b36-bcb0-7f42390076e1",
+      "severity": "LOW",
+      "status": "Resolved",
+      "title": "[ICN81] Red Zone Entry (RZE) Tracking - DH: 5-2",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "jmko",
+      "date": "2026-02-26",
+      "alias": "P389582091",
+      "shortId": "P389582091"
+    },
+    {
+      "id": "15eec383-7376-4e3d-8d05-162426606e88",
+      "severity": "LOW",
+      "status": "Resolved",
+      "title": "[EC2_BP_4] Repair VETTING_CBP_VFM - FOX.3H0654870355 [EC2R7GDK21]",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-02-24",
+      "alias": "D398109199",
+      "shortId": "D398109199"
+    },
+    {
+      "id": "255b41f7-1acb-48bb-9f39-936aa89cd6d3",
+      "severity": "LOW",
+      "status": "Closed",
+      "title": "[APRSTOP][EC2_BP_4] Repair VETTING_CBP_MEMORY - FOX.2M5655270251",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-02-07",
+      "alias": "D389376456",
+      "shortId": "D389376456"
+    },
+    {
+      "id": "cff9e42b-333b-40e0-9f00-7699ee857230",
+      "severity": "LOW",
+      "status": "Resolved",
+      "title": "[Drills][DCO][ICN81] Weekly Compliance Reminder (Feb 22)",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "rackdown_workflow",
+      "date": "2026-02-22",
+      "alias": "V2117294933",
+      "shortId": "V2117294933",
+      "excludeFromBriefing": true
+    },
+    {
+      "id": "52610afa-85f0-4570-a306-0194798bbe54",
+      "severity": "LOW",
+      "status": "Resolved",
+      "title": "[RPO_1][EC2_BP_4] Repair VETTING_CBP_VFM - FOX.2M0660870151",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-02-24",
+      "alias": "D398029102",
+      "shortId": "D398029102"
+    },
+    {
+      "id": "7f4e9309-cd23-4a63-86b7-3cbb0bcd74da",
+      "severity": "LOW",
+      "status": "Resolved",
+      "title": "[MF-S][EC2_BP_1] Repair VFM_AL_K2_NVME_FAIL - QCI.QMNUX25262872",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-02-23",
+      "alias": "D397457300",
+      "shortId": "D397457300"
+    },
+    {
+      "id": "07b04324-e7dc-40c8-9bc2-0ad16a447a38",
+      "severity": "LOW",
+      "status": "Closed",
+      "title": "[NETWORK_BP_6] Johnny 5 link repair jrp2-1 <-> jrp29-1",
+      "summary": "",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "date": "2026-02-09",
+      "alias": "D390333416",
+      "shortId": "D390333416"
+    },
+    {
+      "id": "cdab20e9-2829-4fc2-b382-a5b1af0978e7",
+      "shortId": "D405633198",
+      "title": "[RPO_1][EC2_BP_4][ICN81 4-1 04-01-012-37] Please repair VETTING_CBP_VFM_AL_K2_ALL_PCIE_PORTS_FAILED problem with FOX.5HPK51770328 [EC2R7IK21] [ec2] [Vetting]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-09",
+      "lastUpdated": "2026-03-09T02:58:25Z",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "ibu": 11
+    },
+    {
+      "id": "672614d2-f1cc-452a-903a-bc0d72a839f2",
+      "shortId": "D404898076",
+      "title": "[EC2_BP_2][ICN81 6-3 06-03-007-19] Please repair VETTING_CBP_VFM_AL_K2_PCIE_LINK_EP problem with FOX.2M0555370369 [EC2R8G23] [ec2] [Vetting]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-07",
+      "lastUpdated": "2026-03-08T22:42:37Z",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "ibu": 5
+    },
+    {
+      "id": "7e8646a8-a8d1-4f3c-a005-4b5376b495bc",
+      "shortId": "D404957091",
+      "title": "[EC2_BP_4][ICN81 4-1 04-01-011-33] Please repair VETTING_CBP_MEMORY problem with ZT.210546710015 [EC2M7IK21] [ec2] [Vetting]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-07",
+      "lastUpdated": "2026-03-08T21:06:46Z",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "ibu": 8
+    },
+    {
+      "id": "f1916a74-c0fc-40b6-8cc1-a1dbf2d02f5b",
+      "shortId": "V2132902845",
+      "title": "[Drills][DCO][ICN81] Weekly Compliance Reminder",
+      "status": "Assigned",
+      "severity": "LOW",
+      "date": "2026-03-08",
+      "lastUpdated": "2026-03-08T20:47:06Z",
+      "cluster": "ICN81",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": true
+    },
+    {
+      "id": "7ca1911c-31a0-4803-b9ef-9a2a3ce2a6b4",
+      "shortId": "V2129107020",
+      "title": "[24TH][DONE][SDO_BP_4][ICN52 1-1 11904]Please diagnose icn52-52-es-svc-p11301.icn",
+      "status": "Pending",
+      "date": "2026-03-05",
+      "cluster": "ICN52",
+      "team": "DCO",
+      "severity": "LOW",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "67889cbb-461b-48c5-86de-f5a1171b82cc",
+      "shortId": "V2133151030",
+      "title": "ICN52 - Visual Media Bin Inspection",
+      "status": "Assigned",
+      "date": "2026-03-09",
+      "cluster": "ICN52",
+      "team": "DCO",
+      "severity": "LOW",
+      "from": "boost-ticket-processor"
+    },
+    {
+      "id": "ee5f0f5a-31a2-4024-857e-8928658e6bb0",
+      "shortId": "V2132988330",
+      "title": "DWELL Daily Report Ticket - ICN52",
+      "status": "Assigned",
+      "date": "2026-03-08",
+      "cluster": "ICN52",
+      "team": "DCO",
+      "severity": "LOW",
+      "from": "boost-ticket-processor"
+    },
+    {
+      "id": "545d8fd6-679c-4160-af6d-e96d3461ace8",
+      "shortId": "V2132915338",
+      "title": "[Drills][DCO][ICN52] Weekly Compliance Reminder",
+      "status": "Assigned",
+      "date": "2026-03-08",
+      "excludeFromBriefing": true,
+      "cluster": "ICN52",
+      "team": "DCO",
+      "severity": "LOW",
+      "from": "boost-ticket-processor"
+    },
+    {
+      "id": "5d54ea27-ec1d-4a69-96cb-f14e716ee0a7",
+      "shortId": "V2131070393",
+      "title": "Apply updates on spare laptop and CICO laptops - ICN52",
+      "status": "Pending",
+      "date": "2026-03-06",
+      "cluster": "ICN52",
+      "team": "DCO",
+      "severity": "LOW",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "600a0bd8-6cd7-4141-adff-a19ccf76aed8",
+      "shortId": "V2131070430",
+      "title": "Critical spare cycle count - ICN52",
+      "status": "Pending",
+      "date": "2026-03-06",
+      "cluster": "ICN52",
+      "team": "DCO",
+      "severity": "LOW",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "97aa255e-315d-4b2c-865e-0d517369e281",
+      "shortId": "V2131070764",
+      "title": "DWELL Daily Report Ticket - ICN52",
+      "status": "Pending",
+      "date": "2026-03-06",
+      "cluster": "ICN52",
+      "team": "DCO",
+      "severity": "LOW",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "594f4a73-9fee-4ef5-b2e4-efa4120f4651",
+      "shortId": "V2132058991",
+      "title": "DWELL Daily Report Ticket - ICN52",
+      "status": "Pending",
+      "date": "2026-03-07",
+      "cluster": "ICN52",
+      "team": "DCO",
+      "severity": "LOW",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "b1507432-5958-48dd-a54d-acc16a04a4e4",
+      "shortId": "V2129913094",
+      "title": "Pager test UPDATED read the details carefully - ICN52",
+      "status": "Pending",
+      "date": "2026-03-05",
+      "cluster": "ICN52",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "26792697-def6-496d-9065-d9f5c79c10cc",
+      "shortId": "P168780508",
+      "title": "Exothermic Event Incident Report [ICN63] - [4905020697]",
+      "status": "Assigned",
+      "date": "2024-11-11",
+      "cluster": "ICN63",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "60854363-5899-459a-b591-dacc431d1cc5",
+      "shortId": "D387239038",
+      "title": "[POWERSHELF_BP_1][ICN59 8-2 08-02-005-23] Please repair VETTING_POWERSHELF problem with FOX.62153HANN010AP3601R [PWRWMW240PSC16]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-02-03",
+      "cluster": "ICN59",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "9dec2d80-b461-4f04-ad43-50c15424cfe6",
+      "shortId": "P388321066",
+      "title": "[Media][S3_STORAGE_BP_1][ICN63-3-2-22809][486 TB] Host requires troubleshooting s3-prod-r2d2-icn52weba18t-52001",
+      "status": "Pending",
+      "date": "2026-02-24",
+      "cluster": "ICN63",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "3e08f66b-550a-4af1-aab8-e7f8e8dbe325",
+      "shortId": "V2123073215",
+      "title": "[ICN71] 7S - Site Walkthrough",
+      "status": "Assigned",
+      "date": "2026-02-27",
+      "cluster": "ICN71",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "6cb35cbd-dc73-4c5a-b2e2-3adddac68e51",
+      "shortId": "D400054402",
+      "title": "[REIN-76][EC2_BP_2][ICN56 4-2 21103] Please repair VETTING_MEMORY problem with SNX.MAL15T041802888 [EC2I315]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-02-28",
+      "cluster": "ICN56",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "09570c00-82b3-4f83-9afc-4ae65b12ef1a",
+      "shortId": "V2124986423",
+      "title": "[Drills][DCO][ICN71] Weekly Compliance Reminder",
+      "status": "Assigned",
+      "date": "2026-03-01",
+      "cluster": "ICN71",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": true
+    },
+    {
+      "id": "9b10d713-e2a6-41af-980d-b7f681c77d14",
+      "shortId": "D401453950",
+      "title": "[Media][EBS_BP_1][ICN63 3-1 12516] Please repair VETTING_VFM problem with FOX.GASH13130021 [EBSFLASH816]",
+      "status": "Pending",
+      "date": "2026-03-02",
+      "cluster": "ICN63",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "4135d884-c084-4ba6-8798-2c4f53bae868",
+      "shortId": "D401580068",
+      "title": "[DONE][EC2_BP_2][ICN56 9-3 31514] Please repair VETTING_ANNAPURNA_PCIE_K2C problem with QCI.QTFCLP9350920 [EC2I315]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-02",
+      "cluster": "ICN56",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "dc462639-668d-414e-9e4c-e99371787658",
+      "shortId": "D401954279",
+      "title": "[RE-OPENED][POWERSHELF_BP_1][ICN71 5-8 05-08-006-19] Please repair VETTING_CBP_POWERSHELF problem with DTA.LYBD2551021426",
+      "status": "Assigned",
+      "severity": "LOW",
+      "date": "2026-03-03",
+      "cluster": "ICN71",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "968ad830-1a5a-4498-8f7f-1437d99741a7",
+      "shortId": "D402451691",
+      "title": "[RE-OPENED][EC2_BP_1][ICN71 2-2 02-02-003-43] Please repair VETTING_CBP_NVIDIA_FDT_GPU_STALL problem with QCI.QTWA5PAC245200010 [EC2G6E17C]",
+      "status": "Assigned",
+      "severity": "LOW",
+      "date": "2026-03-04",
+      "cluster": "ICN71",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "35f3c491-f60c-4050-99da-01d244c5b938",
+      "shortId": "D402637593",
+      "title": "[ICN56][9-3 30903][9-5 52603][NETWORK_BP_5][Johnny 5] icn52-56-es-e1-b18-t2-r13 jrp3-2 <-> icn52-56-es-e1-s10-r13 jrp5-2",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-04",
+      "cluster": "ICN56",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "c4a58af9-c35c-4e97-b5f9-d4a8f1927fa3",
+      "shortId": "D402777057",
+      "title": "[MF-S][EC2_BP_4][ICN56 9-5 50812] Please repair HWMON problem with SNX.TCY16W121801507 [EC2C516]",
+      "status": "Pending",
+      "date": "2026-03-04",
+      "cluster": "ICN56",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "95ba189a-53ad-4175-9d6d-cdb6e6e45703",
+      "shortId": "D403145688",
+      "title": "[EC2_BP_2][ICN56 4-1 41813] Please repair VETTING_ANNAPURNA_LTSSM_NVME problem with ZT.206564810133 [EC2I315]",
+      "status": "Assigned",
+      "severity": "LOW",
+      "date": "2026-03-05",
+      "cluster": "ICN56",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "9bfa93bb-9535-49aa-b523-e2d3994ad1c3",
+      "shortId": "D403278014",
+      "title": "[ICN56][9-5 52713][4-2 22102][NETWORK_BP_5][Johnny 5] icn52-56-es-e1-s16-r11 jrp3-1 <-> icn52-56-es-e1-b9-t2-r11 jrp4-4",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-05",
+      "cluster": "ICN56",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "58c5a57f-2f8f-41b9-b137-e41b9d9e098e",
+      "shortId": "D403519380",
+      "title": "[EC2_BP_4][ICN63 6-3 31914] Please repair VETTING_CBP_VFM_AL_GRV_MOBO_BOOT_FAIL problem with FOX.1H0533770084 [EC2R7G21]",
+      "status": "Assigned",
+      "severity": "LOW",
+      "date": "2026-03-05",
+      "cluster": "ICN63",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "7801c670-fe29-4d39-a3f7-37358dcc39a1",
+      "shortId": "V2129913211",
+      "title": "Weekly Pod Walkthrough - ICN71",
+      "status": "Assigned",
+      "date": "2026-03-05",
+      "cluster": "ICN71",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "148f6b8e-48f1-4fcf-930a-e0b98da4cdbb",
+      "shortId": "D403778036",
+      "title": "[EC2_BP_4][ICN63 3-1 10805] Please repair VETTING_ANNAPURNA_REVERT_TO_STOCK problem with FOX.TR0410870046 [EC2M5D16C]",
+      "status": "Pending",
+      "date": "2026-03-06",
+      "cluster": "ICN63",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "c7119cb6-048c-4611-89f8-641d178cd4bc",
+      "shortId": "D404002248",
+      "title": "[ICN56][9-5 52603][9-5 51601][NETWORK_BP_5][Johnny 5] icn52-56-es-e1-s10-r11 jrp5-1",
+      "status": "Pending",
+      "date": "2026-03-06",
+      "cluster": "ICN56",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "0fdaddea-01a3-4fa5-b4f3-269ed6be7003",
+      "shortId": "D404062892",
+      "title": "[EC2_BP_4][ICN63 3-2 22012] Please repair VETTING_VFM problem with FOX.T16R21670022 [EC2R5DN16C]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-06",
+      "cluster": "ICN63",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "d2e44774-dafe-4488-b53f-3b24a4edf7d2",
+      "shortId": "D404151162",
+      "title": "[Media][EBS_BP_1][ICN63 3-1 12408] Please repair HWMON problem with FOX.GASH13330088 [EBSFLASH816]",
+      "status": "Pending",
+      "date": "2026-03-06",
+      "cluster": "ICN63",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "5726e0c9-f501-4dd6-b878-a4d7f6eb470f",
+      "shortId": "D404250664",
+      "title": "[EC2_BP_1][ICN71 5-8 05-08-004-19] Please repair VETTING_CBP_NVIDIA_FDT_GPU_OTHER_SOFTWARE_ERROR problem with QCI.QTWA5LAC260600113 [EC2G7E21]",
+      "status": "Assigned",
+      "severity": "LOW",
+      "date": "2026-03-06",
+      "cluster": "ICN71",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "5e2016fb-a400-4c96-b58a-d37709c6cf96",
+      "shortId": "D404298859",
+      "title": "[ICN56][9-5 52603][9-5 50601][NETWORK_BP_5][Johnny 5] icn52-56-es-e1-s9-r15 jrp3-4",
+      "status": "Pending",
+      "date": "2026-03-06",
+      "cluster": "ICN56",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "cb1a3057-5df3-4529-95d9-443c3bc78da3",
+      "shortId": "V2130953312",
+      "title": "[ICN71] 7S - Site Walkthrough",
+      "status": "Assigned",
+      "date": "2026-03-06",
+      "cluster": "ICN71",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "5e8e3e3a-placeholder",
+      "shortId": "D404402778",
+      "title": "[EC2_BP_1][ICN71 5-8 05-08-006-21] Please repair VETTING_CBP_NVIDIA_FDT_GPU_PCIE_EXPRESS_BUS_ERROR problem with QCI.QTWA5LAC260600119 [EC2G7E21]",
+      "status": "Assigned",
+      "severity": "LOW",
+      "date": "2026-03-06",
+      "cluster": "ICN71",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "placeholder-D404653454",
+      "shortId": "D404653454",
+      "title": "[EC2_BP_4][ICN71 5-7 05-07-003-27] Please repair VETTING_CBP_PDB problem with FOX.5HPK54670466 [EC2R7IK21]",
+      "status": "Assigned",
+      "severity": "LOW",
+      "date": "2026-03-07",
+      "cluster": "ICN71",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "placeholder-D404801562",
+      "shortId": "D404801562",
+      "title": "[EC2_BP_2][ICN71 2-1 02-01-008-31] Please repair VETTING_CBP_AL_GRV_DDR_LOG_PARSER_CBP_DDR_INIT problem with FOX.2M0560470059 [EC2R8G23]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-07",
+      "cluster": "ICN71",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "placeholder-D404806816",
+      "shortId": "D404806816",
+      "title": "[EC2_BP_4][ICN63 6-3 32005] Please repair VETTING_CBP_VFM problem with SNX.BRUN1W082305245 [EC2I419]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-07",
+      "cluster": "ICN63",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "placeholder-D404853144",
+      "shortId": "D404853144",
+      "title": "[EC2_BP_2][ICN63 3-2 20412] Please repair VETTING_ANNAPURNA_K2X_SIDE_LINK_DEGRADED problem with SNX.TRK45W112101375 [EC2R5B16C]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-07",
+      "cluster": "ICN63",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "placeholder-D404905631",
+      "shortId": "D404905631",
+      "title": "[EC2_BP_4][ICN63 3-2 20415] Please repair VETTING_CBP_VFM_K2_1G_BMC_CONNECTIVITY problem with FOX.1B0913250236 [EC2G5G19]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-07",
+      "cluster": "ICN63",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "placeholder-D404906934",
+      "shortId": "D404906934",
+      "title": "[EC2_BP_2][ICN71 3-3 03-03-002-37] Please repair VETTING_CBP_VFM_AL_K2_PCIE_LINK_EP problem with FOX.1HPK53570087 [EC2C7IK21]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-07",
+      "cluster": "ICN71",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "placeholder-D405198381",
+      "shortId": "D405198381",
+      "title": "[EC2_BP_2][ICN56 9-5 52410] Please repair VETTING_MEMORY problem with FOX.TR0504670045 [EC2R516C]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-08",
+      "cluster": "ICN56",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "placeholder-D405300404",
+      "shortId": "D405300404",
+      "title": "[EC2_BP_2][ICN63 3-2 21213] Please repair VETTING_ANNAPURNA_K2X_SIDE_LINK_DEGRADED problem with SNX.TRK45W112101449 [EC2R5B16C]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-08",
+      "cluster": "ICN63",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "placeholder-D405426860",
+      "shortId": "D405426860",
+      "title": "[EC2_BP_4][ICN56 9-3 30709] Please repair VETTING_VFM problem with SNX.CN16BW101902661 [EC2C5N16]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-08",
+      "cluster": "ICN56",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "placeholder-D405459825",
+      "shortId": "D405459825",
+      "title": "[ICN71][2-1 02-01-004-17][2-1 02-01-004-34][NETWORK_BP_5][Johnny 5] icn71-br-fnc-f1-b1-t1-r1 jrp6-3 <-> icn71-br-fnc-f1-lul-r3",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-08",
+      "cluster": "ICN71",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "placeholder-D405473816",
+      "shortId": "D405473816",
+      "title": "[MF-S][EC2_BP_4][ICN56 9-5 50714] Please repair HWMON problem with FOX.DTAC85230158 [EC2C516]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-08",
+      "cluster": "ICN56",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "placeholder-D405495774",
+      "shortId": "D405495774",
+      "title": "[EC2_BP_4][ICN63 3-1 10707] Please repair VETTING_VFM problem with SNX.CN16BW022109801 [EC2C5N16]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-08",
+      "cluster": "ICN63",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "placeholder-D405577465",
+      "shortId": "D405577465",
+      "title": "[EC2_BP_4][ICN63 3-1 10707] Please repair VETTING_VFM problem with SNX.CN16BW022110137 [EC2C5N16]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-08",
+      "cluster": "ICN63",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "placeholder-D405619150",
+      "shortId": "D405619150",
+      "title": "[ICN63][3-2 20303][3-2 20407][NETWORK_BP_5][Johnny 5] icn52-63-es-e1-b7-t1-r6 jrp10-4 <-> icn52-63-es-acc-rsw-10-43-124-128 jrp32-4",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-08",
+      "cluster": "ICN63",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "placeholder-D405642632",
+      "shortId": "D405642632",
+      "title": "[EC2_BP_4][ICN63 6-3 30816] Please repair VETTING_VFM problem with FOX.QD1624870007 [EC2I3EN16C]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-09",
+      "cluster": "ICN63",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "placeholder-D405644305",
+      "shortId": "D405644305",
+      "title": "[EC2_BP_1][ICN56 9-3 32509] Please repair VETTING_VFM problem with SNX.TREK3W111900708 [EC2M516C]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-09",
+      "cluster": "ICN56",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "placeholder-D405664908",
+      "shortId": "D405664908",
+      "title": "[EC2_BP_1][ICN71 4-6 04-06-011-43] Please repair VETTING_CBP_VFM_AL_1G_K2_MANAGED_MISSING_MULTI problem with WYN.WAA7HN529045Y [EC2TRN2PD21]",
+      "status": "Pending",
+      "severity": "LOW",
+      "date": "2026-03-09",
+      "cluster": "ICN71",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "placeholder-D405669049",
+      "shortId": "D405669049",
+      "title": "[EC2_BP_1][ICN71 4-5 04-05-007-45] Please repair VETTING_CBP_VFM_MLA_DIAG_PERMANENT_HSC_OVERCURRENT problem with WYN.WAA7HN513034Y [EC2TRN2PD21]",
+      "status": "Work In Progress",
+      "severity": "LOW",
+      "date": "2026-03-09",
+      "cluster": "ICN71",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "4694c0d7-e663-4a87-9c4c-4d38b10e7604",
+      "shortId": "V2128541464",
+      "title": "[SDO_BP_4][ICN80 6-1 12505]Please diagnose icn80-80-es-svc-c40314.icn",
+      "status": "Pending",
+      "date": "2026-03-04",
+      "cluster": "ICN80",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "3f3d6b15-e42e-462f-8934-5b6918fe8f30",
+      "shortId": "D403603950",
+      "title": "[EC2_BP_4][ICN80 8-2 22019] Please repair VETTING_VFM problem with SNX.CN16BW022110004 [EC2C5N16]",
+      "status": "Pending",
+      "date": "2026-03-05",
+      "cluster": "ICN80",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "3da3651f-e450-4756-8d69-144d7e1a24c1",
+      "shortId": "D397152665",
+      "title": "[MF-S][EC2_BP_4][ICN80 8-2 21014] Please repair HWMON problem with SNX.TREK4W092102805 [EC2M5D16C]",
+      "status": "Pending",
+      "date": "2026-02-23",
+      "cluster": "ICN80",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "7e6ff4e5-ef0b-43b2-986b-8546dc520c4a",
+      "shortId": "D399793700",
+      "title": "[MF-S][EC2_BP_4][ICN80 8-2 21014] Please repair HWMON problem with SNX.TREK4W092102810 [EC2M5D16C]",
+      "status": "Pending",
+      "date": "2026-02-27",
+      "cluster": "ICN80",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "43482b07-2d2e-4a2c-ae19-145756599751",
+      "shortId": "D401545083",
+      "title": "[MF-S][EBS_BP_3][ICN80 6-1 10304] Please repair VETTING_VFM problem with QCI.QTFCS19390022 [EBSFLASH16]",
+      "status": "Pending",
+      "date": "2026-03-02",
+      "cluster": "ICN80",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "ba3ecbf6-a06c-488e-98c5-51f97196750b",
+      "shortId": "D402795919",
+      "title": "[MF-S][EC2_BP_4][ICN80 8-2 21207] Please repair HWMON problem with FOX.T06A14670084 [EC2R5D16C]",
+      "status": "Pending",
+      "date": "2026-03-04",
+      "cluster": "ICN80",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "1081c0a7-0588-4d4e-8984-9c8fc1c00242",
+      "shortId": "D405198381",
+      "title": "[EC2_BP_2][ICN80 6-3 31407] Please repair VETTING_CBP_VFM problem with FOX.3HOP35270046 [EC2M7I21]",
+      "status": "Pending",
+      "date": "2026-03-08",
+      "cluster": "ICN80",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "0b01c873-3d77-4614-ba0c-6deeaf1fb03e",
+      "shortId": "V2132902555",
+      "title": "[Drills][DCO][ICN80] Weekly Compliance Reminder",
+      "status": "Assigned",
+      "date": "2026-03-08",
+      "cluster": "ICN80",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": true
+    },
+    {
+      "id": "a7117c72-a542-408c-bf63-15a81187ca93",
+      "shortId": "V1946214003",
+      "title": "ICN57-P1 Host: QTFCS1130001A not SSHable POP: ICN57-P1",
+      "status": "Pending",
+      "date": "2025-09-24",
+      "cluster": "ICN57",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "5cb72100-5bff-46e9-b5f4-29d113c808cf",
+      "shortId": "V1946216851",
+      "title": "ICN57-P1 Host: QTFCS112903F8 not SSHable POP: ICN57-P1",
+      "status": "Pending",
+      "date": "2025-09-24",
+      "cluster": "ICN57",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "624cc1e3-bfb5-4203-8882-c17ce79bd5ff",
+      "shortId": "P192083723",
+      "title": "[Stage1][ID][ICN57][Border] New Span deployment between ICN54-ICN57",
+      "status": "Assigned",
+      "date": "2025-01-22",
+      "cluster": "ICN57",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "5ca09385-8f86-4352-ad44-5f14bcc3518b",
+      "shortId": "P192076958",
+      "title": "[Stage1][ID][ICN57][Border] ICN57 FNC LLE",
+      "status": "Assigned",
+      "date": "2025-01-22",
+      "cluster": "ICN57",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "946f6aaf-ac06-4031-b309-c6645c2d2761",
+      "shortId": "D401876770",
+      "title": "[RPO_3][EC2_BP_4][ICN53 7-6 71204] Please repair BOOT problem with QCI.QTFCYE026009D [EC2C5AD17B]",
+      "status": "Work In Progress",
+      "date": "2026-03-03",
+      "cluster": "ICN53",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "be8dddd2-c84d-489c-8d0c-926026cfc57a",
+      "shortId": "D402631729",
+      "title": "[EC2_BP_2][ICN69 2-1 02-01-013-21] Please repair VETTING_CBP_VFM_AL_K2_ALL_PCIE_PORTS_FAILED problem with FOX.1HPK53970205 [EC2C7IK21]",
+      "status": "Pending",
+      "date": "2026-03-04",
+      "cluster": "ICN69",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "f756675b-51a7-45c9-9fce-9d9ede2fabfa",
+      "shortId": "D405126080",
+      "title": "[ICN53][7-6 71203][7-6 71505][NETWORK_BP_5][Johnny 5] icn53-53-es-e2-b14-t1-r8 jrp12-2",
+      "status": "Pending",
+      "date": "2026-03-08",
+      "cluster": "ICN53",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "879300fe-6b00-4573-855a-bc35ac4c72c4",
+      "shortId": "D405541352",
+      "title": "[ICN53 7-6 71910][NETWORK_BP_5]Skynet V2 Event: device:psu:down on icn53-br-lbe-j11-r3",
+      "status": "Pending",
+      "date": "2026-03-08",
+      "cluster": "ICN53",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "077a8e9b-5810-45aa-b861-ad095a8fdef9",
+      "shortId": "D402983113",
+      "title": "[EC2_BP_4][ICN53 7-6 71204] Please repair BOOT problem with QCI.QTFCYE0260088 [EC2C5AD17B]",
+      "status": "Pending",
+      "date": "2026-03-04",
+      "cluster": "ICN53",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "b7fab2b5-637d-4027-a01f-16ef0a95af77",
+      "shortId": "D400110304",
+      "title": "[EC2_BP_4][ICN69 2-1 02-01-013-23] Please repair VETTING_CBP_VFM problem with FOX.2M0552470440 [EC2R8G23]",
+      "status": "Pending",
+      "date": "2026-02-28",
+      "cluster": "ICN69",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "e9cd4d61-527d-4041-9659-a08f758661d7",
+      "shortId": "P395503274",
+      "title": "[ICN66] [3-1] HDD Destruction Tracking Ticket [mgyun] [2026-3-9]",
+      "status": "Assigned",
+      "date": "2026-03-09",
+      "cluster": "ICN66",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "fcaa45b8-747a-4ffb-98df-1e02f4b46a98",
+      "shortId": "D405655008",
+      "title": "[EC2_BP_1][ICN69 3-2 03-02-028-15] Please repair VETTING_CBP_AL_K2_HIGH_SPEED_ETH_PORT problem with QCI.QTWA5LAC260600196 [EC2G7E21]",
+      "status": "Pending",
+      "date": "2026-03-09",
+      "cluster": "ICN69",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "82d8c395-70bc-4ee8-bdba-ead8d6046885",
+      "shortId": "D405715193",
+      "title": "[ICN66][3-1 11803][3-1 11804][NETWORK_BP_5][Johnny 5] icn53-66-es-tar-r201 jrp17",
+      "status": "Pending",
+      "date": "2026-03-09",
+      "cluster": "ICN66",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "2a3631bf-8b2d-465d-854b-ba694e0a34ec",
+      "shortId": "D382281295",
+      "title": "[MF-S][EBS_BP_3][ICN53 7-6 71210] Please repair HWMON problem with SNX.ASH16T121901118 [EBSFLASH16]",
+      "status": "Pending",
+      "date": "2026-01-26",
+      "cluster": "ICN53",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "da104316-7a18-44fd-8d1f-144e0db4f53b",
+      "shortId": "P395467265",
+      "title": "[ICN66] 3-1 Red Zone Entry (RZE) Tracking Ticket [mgyun] [2026-3-9]",
+      "status": "Assigned",
+      "date": "2026-03-09",
+      "cluster": "ICN66",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "6e0ff134-2be1-4ab5-8bf2-47d18b96740d",
+      "shortId": "D403781363",
+      "title": "[EC2_BP_1][ICN69 2-1 02-01-028-17] Please repair VETTING_CBP_VFM problem with FOX.3HPK51470020 [EC2M7IK21]",
+      "status": "Pending",
+      "date": "2026-03-06",
+      "cluster": "ICN69",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "43aad0fc-4ccb-48e5-a8fe-323af23b6284",
+      "shortId": "D405715193",
+      "title": "[ICN66 3-1 12114][NETWORK_BP_5] Johnny 5 link down",
+      "status": "Pending",
+      "date": "2026-03-09",
+      "cluster": "ICN66",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "5e3e7c8a-1234-4a5b-b6c7-d8e9f0a1b2c3",
+      "shortId": "V2132902555",
+      "title": "[Drills][DCO][ICN53] Weekly Compliance Reminder",
+      "status": "Assigned",
+      "date": "2026-03-08",
+      "cluster": "ICN53",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": true
+    },
+    {
+      "id": "6f4f8d9b-2345-5b6c-c7d8-e9f0a1b2c3d4",
+      "shortId": "V2132897972",
+      "title": "[Drills][DCO][ICN66] Weekly Compliance Reminder",
+      "status": "Assigned",
+      "date": "2026-03-08",
+      "cluster": "ICN66",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": true
+    },
+    {
+      "id": "7a5a9eac-3456-6c7d-d8e9-f0a1b2c3d4e5",
+      "shortId": "V2132895322",
+      "title": "[Drills][DCO][ICN69] Weekly Compliance Reminder",
+      "status": "Assigned",
+      "date": "2026-03-08",
+      "cluster": "ICN69",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": true
+    },
+    {
+      "id": "1c2d3e4f-5a6b-7c8d-9e0f-a1b2c3d4e5f6",
+      "shortId": "D405126081",
+      "title": "[ICN53][7-6][NETWORK_BP_5] icn53-53-es-e2-b14 link down",
+      "status": "Pending",
+      "date": "2026-03-08",
+      "cluster": "ICN53",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "2d3e4f5a-6b7c-8d9e-0fa1-b2c3d4e5f6a7",
+      "shortId": "D405541353",
+      "title": "[ICN53 7-6][NETWORK_BP_5] Skynet V2 Event: device:psu:down icn53-br-lbe-j11-r3",
+      "status": "Pending",
+      "date": "2026-03-08",
+      "cluster": "ICN53",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "3e4f5a6b-7c8d-9e0f-a1b2-c3d4e5f6a7b8",
+      "shortId": "D402631730",
+      "title": "[EC2_BP_2][ICN69 2-1] VETTING_CBP_VFM_AL_K2 problem FOX.1HPK53970205",
+      "status": "Pending",
+      "date": "2026-03-04",
+      "cluster": "ICN69",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "4f5a6b7c-8d9e-0fa1-b2c3-d4e5f6a7b8c9",
+      "shortId": "D400110305",
+      "title": "[EC2_BP_4][ICN69 2-1] VETTING_CBP_VFM problem FOX.2M0552470440",
+      "status": "Pending",
+      "date": "2026-02-28",
+      "cluster": "ICN69",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "5a6b7c8d-9e0f-a1b2-c3d4-e5f6a7b8c9d0",
+      "shortId": "D405655009",
+      "title": "[EC2_BP_1][ICN69 3-2] VETTING_CBP_AL_K2_HIGH_SPEED_ETH_PORT QCI.QTWA5LAC260600196",
+      "status": "Pending",
+      "date": "2026-03-09",
+      "cluster": "ICN69",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "6b7c8d9e-0fa1-b2c3-d4e5-f6a7b8c9d0e1",
+      "shortId": "D403781364",
+      "title": "[EC2_BP_1][ICN69 2-1] VETTING_CBP_VFM FOX.3HPK51470020",
+      "status": "Pending",
+      "date": "2026-03-06",
+      "cluster": "ICN69",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "7c8d9e0f-a1b2-c3d4-e5f6-a7b8c9d0e1f2",
+      "shortId": "D405715194",
+      "title": "[ICN66][3-1][NETWORK_BP_5] Johnny 5 icn53-66-es-tar-r201",
+      "status": "Pending",
+      "date": "2026-03-09",
+      "cluster": "ICN66",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "8d9e0fa1-b2c3-d4e5-f6a7-b8c9d0e1f2a3",
+      "shortId": "D382281296",
+      "title": "[MF-S][EBS_BP_3][ICN53 7-6] HWMON SNX.ASH16T121901118",
+      "status": "Pending",
+      "date": "2026-01-26",
+      "cluster": "ICN53",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "9e0fa1b2-c3d4-e5f6-a7b8-c9d0e1f2a3b4",
+      "shortId": "P395503275",
+      "title": "[ICN66] HDD Destruction Tracking [mgyun]",
+      "status": "Assigned",
+      "date": "2026-03-09",
+      "cluster": "ICN66",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "a1b2c3d4-e5f6-a7b8-c9d0-e1f2a3b4c5d6",
+      "shortId": "P395467266",
+      "title": "[ICN66] Red Zone Entry (RZE) Tracking [mgyun]",
+      "status": "Assigned",
+      "date": "2026-03-09",
+      "cluster": "ICN66",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "47cfc60e-97d4-4fdc-b86a-734d39d1f0fe",
+      "shortId": "D405767802",
+      "title": "[S3_STORAGE_BP_1][ICN91 4-1 04-01-017-43] Please repair VETTING_CBP_VFM problem with FOX.1H8652570017 [S3HANUMANCV121]",
+      "status": "Pending",
+      "date": "2026-03-09",
+      "cluster": "ICN91",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "5f74974b-7bd2-43c5-8124-2b645cbc0855",
+      "shortId": "D405766047",
+      "title": "[EC2_BP_4][ICN54 1-7 71117] Please repair VETTING_VFM problem with SNX.TREK5W101900173 [EC2R516C]",
+      "status": "Pending",
+      "date": "2026-03-09",
+      "cluster": "ICN54",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "a0c6aa33-8097-4066-a089-ae3438d76b36",
+      "shortId": "D405523470",
+      "title": "[RPO_1][EC2_BP_4][ICN91 4-1 04-01-015-39] Please repair VETTING_CBP_AL_K2_NVME_INTERPOSER_FAIL problem with FOX.1M4960770031 [EC2I8GE23]",
+      "status": "Pending",
+      "date": "2026-03-08",
+      "cluster": "ICN91",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "b69afdc1-a439-457a-b320-bcaf7ecbf548",
+      "shortId": "D404631214",
+      "title": "[EC2_BP_4][ICN54 2-6 60413] Please repair VETTING_MEMORY problem with QCI.QTFCS1829002D [EC2M516]",
+      "status": "Pending",
+      "date": "2026-03-07",
+      "cluster": "ICN54",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "2830a968-a552-472f-b748-e1bd5bd8cf60",
+      "shortId": "D399137183",
+      "title": "[MF-S][EC2_BP_2][ICN54 2-6 60506] Please repair BOOT problem with SNX.BRK160318026246 [EC2M516]",
+      "status": "Pending",
+      "date": "2026-02-26",
+      "cluster": "ICN54",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "1e825ce4-0f59-4eb4-9810-6035af73a55f",
+      "shortId": "D405692788",
+      "title": "[MF-S][EBS_BP_3][ICN54 2-6 60718] Please repair HWMON problem with FOX.BASH82130009 [EBSFLASH16]",
+      "status": "Pending",
+      "date": "2026-03-09",
+      "cluster": "ICN54",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "39a6badf-fc36-4b6e-aecb-0f1a756d9692",
+      "shortId": "D405599359",
+      "title": "[ICN54 1-7 MR70300-2][NETWORK_BP_5]Skynet V2 Event: interface:down on icn54-54-p6-wsoob-con-acc-sw1",
+      "status": "Pending",
+      "date": "2026-03-09",
+      "cluster": "ICN54",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "6bc3454c-0ebb-4ea0-b9eb-b439dd90189e",
+      "shortId": "D405684255",
+      "title": "[ICN54][1-2 13409][NETWORK_BP_5][Johnny 5] icn54-54-ws-e1-b2-t1-r2 jrp24",
+      "status": "Pending",
+      "date": "2026-03-09",
+      "cluster": "ICN54",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "64503245-4717-4500-b9f5-01bbe9faf9f5",
+      "shortId": "V2133068781",
+      "title": "[Tasks] Rack Delivery Schedule Sharing",
+      "status": "Assigned",
+      "date": "2026-03-09",
+      "cluster": "ICN54",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "66a2a7df-bd86-45f7-a10b-d9b806cbd151",
+      "shortId": "D402202468",
+      "title": "[RE-OPENED][EC2_BP_2][ICN65 1-1 11533] Please repair VETTING_CBP_VFM_AL_K2_NVME_FAIL problem with FOX.1B0421270016 [EC2M6GD19]",
+      "status": "Assigned",
+      "date": "2026-03-03",
+      "cluster": "ICN65",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "ec3e2aa4-cc74-428b-a574-00b1cc8aa500",
+      "shortId": "P395371906",
+      "title": "[ICN91] Red Zone Entry (RZE) Tracking Ticket - DH: 4-1",
+      "status": "Assigned",
+      "date": "2026-03-09",
+      "cluster": "ICN91",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "8dc854b4-5734-46fa-b478-986c7332f8c3",
+      "shortId": "D384946144",
+      "title": "[MF-S][EBS_BP_3][ICN54 5-1 17518] Please repair VETTING_VFM problem with QCI.QTFCS10160031 [EBSFLASH16]",
+      "status": "Pending",
+      "date": "2026-01-30",
+      "cluster": "ICN54",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "8071a3a4-0883-4472-8c7f-cd755aeb3a7d",
+      "shortId": "D386618231",
+      "title": "[MF-S][S3_FRONTEND_BP_4][ICN54 5-1 15703] Please repair HWMON problem with ZT.206598550340 [S3WEBSERVER14] [APRSTOP]",
+      "status": "Pending",
+      "date": "2026-02-02",
+      "cluster": "ICN54",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "2a4bb79f-0af1-41ca-b441-675d89856af9",
+      "shortId": "D387244874",
+      "title": "[MF-S][S3_FRONTEND_BP_4][ICN54 5-1 15702] Please repair HWMON problem with SNX.JNO15T051700296 [S3KEYMAP15]",
+      "status": "Pending",
+      "date": "2026-02-03",
+      "cluster": "ICN54",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "abede239-2cb4-4a2f-beb8-e2d392172db7",
+      "shortId": "D399270576",
+      "title": "[MF-S][EBS_BP_1][ICN54 4-9 90908] Please repair VETTING_VFM problem with QCI.QTFCS11130829 [EBSFLASH816]",
+      "status": "Pending",
+      "date": "2026-02-27",
+      "cluster": "ICN54",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "e74a5d4e-393b-4d61-b722-5dc7bef1544c",
+      "shortId": "D404833673",
+      "title": "[MF-S][EBS_BP_1][ICN54 4-1 11514] Please repair HWMON problem with FOX.GASH14830058 [EBSFLASH816]",
+      "status": "Pending",
+      "date": "2026-03-07",
+      "cluster": "ICN54",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "5bc797a6-42ec-44e6-888a-6a017dee5e1d",
+      "shortId": "D397282362",
+      "title": "[DO_NOT_REMOVE_OS_DRIVE][ICN54 5-1 19307][S3_STORAGE_BP_3][S3RACKCONSOLIDATION-Purge all storage drives]",
+      "status": "Pending",
+      "date": "2026-02-23",
+      "cluster": "ICN54",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "9086e180-a742-43f9-8b46-f2631606fac9",
+      "shortId": "V2132908700",
+      "title": "[Drills][DCO][ICN92] Weekly Compliance Reminder",
+      "status": "Assigned",
+      "date": "2026-03-08",
+      "cluster": "ICN92",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": true
+    },
+    {
+      "id": "4dd47e54-7645-4159-9766-89890cd57e0f",
+      "shortId": "V2132897972",
+      "title": "[Drills][DCO][ICN54] Weekly Compliance Reminder",
+      "status": "Pending",
+      "date": "2026-03-08",
+      "cluster": "ICN54",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": true
+    },
+    {
+      "id": "cd368b12-b4c8-4ec5-9a8e-aa7e2297f36a",
+      "shortId": "V2132895322",
+      "title": "[Drills][DCO][ICN91] Weekly Compliance Reminder",
+      "status": "Assigned",
+      "date": "2026-03-08",
+      "cluster": "ICN91",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": true
+    },
+    {
+      "id": "aa1eabcc-e530-4565-8147-36cfa4781209",
+      "shortId": "V2132895784",
+      "title": "[Drills][DCO][ICN65] Weekly Compliance Reminder",
+      "status": "Assigned",
+      "date": "2026-03-08",
+      "cluster": "ICN65",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": true
+    },
+    {
+      "id": "6100bc3c-8289-4133-add6-a6f72b099a17",
+      "shortId": "D405472953",
+      "title": "[MF-S][EBS_BP_3][ICN54 5-1 17404] Please repair HWMON problem with QCI.QTFCS104001FB [EBSFLASH16]",
+      "status": "Pending",
+      "date": "2026-03-08",
+      "cluster": "ICN54",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "ed2f08e9-24e6-4e17-8ed4-8ba069c46907",
+      "shortId": "D404913032",
+      "title": "[EC2_BP_1][ICN65 3-2 21306] Please repair VETTING_VFM problem with QCI.QTFCLP22400E4 [EC2I315]",
+      "status": "Pending",
+      "date": "2026-03-07",
+      "cluster": "ICN65",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "298e05a5-d97d-45fc-b499-434c93c07937",
+      "shortId": "D405322245",
+      "title": "[EC2_BP_2][ICN54 1-7 70412] Please repair VETTING_MEMORY problem with SNX.PC16BW021900254 [EC2T3N16]",
+      "status": "Pending",
+      "date": "2026-03-08",
+      "cluster": "ICN54",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "e8e67d5a-8508-483b-8640-7ee6aa67be68",
+      "shortId": "D405245053",
+      "title": "[MF-S][EBS_BP_3][ICN54 2-6 60214] Please repair VETTING_VFM problem with SNX.ASH16T091800153 [EBSFLASH16]",
+      "status": "Pending",
+      "date": "2026-03-08",
+      "cluster": "ICN54",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "de9cca95-a839-4858-b7f2-495604e27356",
+      "shortId": "D404495440",
+      "title": "[ICN54][2-6 60201][2-6 61313][NETWORK_BP_5][Johnny 5] icn54-54-es-e2-b1-t1-r9 jrp7-1",
+      "status": "Pending",
+      "date": "2026-03-07",
+      "cluster": "ICN54",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "3fdaf82a-6f37-41ad-b10a-9b1f7dd96cd0",
+      "shortId": "V2129966594",
+      "title": "[ICN91] Apply ACME updates on spare laptop",
+      "status": "Assigned",
+      "date": "2026-03-06",
+      "cluster": "ICN91",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "9e52bfdd-fa07-4ab6-9eef-4a664aa7363a",
+      "shortId": "V2129966401",
+      "title": "[ICN92] Apply ACME updates on spare laptop",
+      "status": "Assigned",
+      "date": "2026-03-06",
+      "cluster": "ICN92",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "fb136d5e-3f10-4fe4-b1aa-acd2821673f7",
+      "shortId": "D403340407",
+      "title": "[MF-S][EBS_BP_1][ICN65 1-1 10701] Please repair HWMON problem with FOX.GASH15030051 [EBSFLASH816]",
+      "status": "Pending",
+      "date": "2026-03-05",
+      "cluster": "ICN65",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "60347a2a-f96d-471d-9d40-d0a0b6179e19",
+      "shortId": "V2126899568",
+      "title": "[Tasks] Rack Delivery Schedule Sharing",
+      "status": "Assigned",
+      "date": "2026-03-03",
+      "cluster": "ICN54",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "620cd3c5-4600-4a9b-94fd-89e9178bf3d3",
+      "shortId": "V2130539006",
+      "title": "[Tasks] Rack Delivery Schedule Sharing",
+      "status": "Assigned",
+      "date": "2026-03-06",
+      "cluster": "ICN54",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "c9895cf6-8530-4ed9-8209-011c7bfa5360",
+      "shortId": "D403202278",
+      "title": "[MF-H][GARFIELDA][ICN65 3-2 21114][S3_STORAGE_BP_6][S3DRIVE][2 Drives] S3 Drive Replacement",
+      "status": "Pending",
+      "date": "2026-03-05",
+      "cluster": "ICN65",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "b2802c9d-423c-4b33-a48b-196257d2737a",
+      "shortId": "P393831638",
+      "title": "[ICN92][icn54-92-es-e1-b3] Project Completion by ID [Stage1/2]",
+      "status": "Assigned",
+      "date": "2026-03-05",
+      "cluster": "ICN92",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "cf95fe6b-d1ae-44f8-9500-4e1955df466a",
+      "shortId": "P393830621",
+      "title": "[ICN92][icn54-92-es-e1-b2] Project Completion by ID [Stage1/2]",
+      "status": "Assigned",
+      "date": "2026-03-05",
+      "cluster": "ICN92",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "5d199386-cda7-43b4-9b99-9906ce9008d9",
+      "shortId": "V2125151407",
+      "title": "[Tasks] Rack Delivery Schedule Sharing",
+      "status": "Assigned",
+      "date": "2026-03-02",
+      "cluster": "ICN54",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "1ffe6fbd-9084-480d-9c1a-ba6e423235e8",
+      "shortId": "V2124982903",
+      "title": "[Drills][DCO][ICN92] Weekly Compliance Reminder",
+      "status": "Assigned",
+      "date": "2026-03-01",
+      "cluster": "ICN92",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": true
+    },
+    {
+      "id": "457d2200-0cf2-4324-b45b-2bd7a40e7477",
+      "shortId": "D403242231",
+      "title": "[MF-H][ICN54 1-1 12301][S3_STORAGE_BP_6][S3DRIVE][2 Drives] S3 Drive Replacement",
+      "status": "Pending",
+      "date": "2026-03-05",
+      "cluster": "ICN54",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "894c8277-72d0-4563-9622-9a01f291e147",
+      "shortId": "V2128788549",
+      "title": "[Tasks] Rack Delivery Schedule Sharing",
+      "status": "Assigned",
+      "date": "2026-03-05",
+      "cluster": "ICN54",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "0e2cf3a4-0f5f-473d-bc4a-5e8b99fbf3f7",
+      "shortId": "V2122673016",
+      "title": "[Tasks] Rack Delivery Schedule Sharing",
+      "status": "Assigned",
+      "date": "2026-02-27",
+      "cluster": "ICN54",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "2f62ea38-ddec-428f-9c32-e3e8953d574f",
+      "shortId": "V2119114882",
+      "title": "[Tasks] Rack Delivery Schedule Sharing",
+      "status": "Assigned",
+      "date": "2026-02-24",
+      "cluster": "ICN54",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "79be7330-7eb1-4078-b05c-dd77f424bb9f",
+      "shortId": "V2097544428",
+      "title": "[POWERSHELF_BP_1][BP_1]Incomplete Power Up at rack 08-02-005-23 FOX.62153HANN010AP360RE WMW240",
+      "status": "Pending",
+      "date": "2026-02-04",
+      "cluster": "ICN59",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "c24c02a7-b90e-4099-b8df-52034fbb3eab",
+      "shortId": "V2097544414",
+      "title": "[POWERSHELF_BP_1][BP_1]Incomplete Power Up at rack 08-02-005-23 FOX.62153HANN010AP3601R WMW240",
+      "status": "Pending",
+      "date": "2026-02-04",
+      "cluster": "ICN59",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "c7dc33de-2c25-4549-ba8d-82e8f2f0380c",
+      "shortId": "V2097544382",
+      "title": "[POWERSHELF_BP_1][BP_1]Incomplete Power Up at rack 08-02-005-23 FOX.62153HANN010AP360RA WMW240",
+      "status": "Pending",
+      "date": "2026-02-04",
+      "cluster": "ICN59",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "8638b2f9-dda7-4019-a312-b1bc96f1d3a8",
+      "shortId": "V2097544362",
+      "title": "[POWERSHELF_BP_1][BP_1]Incomplete Power Up at rack 08-02-005-23 FOX.62153HANN010AP360R9 WMW240",
+      "status": "Pending",
+      "date": "2026-02-04",
+      "cluster": "ICN59",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "c7aa8376-8c87-4523-b35f-d1b56dca9b7c",
+      "shortId": "V2097544158",
+      "title": "[POWERSHELF_BP_1][BP_1]Incomplete Power Up at rack 08-02-005-35 FOX.62153HANN010AP360JV WMW240",
+      "status": "Pending",
+      "date": "2026-02-04",
+      "cluster": "ICN59",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "757ea68e-8d43-4ad5-87eb-2675fa973732",
+      "shortId": "V2097544028",
+      "title": "[POWERSHELF_BP_1][BP_1]Incomplete Power Up at rack 08-02-005-35 FOX.62153HANN010AP360RC WMW240",
+      "status": "Pending",
+      "date": "2026-02-04",
+      "cluster": "ICN59",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "02647279-b9bf-47b7-9d6c-a7e6020ef852",
+      "shortId": "V2097543855",
+      "title": "[POWERSHELF_BP_1][BP_1]Incomplete Power Up at rack 08-02-005-35 FOX.62153HANN010AP360QJ WMW240",
+      "status": "Pending",
+      "date": "2026-02-04",
+      "cluster": "ICN59",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "71e8ac38-e9e8-48ea-9127-069f807b315d",
+      "shortId": "V2132058874",
+      "title": "[ICN63] Bi-Weekly Loading Dock Reservation",
+      "status": "Assigned",
+      "date": "2026-03-07",
+      "cluster": "ICN63",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "8bf87d39-4d12-4613-adce-2d8d42a72fdc",
+      "shortId": "V2132058808",
+      "title": "ICN56 - Weekly Walkthrough",
+      "status": "Assigned",
+      "date": "2026-03-07",
+      "cluster": "ICN56",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "ee067d99-4995-4b1b-b648-6d1044e4fe3f",
+      "shortId": "D392734525",
+      "title": "[POWERSHELF_BP_1][ICN59 8-2 08-02-009-35] VETTING_POWERSHELF FOX.JJU253702281TD",
+      "status": "Pending",
+      "date": "2026-02-14",
+      "cluster": "ICN59",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "20cf2aa8-59c0-4bc6-842b-e56e9f614b29",
+      "shortId": "D392732529",
+      "title": "[POWERSHELF_BP_1][ICN59 8-2 08-02-007-26] VETTING_POWERSHELF FOX.JJU253602115TD",
+      "status": "Pending",
+      "date": "2026-02-14",
+      "cluster": "ICN59",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "906bde93-c334-48d5-8249-ae59498705a6",
+      "shortId": "D392733080",
+      "title": "[POWERSHELF_BP_1][ICN59 8-2 08-02-007-26] VETTING_POWERSHELF FOX.JJU253702282TD",
+      "status": "Pending",
+      "date": "2026-02-14",
+      "cluster": "ICN59",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "883b6b00-afc5-44ef-9616-021ce569d0e7",
+      "shortId": "D392733101",
+      "title": "[POWERSHELF_BP_1][ICN59 8-2 08-02-007-26] VETTING_POWERSHELF FOX.JJU253702336TD",
+      "status": "Pending",
+      "date": "2026-02-14",
+      "cluster": "ICN59",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "c921e67d-ced1-4085-acb9-b1d11a9b7dfa",
+      "shortId": "D392733301",
+      "title": "[POWERSHELF_BP_1][ICN59 8-2 08-02-007-26] VETTING_POWERSHELF FOX.62153HANN010AP360TS",
+      "status": "Pending",
+      "date": "2026-02-14",
+      "cluster": "ICN59",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "492c6291-f14c-4e67-92b6-335011f677ba",
+      "shortId": "D392733325",
+      "title": "[POWERSHELF_BP_1][ICN59 8-2 08-02-007-26] VETTING_POWERSHELF FOX.JJU253702295TD",
+      "status": "Pending",
+      "date": "2026-02-14",
+      "cluster": "ICN59",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "84b23a39-54b7-4734-92a7-3fead81d1403",
+      "shortId": "D392733329",
+      "title": "[POWERSHELF_BP_1][ICN59 8-2 08-02-007-26] VETTING_POWERSHELF FOX.JJU253702258TD",
+      "status": "Pending",
+      "date": "2026-02-14",
+      "cluster": "ICN59",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "0e369ed0-1d6e-4d80-a9ff-ae43a31b24ed",
+      "shortId": "D392734126",
+      "title": "[POWERSHELF_BP_1][ICN59 8-2 08-02-009-35] VETTING_POWERSHELF FOX.62153HANN010AP360PB",
+      "status": "Pending",
+      "date": "2026-02-14",
+      "cluster": "ICN59",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "912a93d0-f906-4c4a-b393-82596918b392",
+      "shortId": "D392734298",
+      "title": "[POWERSHELF_BP_1][ICN59 8-2 08-02-009-35] VETTING_POWERSHELF FOX.JJU253702328TD",
+      "status": "Pending",
+      "date": "2026-02-14",
+      "cluster": "ICN59",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "b0fad893-f09f-4c4a-acaf-bad106eab297",
+      "shortId": "D392734301",
+      "title": "[POWERSHELF_BP_1][ICN59 8-2 08-02-009-35] VETTING_POWERSHELF FOX.JJU253902533TD",
+      "status": "Pending",
+      "date": "2026-02-14",
+      "cluster": "ICN59",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "fa3ca0b1-8e25-4a6b-ab32-2c8a2412cf2d",
+      "shortId": "D392734317",
+      "title": "[POWERSHELF_BP_1][ICN59 8-2 08-02-009-35] VETTING_POWERSHELF FOX.JJU253902537TD",
+      "status": "Pending",
+      "date": "2026-02-14",
+      "cluster": "ICN59",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "62447ffd-7b5c-47c5-bd2b-b488f1a3c508",
+      "shortId": "D392734529",
+      "title": "[POWERSHELF_BP_1][ICN59 8-2 08-02-009-35] VETTING_POWERSHELF FOX.JJU253702309TD",
+      "status": "Pending",
+      "date": "2026-02-14",
+      "cluster": "ICN59",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "8cce1452-0822-4dbf-84f3-cfbafee74121",
+      "shortId": "D392734530",
+      "title": "[POWERSHELF_BP_1][ICN59 8-2 08-02-009-35] VETTING_POWERSHELF FOX.JJU253702315TD",
+      "status": "Pending",
+      "date": "2026-02-14",
+      "cluster": "ICN59",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "285cc839-55c8-46eb-aeec-08f6b11e321d",
+      "shortId": "D392736796",
+      "title": "[POWERSHELF_BP_1][ICN59 8-2 08-02-009-23] VETTING_POWERSHELF FOX.JJU253702444TD",
+      "status": "Pending",
+      "date": "2026-02-14",
+      "cluster": "ICN59",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "6fe28b0b-7e58-4af1-8acc-26a241363c78",
+      "shortId": "D392736810",
+      "title": "[POWERSHELF_BP_1][ICN59 8-2 08-02-009-23] VETTING_POWERSHELF FOX.JJU253902522TD",
+      "status": "Pending",
+      "date": "2026-02-14",
+      "cluster": "ICN59",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "cff51580-394a-46f1-a972-795a049cb2d0",
+      "shortId": "D392736814",
+      "title": "[POWERSHELF_BP_1][ICN59 8-2 08-02-009-23] VETTING_POWERSHELF FOX.JJU253902553TD",
+      "status": "Pending",
+      "date": "2026-02-14",
+      "cluster": "ICN59",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "b9dcc455-de7b-410c-9c17-d37d87fcafd9",
+      "shortId": "D392736820",
+      "title": "[POWERSHELF_BP_1][ICN59 8-2 08-02-009-23] VETTING_POWERSHELF FOX.JJU253702448TD",
+      "status": "Pending",
+      "date": "2026-02-14",
+      "cluster": "ICN59",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "2cd0446b-88c4-4881-a133-e8624a13c8d5",
+      "shortId": "D392736825",
+      "title": "[POWERSHELF_BP_1][ICN59 8-2 08-02-009-23] VETTING_POWERSHELF FOX.JJU253702519TD",
+      "status": "Pending",
+      "date": "2026-02-14",
+      "cluster": "ICN59",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    },
+    {
+      "id": "ef40b33e-14ed-4aca-bb6a-fe366da24706",
+      "shortId": "D392736827",
+      "title": "[POWERSHELF_BP_1][ICN59 8-2 08-02-009-23] VETTING_POWERSHELF FOX.JJU253902551TD",
+      "status": "Pending",
+      "date": "2026-02-14",
+      "cluster": "ICN59",
+      "severity": "LOW",
+      "team": "DCO",
+      "from": "boost-ticket-processor",
+      "excludeFromBriefing": false
+    }
+  ],
+  "GLOBAL_TEAMS": [
+    "All",
+    "DCO",
+    "Central Ops Install",
+    "Networking Ops Excellence",
+    "Security",
+    "DCC Global",
+    "Logistics",
+    "DCEO"
+  ],
+  "SUB_GEOS": {
+    "India": {
+      "leader": "achowdhr",
+      "emoji": "🇮🇳"
+    },
+    "South Asia & ANZ": {
+      "leader": "simontan",
+      "emoji": "🌏"
+    },
+    "Greater China": {
+      "leader": "hcyeoh",
+      "emoji": "🇨🇳"
+    },
+    "Japan": {
+      "leader": "timrex",
+      "emoji": "🇯🇵"
+    },
+    "Middle East & Africa": {
+      "leader": "alashqar",
+      "emoji": "🌍"
+    },
+    "Global Services": {
+      "leader": "buccella",
+      "emoji": "🇺🇸"
+    }
+  },
+  "lastSync": "2026-03-09T10:42:04.139Z",
+  "AZ_MAP": {
+    "ICN52AZ": {
+      "sites": [
+        "ICN51",
+        "ICN52",
+        "ICN56",
+        "ICN59",
+        "ICN63",
+        "ICN71"
+      ],
+      "dcoGroups": {
+        "ICN51": "ICN52",
+        "ICN52": "ICN52",
+        "ICN56": "ICN56",
+        "ICN59": "ICN59",
+        "ICN63": "ICN63",
+        "ICN71": "ICN71"
+      }
+    },
+    "ICN53AZ": {
+      "sites": [
+        "ICN53",
+        "ICN66",
+        "ICN69"
+      ],
+      "dcoGroups": {
+        "ICN53": "ICN53",
+        "ICN66": "ICN66",
+        "ICN69": "ICN69"
+      }
+    },
+    "ICN54AZ": {
+      "sites": [
+        "ICN54",
+        "ICN65",
+        "ICN91",
+        "ICN92"
+      ],
+      "dcoGroups": {
+        "ICN54": "ICN54",
+        "ICN65": "ICN65",
+        "ICN91": "ICN91",
+        "ICN92": "ICN92"
+      }
+    },
+    "ICN80AZ": {
+      "sites": [
+        "ICN57",
+        "ICN80",
+        "ICN81"
+      ],
+      "dcoGroups": {
+        "ICN57": "ICN80",
+        "ICN80": "ICN80",
+        "ICN81": "ICN81"
+      }
+    }
+  },
+  "SITE_DCO": {
+    "ICN51": "ICN52",
+    "ICN52": "ICN52",
+    "ICN56": "ICN56",
+    "ICN59": "ICN59",
+    "ICN63": "ICN63",
+    "ICN71": "ICN71",
+    "ICN53": "ICN53",
+    "ICN66": "ICN66",
+    "ICN69": "ICN69",
+    "ICN54": "ICN54",
+    "ICN65": "ICN65",
+    "ICN91": "ICN91",
+    "ICN92": "ICN92",
+    "ICN57": "ICN80",
+    "ICN80": "ICN80",
+    "ICN81": "ICN81"
+  },
+  "UNMANNED_SITES": [
+    "ICN50",
+    "ICN55",
+    "ICN58",
+    "ICN400",
+    "ICN401"
+  ]
+}
