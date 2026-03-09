@@ -1524,7 +1524,8 @@
       "team": "DCO",
       "from": "boost-ticket-processor",
       "date": "2026-03-06",
-      "alias": "D404153907"
+      "alias": "D404153907",
+      "shortId": "D404153907"
     },
     {
       "id": "3372780f-3aa4-4e47-afca-59c31b21c97d",
@@ -1536,7 +1537,8 @@
       "team": "DCO",
       "from": "tavern",
       "date": "2026-03-05",
-      "alias": "V2129912513"
+      "alias": "V2129912513",
+      "shortId": "V2129912513"
     },
     {
       "id": "c9104bb7-6cee-4fae-bc97-b2f08a066966",
@@ -1548,7 +1550,8 @@
       "team": "DCO",
       "from": "boost-ticket-processor",
       "date": "2026-03-06",
-      "alias": "D403929823"
+      "alias": "D403929823",
+      "shortId": "D403929823"
     },
     {
       "id": "9a5a9c9f-a04e-47bb-8e09-56248c2a80f4",
@@ -1560,7 +1563,8 @@
       "team": "DCO",
       "from": "boost-ticket-processor",
       "date": "2026-02-13",
-      "alias": "D392464547"
+      "alias": "D392464547",
+      "shortId": "D392464547"
     },
     {
       "id": "bb7eb011-e0fc-48ce-8d97-fe7b251a0a89",
@@ -1572,7 +1576,8 @@
       "team": "DCO",
       "from": "boost-ticket-processor",
       "date": "2026-02-19",
-      "alias": "D395233848"
+      "alias": "D395233848",
+      "shortId": "D395233848"
     },
     {
       "id": "58be40a3-bb30-4504-b97a-8673b6dc2e03",
@@ -1584,7 +1589,8 @@
       "team": "DCO",
       "from": "boost-ticket-processor",
       "date": "2026-02-18",
-      "alias": "D395007162"
+      "alias": "D395007162",
+      "shortId": "D395007162"
     },
     {
       "id": "a045eb86-c0d8-4157-bb90-b9220f69080d",
@@ -1596,7 +1602,8 @@
       "team": "DCO",
       "from": "boost-ticket-processor",
       "date": "2026-03-05",
-      "alias": "D403558069"
+      "alias": "D403558069",
+      "shortId": "D403558069"
     },
     {
       "id": "2fef0c14-e6fb-41ce-9f1f-cc25ee900ae2",
@@ -1608,7 +1615,8 @@
       "team": "DCO",
       "from": "boost-ticket-processor",
       "date": "2026-02-18",
-      "alias": "D394898266"
+      "alias": "D394898266",
+      "shortId": "D394898266"
     },
     {
       "id": "3b5e5450-294b-469c-b0b6-747597f98b86",
@@ -1620,7 +1628,8 @@
       "team": "DCO",
       "from": "boost-ticket-processor",
       "date": "2026-03-05",
-      "alias": "D403423055"
+      "alias": "D403423055",
+      "shortId": "D403423055"
     },
     {
       "id": "7f477f39-444a-4083-b061-6a5895a4196d",
@@ -1632,7 +1641,8 @@
       "team": "DCO",
       "from": "boost-ticket-processor",
       "date": "2026-02-18",
-      "alias": "D394753130"
+      "alias": "D394753130",
+      "shortId": "D394753130"
     },
     {
       "id": "ea4ad2e9-dd85-4c42-990d-836f520ac252",
@@ -1644,7 +1654,8 @@
       "team": "DCO",
       "from": "boost-ticket-processor",
       "date": "2026-03-02",
-      "alias": "D401265302"
+      "alias": "D401265302",
+      "shortId": "D401265302"
     },
     {
       "id": "ea4e5bb2-4229-4b77-87df-3ef54188da37",
@@ -1656,7 +1667,8 @@
       "team": "DCO",
       "from": "boost-ticket-processor",
       "date": "2026-02-18",
-      "alias": "D394705176"
+      "alias": "D394705176",
+      "shortId": "D394705176"
     },
     {
       "id": "3e65f10c-685c-4cb2-8011-65ac026d5824",
@@ -1668,7 +1680,8 @@
       "team": "DCO",
       "from": "hyeongs",
       "date": "2026-03-05",
-      "alias": "P393287301"
+      "alias": "P393287301",
+      "shortId": "P393287301"
     },
     {
       "id": "a0885c49-cc33-4161-bf02-53b860744cbe",
@@ -1680,7 +1693,8 @@
       "team": "DCO",
       "from": "jaehocho",
       "date": "2026-03-03",
-      "alias": "P392161143"
+      "alias": "P392161143",
+      "shortId": "P392161143"
     },
     {
       "id": "ead36d09-99c3-4bd6-aef3-236e116988bc",
@@ -1692,7 +1706,8 @@
       "team": "DCO",
       "from": "boost-ticket-processor",
       "date": "2026-03-05",
-      "alias": "D403170024"
+      "alias": "D403170024",
+      "shortId": "D403170024"
     },
     {
       "id": "b738dc5c-2d68-4389-8526-3f409dd12b49",
@@ -1704,7 +1719,8 @@
       "team": "DCO",
       "from": "boost-ticket-processor",
       "date": "2025-11-14",
-      "alias": "D341879060"
+      "alias": "D341879060",
+      "shortId": "D341879060"
     },
     {
       "id": "a1b04866-d240-4e33-ab04-961c1a8088ce",
@@ -1716,7 +1732,8 @@
       "team": "DCO",
       "from": "boost-ticket-processor",
       "date": "2026-03-04",
-      "alias": "D402888410"
+      "alias": "D402888410",
+      "shortId": "D402888410"
     },
     {
       "id": "141b9028-c92a-4f65-b0a0-847129c1c260",
@@ -1728,7 +1745,8 @@
       "team": "DCO",
       "from": "boost-ticket-processor",
       "date": "2026-03-04",
-      "alias": "D402869737"
+      "alias": "D402869737",
+      "shortId": "D402869737"
     },
     {
       "id": "fca6afea-0377-4aae-bd13-ec8cbc2dc44c",
@@ -1740,7 +1758,8 @@
       "team": "DCO",
       "from": "boost-ticket-processor",
       "date": "2026-02-17",
-      "alias": "D394382287"
+      "alias": "D394382287",
+      "shortId": "D394382287"
     },
     {
       "id": "a674e3b9-bb0f-4b38-9ed0-94e8a70ef511",
@@ -1766,7 +1785,8 @@
       "team": "DCO",
       "from": "boost-ticket-processor",
       "date": "2026-03-05",
-      "alias": "D403325790"
+      "alias": "D403325790",
+      "shortId": "D403325790"
     },
     {
       "id": "16163b52-6543-487d-a2a0-ddb9796259a6",
@@ -1778,7 +1798,8 @@
       "team": "DCO",
       "from": "hyeongs",
       "date": "2026-03-04",
-      "alias": "P392765184"
+      "alias": "P392765184",
+      "shortId": "P392765184"
     },
     {
       "id": "11058da1-41be-40b4-a42d-56c87eec458a",
@@ -1790,7 +1811,8 @@
       "team": "DCO",
       "from": "boost-ticket-processor",
       "date": "2026-02-16",
-      "alias": "D393627186"
+      "alias": "D393627186",
+      "shortId": "D393627186"
     },
     {
       "id": "2a9bb30f-4298-4250-9d90-6a96976a17ce",
@@ -1802,7 +1824,8 @@
       "team": "DCO",
       "from": "boost-ticket-processor",
       "date": "2026-02-17",
-      "alias": "D394085624"
+      "alias": "D394085624",
+      "shortId": "D394085624"
     },
     {
       "id": "dee6bfed-e0f8-49ea-9e19-89afd69b6a6c",
@@ -1814,7 +1837,8 @@
       "team": "DCO",
       "from": "boost-ticket-processor",
       "date": "2026-03-02",
-      "alias": "D401286149"
+      "alias": "D401286149",
+      "shortId": "D401286149"
     },
     {
       "id": "afefa6ba-1a2a-4d79-88e2-63830e3c4b6b",
@@ -1826,7 +1850,8 @@
       "team": "DCO",
       "from": "boost-ticket-processor",
       "date": "2026-02-16",
-      "alias": "D393644971"
+      "alias": "D393644971",
+      "shortId": "D393644971"
     },
     {
       "id": "c85bf043-40e3-4ece-91c8-6de74d7077bb",
@@ -1838,7 +1863,8 @@
       "team": "DCO",
       "from": "boost-ticket-processor",
       "date": "2026-02-16",
-      "alias": "D393555382"
+      "alias": "D393555382",
+      "shortId": "D393555382"
     },
     {
       "id": "d085c33f-e07a-4e4b-bed3-210b5631c7f8",
@@ -1850,7 +1876,8 @@
       "team": "DCO",
       "from": "boost-ticket-processor",
       "date": "2026-02-14",
-      "alias": "D392904724"
+      "alias": "D392904724",
+      "shortId": "D392904724"
     },
     {
       "id": "b6d610ad-6ff9-4964-9d05-8a2c7261edbb",
@@ -1862,7 +1889,8 @@
       "team": "DCO",
       "from": "boost-ticket-processor",
       "date": "2026-02-26",
-      "alias": "D399128239"
+      "alias": "D399128239",
+      "shortId": "D399128239"
     },
     {
       "id": "aa0a9619-f6d5-4d68-a177-b879f83b72ba",
@@ -1888,7 +1916,8 @@
       "team": "DCO",
       "from": "boost-ticket-processor",
       "date": "2026-02-14",
-      "alias": "D392947273"
+      "alias": "D392947273",
+      "shortId": "D392947273"
     },
     {
       "id": "a940ac94-4bec-4e9a-b073-7977b13fa02e",
@@ -1900,7 +1929,8 @@
       "team": "DCO",
       "from": "boost-ticket-processor",
       "date": "2026-02-13",
-      "alias": "D392435526"
+      "alias": "D392435526",
+      "shortId": "D392435526"
     },
     {
       "id": "6afd21f8-292a-4831-9957-ffda698065cd",
@@ -1912,7 +1942,8 @@
       "team": "DCO",
       "from": "boost-ticket-processor",
       "date": "2026-02-13",
-      "alias": "D392493998"
+      "alias": "D392493998",
+      "shortId": "D392493998"
     },
     {
       "id": "ed02f384-60ad-4b52-af31-a9b5239558be",
@@ -1924,7 +1955,8 @@
       "team": "DCO",
       "from": "tavern",
       "date": "2026-02-12",
-      "alias": "V2106911719"
+      "alias": "V2106911719",
+      "shortId": "V2106911719"
     },
     {
       "id": "ad6f356b-d03d-47fe-bfd8-abbf1070e1a4",
@@ -1936,7 +1968,8 @@
       "team": "DCO",
       "from": "boost-ticket-processor",
       "date": "2026-02-12",
-      "alias": "D391917377"
+      "alias": "D391917377",
+      "shortId": "D391917377"
     },
     {
       "id": "b1bd5a68-8a07-45c3-ae4c-c5a0eb344d3e",
@@ -1948,7 +1981,8 @@
       "team": "DCO",
       "from": "boost-ticket-processor",
       "date": "2026-02-12",
-      "alias": "D391917443"
+      "alias": "D391917443",
+      "shortId": "D391917443"
     },
     {
       "id": "1032e54c-599f-43e0-b638-14f2149045b8",
@@ -1960,7 +1994,8 @@
       "team": "DCO",
       "from": "boost-ticket-processor",
       "date": "2026-02-12",
-      "alias": "D391917373"
+      "alias": "D391917373",
+      "shortId": "D391917373"
     },
     {
       "id": "ad9e6d60-2ffd-42df-8d6d-59254a359b4e",
@@ -1972,7 +2007,8 @@
       "team": "DCO",
       "from": "boost-ticket-processor",
       "date": "2026-02-12",
-      "alias": "D391917365"
+      "alias": "D391917365",
+      "shortId": "D391917365"
     },
     {
       "id": "e31c0720-295a-4d8c-9751-952b966964bd",
@@ -1984,7 +2020,8 @@
       "team": "DCO",
       "from": "boost-ticket-processor",
       "date": "2026-02-12",
-      "alias": "D391917342"
+      "alias": "D391917342",
+      "shortId": "D391917342"
     },
     {
       "id": "88edfe27-9109-4ec4-a068-b07b94432c65",
@@ -1996,7 +2033,8 @@
       "team": "DCO",
       "from": "boost-ticket-processor",
       "date": "2026-02-11",
-      "alias": "D391029651"
+      "alias": "D391029651",
+      "shortId": "D391029651"
     },
     {
       "id": "6b7e0b8a-d8e3-4444-a428-1d2db15ab472",
@@ -2008,7 +2046,8 @@
       "team": "DCO",
       "from": "tavern",
       "date": "2026-02-26",
-      "alias": "V2122045784"
+      "alias": "V2122045784",
+      "shortId": "V2122045784"
     },
     {
       "id": "ed1986df-4818-4f2c-a15c-c4cba22c2b45",
@@ -2020,7 +2059,8 @@
       "team": "DCO",
       "from": "rackdown_workflow",
       "date": "2026-02-01",
-      "alias": "V2094579064"
+      "alias": "V2094579064",
+      "shortId": "V2094579064"
     },
     {
       "id": "286712b8-781c-4b36-bcb0-7f42390076e1",
@@ -2032,7 +2072,8 @@
       "team": "DCO",
       "from": "jmko",
       "date": "2026-02-26",
-      "alias": "P389582091"
+      "alias": "P389582091",
+      "shortId": "P389582091"
     },
     {
       "id": "15eec383-7376-4e3d-8d05-162426606e88",
@@ -2044,7 +2085,8 @@
       "team": "DCO",
       "from": "boost-ticket-processor",
       "date": "2026-02-24",
-      "alias": "D398109199"
+      "alias": "D398109199",
+      "shortId": "D398109199"
     },
     {
       "id": "255b41f7-1acb-48bb-9f39-936aa89cd6d3",
@@ -2056,7 +2098,8 @@
       "team": "DCO",
       "from": "boost-ticket-processor",
       "date": "2026-02-07",
-      "alias": "D389376456"
+      "alias": "D389376456",
+      "shortId": "D389376456"
     },
     {
       "id": "cff9e42b-333b-40e0-9f00-7699ee857230",
@@ -2068,7 +2111,8 @@
       "team": "DCO",
       "from": "rackdown_workflow",
       "date": "2026-02-22",
-      "alias": "V2117294933"
+      "alias": "V2117294933",
+      "shortId": "V2117294933"
     },
     {
       "id": "52610afa-85f0-4570-a306-0194798bbe54",
@@ -2080,7 +2124,8 @@
       "team": "DCO",
       "from": "boost-ticket-processor",
       "date": "2026-02-24",
-      "alias": "D398029102"
+      "alias": "D398029102",
+      "shortId": "D398029102"
     },
     {
       "id": "7f4e9309-cd23-4a63-86b7-3cbb0bcd74da",
@@ -2092,7 +2137,8 @@
       "team": "DCO",
       "from": "boost-ticket-processor",
       "date": "2026-02-23",
-      "alias": "D397457300"
+      "alias": "D397457300",
+      "shortId": "D397457300"
     },
     {
       "id": "07b04324-e7dc-40c8-9bc2-0ad16a447a38",
@@ -2104,7 +2150,8 @@
       "team": "DCO",
       "from": "boost-ticket-processor",
       "date": "2026-02-09",
-      "alias": "D390333416"
+      "alias": "D390333416",
+      "shortId": "D390333416"
     }
   ],
   "GLOBAL_TEAMS": [
