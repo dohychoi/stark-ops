@@ -20,7 +20,7 @@ function saveSettings() {
     followedTeams: followed,
   };
   localStorage.setItem("opspulse-settings", JSON.stringify(s));
-  applySettings();
+  loadData().then(() => applySettings());
 }
 function renderFollowedTeams() {
   const container = document.getElementById("followed-teams-checkboxes");
@@ -613,7 +613,12 @@ let CLUSTERS = {}, EMAIL_UPDATES = [], TICKET_UPDATES = [], GLOBAL_TEAMS = [], S
 
 async function loadData() {
   try {
-    const res = await fetch("data.json");
+    const s = loadSettings();
+    const site = (s.site || "ICN81").toUpperCase();
+    const role = s.team || "DCO";
+    // Try site-role specific data first, fallback to default
+    let res = await fetch(`data/${site}-${role}.json`);
+    if (!res.ok) res = await fetch("data.json");
     const d = await res.json();
     CLUSTERS = d.CLUSTERS;
     EMAIL_UPDATES = d.EMAIL_UPDATES;
