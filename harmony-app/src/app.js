@@ -172,30 +172,24 @@ async function sendMessage() {
   }
 
   try {
-    var sdk = typeof AwsBundle !== "undefined" ? AwsBundle : null;
-    if (!sdk) {
+    if (typeof AwsBundle === "undefined") {
       addMessageToDOM("assistant", "⚠️ AWS SDK not loaded. AI responses unavailable.");
       conversationHistory.push({ role: "assistant", content: "SDK not available" });
       saveCurrentChat();
       return;
     }
 
-    var cognito = new sdk.CognitoIdentityClient({ region: "us-east-1" });
-    var creds = await cognito.send(new sdk.GetCredentialsForIdentityCommand({
-      IdentityId: await cognito.send(new sdk.GetIdCommand({
-        IdentityPoolId: "us-east-1:91dc7b85-b40b-49ea-91f8-d7cb2ce86252"
-      })).then(function(r) { return r.IdentityId; })
-    }));
-    var akid = creds.Credentials.AccessKeyId;
-    var secret = creds.Credentials.SecretKey;
-    var session = creds.Credentials.SessionToken;
-
-    var bedrock = new sdk.BedrockRuntimeClient({
-      region: "us-east-1",
-      credentials: { accessKeyId: akid, secretAccessKey: secret, sessionToken: session }
+    var credProvider = AwsBundle.fromCognitoIdentityPool({
+      identityPoolId: "us-east-1:91dc7b85-b40b-49ea-91f8-d7cb2ce86252",
+      clientConfig: { region: "us-east-1" }
     });
 
-    var resp = await bedrock.send(new sdk.InvokeModelCommand({
+    var bedrock = new AwsBundle.BedrockRuntimeClient({
+      region: "us-east-1",
+      credentials: credProvider
+    });
+
+    var resp = await bedrock.send(new AwsBundle.InvokeModelCommand({
       modelId: "us.anthropic.claude-3-5-haiku-20241022-v1:0",
       contentType: "application/json",
       body: JSON.stringify({ anthropic_version: "bedrock-2023-05-31", max_tokens: 2048, messages: messages })
