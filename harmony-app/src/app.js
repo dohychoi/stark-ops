@@ -195,9 +195,11 @@ async function sendMessage() {
   conversationHistory.push({ role: "user", content: text });
 
   const lower = text.toLowerCase();
+  const isBriefing = /브리핑|briefing|오늘.*할|daily|today|할일|해야.*할/.test(lower);
   const wantsChart = /그래프|차트|graph|chart|시각|visual/.test(lower);
-  const aboutTickets = /티켓|ticket|break.?fix/.test(lower);
-  const isBriefing = /오늘.*할.*일|briefing|브리핑|daily|today.*do|할일|해야.*할/.test(lower);
+  const aboutTickets = /티켓|ticket|break.?fix|TT|tt/.test(lower);
+  const wantsEmail = /이메일|email|메일|outlook/.test(lower);
+  const wantsStatus = /상태|status|현황|overview/.test(lower);
 
   // === Daily Briefing (local) ===
   if (isBriefing) {
@@ -257,6 +259,36 @@ async function sendMessage() {
     summary += "\n```chart\n" + JSON.stringify({type:"bar",title:"티켓 상태",labels:statE.map(function(e){return e[0]}),data:statE.map(function(e){return e[1]})}) + "\n```";
     addMessageToDOM("assistant", summary);
     conversationHistory.push({ role: "assistant", content: summary });
+    saveCurrentChat();
+    return;
+  }
+
+  // === Email summary (local) ===
+  if (wantsEmail) {
+    var emailMsg = "📬 Outlook 이메일 업데이트 (" + EMAIL_UPDATES.length + "건)\n\n";
+    EMAIL_UPDATES.forEach(function(e) {
+      emailMsg += (e.important ? "🚨" : "📧") + " [" + e.tag + "] " + e.subject + "\n   From: " + e.from + " | " + e.date + "\n   " + (e.preview||"").substring(0,100) + "\n\n";
+    });
+    addMessageToDOM("assistant", emailMsg);
+    conversationHistory.push({ role: "assistant", content: emailMsg });
+    saveCurrentChat();
+    return;
+  }
+
+  // === Status overview (local) ===
+  if (wantsStatus) {
+    var s3 = loadSettings();
+    var statusMsg = "📊 " + (s3.site||"APMEA") + " 현황 Overview\n\n";
+    var openT = TICKET_UPDATES.filter(function(t) { return ["Open","Pending","Assigned","Work In Progress","Researching"].includes(t.status); });
+    statusMsg += "🎫 티켓: 총 " + TICKET_UPDATES.length + "건 (Open: " + openT.length + "건)\n";
+    var sevCounts = {};
+    TICKET_UPDATES.forEach(function(t) { sevCounts[t.severity] = (sevCounts[t.severity]||0)+1; });
+    Object.entries(sevCounts).sort().forEach(function(e) { statusMsg += "  • " + e[0] + ": " + e[1] + "건\n"; });
+    statusMsg += "\n🌏 클러스터: " + Object.keys(CLUSTERS).length + "개\n";
+    Object.entries(CLUSTERS).forEach(function(e) { statusMsg += "  • " + e[0] + " (" + e[1].name + "): " + e[1].adoption + "% adoption, " + e[1].status + "\n"; });
+    statusMsg += "\n📬 이메일: " + EMAIL_UPDATES.length + "건 (중요: " + EMAIL_UPDATES.filter(function(e){return e.important}).length + "건)\n";
+    addMessageToDOM("assistant", statusMsg);
+    conversationHistory.push({ role: "assistant", content: statusMsg });
     saveCurrentChat();
     return;
   }
