@@ -155,25 +155,26 @@ function addMessageToDOM(role, text) {
   const div = document.createElement("div");
   div.className = "msg " + role;
 
-  // Extract ```chart blocks
+  // Extract ```chart blocks before any escaping
   const charts = [];
   let clean = String(text).replace(/```chart\s*([\s\S]*?)```/g, function(_, json) {
     charts.push(json.trim());
-    return '<div class="chart-placeholder" data-idx="' + (charts.length - 1) + '"></div>';
+    return "%%CHART_" + (charts.length - 1) + "%%";
   });
-  // Convert newlines to <br> and escape
+  // Escape HTML and convert newlines
   clean = clean.split('\n').map(function(line) {
     return line.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
   }).join('<br>');
-  // Restore chart placeholders (they got escaped)
-  clean = clean.replace(/&lt;div class=&quot;chart-placeholder&quot; data-idx=&quot;(\d+)&quot;&gt;&lt;\/div&gt;/g,
-    '<div class="chart-placeholder" data-idx="$1"></div>');
+  // Restore chart markers
+  for (var ci = 0; ci < charts.length; ci++) {
+    clean = clean.replace("%%CHART_" + ci + "%%", '<div class="chart-slot" data-idx="' + ci + '"></div>');
+  }
 
   div.innerHTML = '<div class="msg-text">' + clean + '</div>';
   el.appendChild(div);
 
   // Render charts
-  div.querySelectorAll(".chart-placeholder").forEach(function(ph) {
+  div.querySelectorAll(".chart-slot").forEach(function(ph) {
     try {
       var cfg = JSON.parse(charts[ph.dataset.idx]);
       var wrap = document.createElement("div");
@@ -693,10 +694,17 @@ async function loadData() {
     const s = loadSettings();
     const site = (s.site || "ICN81").toUpperCase();
     const role = s.team || "DCO";
-    const cb = "?_=" + Date.now();
-    let res = await fetch("data/" + site + "-" + role + ".json" + cb);
-    if (!res.ok) res = await fetch("data.json" + cb);
+    let res;
+    try { res = await fetch("data/" + site + "-" + role + ".json"); } catch(e2) {}
+    if (!res || !res.ok) {
+      try { res = await fetch("data.json"); } catch(e3) {}
+    }
+    if (!res || !res.ok) {
+      try { res = await fetch("./data.json"); } catch(e4) {}
+    }
+    if (!res || !res.ok) { console.error("data.json not found"); return; }
     const d = await res.json();
+    console.log("Data loaded:", Object.keys(d), "Tickets:", (d.TICKET_UPDATES||[]).length, "Emails:", (d.EMAIL_UPDATES||[]).length);
     CLUSTERS = d.CLUSTERS || {};
     EMAIL_UPDATES = d.EMAIL_UPDATES || [];
     TICKET_UPDATES = d.TICKET_UPDATES || [];
