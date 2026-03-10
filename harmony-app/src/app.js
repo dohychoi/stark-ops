@@ -150,8 +150,39 @@ function addMessageToDOM(role, text) {
   if (welcome) welcome.remove();
   const div = document.createElement("div");
   div.className = "msg " + role;
-  div.innerHTML = '<div class="msg-text">' + escHtml(text) + '</div>';
+
+  // Extract ```chart blocks
+  const charts = [];
+  let clean = String(text).replace(/```chart\s*([\s\S]*?)```/g, function(_, json) {
+    charts.push(json.trim());
+    return '<div class="chart-placeholder" data-idx="' + (charts.length - 1) + '"></div>';
+  });
+  // Convert newlines to <br> and escape
+  clean = clean.split('\n').map(function(line) {
+    return line.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  }).join('<br>');
+  // Restore chart placeholders (they got escaped)
+  clean = clean.replace(/&lt;div class=&quot;chart-placeholder&quot; data-idx=&quot;(\d+)&quot;&gt;&lt;\/div&gt;/g,
+    '<div class="chart-placeholder" data-idx="$1"></div>');
+
+  div.innerHTML = '<div class="msg-text">' + clean + '</div>';
   el.appendChild(div);
+
+  // Render charts
+  div.querySelectorAll(".chart-placeholder").forEach(function(ph) {
+    try {
+      var cfg = JSON.parse(charts[ph.dataset.idx]);
+      var wrap = document.createElement("div");
+      wrap.style.cssText = "max-width:320px;margin:8px 0;";
+      if (cfg.title) { var t = document.createElement("div"); t.style.cssText = "font-size:12px;font-weight:600;margin-bottom:4px;"; t.textContent = cfg.title; wrap.appendChild(t); }
+      var canvas = document.createElement("canvas");
+      canvas.width = 300; canvas.height = 200;
+      wrap.appendChild(canvas);
+      ph.replaceWith(wrap);
+      new Chart(canvas, { type: cfg.type || "bar", data: { labels: cfg.labels, datasets: [{ data: cfg.data, backgroundColor: ["#e74c3c","#3498db","#2ecc71","#f39c12","#9b59b6","#1abc9c","#e67e22","#34495e","#e91e63","#00bcd4"] }] }, options: { responsive: false, plugins: { legend: { display: cfg.type === "doughnut" || cfg.type === "pie" } } } });
+    } catch(e) { ph.textContent = "[Chart error]"; }
+  });
+
   el.scrollTop = el.scrollHeight;
 }
 
@@ -163,12 +194,79 @@ async function sendMessage() {
   addMessageToDOM("user", text);
   conversationHistory.push({ role: "user", content: text });
 
-  // Build system prompt
+  const lower = text.toLowerCase();
+  const wantsChart = /그래프|차트|graph|chart|시각|visual/.test(lower);
+  const aboutTickets = /티켓|ticket|break.?fix/.test(lower);
+  const isBriefing = /오늘.*할.*일|briefing|브리핑|daily|today.*do|할일|해야.*할/.test(lower);
+
+  // === Daily Briefing (local) ===
+  if (isBriefing) {
+    var s = loadSettings();
+    var site = s.site || "ICN81";
+    var team = s.team || "DCO";
+    var mySites = new Set();
+    Object.entries(SITE_DCO).forEach(function(e) { if (e[1].toUpperCase() === site.toUpperCase()) mySites.add(e[0].toUpperCase()); });
+    if (mySites.size === 0) mySites.add(site.toUpperCase());
+
+    var openTickets = TICKET_UPDATES.filter(function(t) {
+      return ["Open","Pending","Assigned","Work In Progress","Researching"].includes(t.status) && mySites.has((t.cluster || "").toUpperCase());
+    });
+    openTickets.forEach(function(t) { t._priority = calcPriority(t); });
+    openTickets.sort(function(a, b) { return a._priority - b._priority; });
+    var cats = {};
+    openTickets.forEach(function(t) { var c = categorizeTicket(t.title); cats[c] = (cats[c]||0)+1; });
+
+    var highEmails = EMAIL_UPDATES.filter(function(e) { return e.important; });
+    var lowEmails = EMAIL_UPDATES.filter(function(e) { return !e.important; });
+
+    var briefing = "☀️ " + site + " " + team + " Daily Briefing\n\n";
+    briefing += "🎫 Open 티켓 (" + openTickets.length + "건)\n";
+    Object.entries(cats).sort(function(a,b) { return b[1]-a[1]; }).forEach(function(e) { briefing += "  • " + e[0] + ": " + e[1] + "건\n"; });
+    briefing += "\n";
+    openTickets.forEach(function(t, i) {
+      var linkId = t.shortId || (t.id && t.id.includes("-") ? t.id.split("-").pop() : t.id);
+      briefing += "  📌 " + (i+1) + ". " + (t.title||"").substring(0,65) + "\n     → https://t.corp.amazon.com/" + linkId + "\n";
+    });
+    briefing += "\n🚨 Important email (" + highEmails.length + "건)\n";
+    highEmails.forEach(function(e) { briefing += "  • [" + e.tag + "] " + e.subject + "\n    From: " + e.from + " | " + (e.preview||"").substring(0,80) + "\n"; });
+    briefing += "\n📬 기타 업데이트 (" + lowEmails.length + "건)\n";
+    lowEmails.forEach(function(e) { briefing += "  • [" + e.tag + "] " + e.subject + "\n"; });
+
+    var catEntries = Object.entries(cats).sort(function(a,b) { return b[1]-a[1]; });
+    if (catEntries.length > 0) {
+      briefing += "\n```chart\n" + JSON.stringify({type:"doughnut",title:"Open 티켓 유형",labels:catEntries.map(function(e){return e[0]}),data:catEntries.map(function(e){return e[1]})}) + "\n```";
+    }
+    addMessageToDOM("assistant", briefing);
+    conversationHistory.push({ role: "assistant", content: briefing });
+    saveCurrentChat();
+    return;
+  }
+
+  // === Ticket chart request (local) ===
+  if (wantsChart && aboutTickets) {
+    var cats2 = {}, statuses = {};
+    TICKET_UPDATES.forEach(function(t) { var c = categorizeTicket(t.title); cats2[c] = (cats2[c]||0)+1; statuses[t.status] = (statuses[t.status]||0)+1; });
+    var catE = Object.entries(cats2).sort(function(a,b) { return b[1]-a[1]; });
+    var statE = Object.entries(statuses);
+    var s2 = loadSettings();
+    var summary = "📊 " + (s2.site||"ICN81") + " 티켓 분석 (총 " + TICKET_UPDATES.length + "건)\n\n";
+    summary += "■ 상태별: " + statE.map(function(e) { return e[0]+": "+e[1]+"건"; }).join(" | ") + "\n\n";
+    summary += "■ 유형별 Top 5:\n";
+    catE.slice(0,5).forEach(function(e) { summary += "  • " + e[0] + ": " + e[1] + "건\n"; });
+    summary += "\n```chart\n" + JSON.stringify({type:"doughnut",title:"티켓 유형별 분포",labels:catE.map(function(e){return e[0]}),data:catE.map(function(e){return e[1]})}) + "\n```";
+    summary += "\n```chart\n" + JSON.stringify({type:"bar",title:"티켓 상태",labels:statE.map(function(e){return e[0]}),data:statE.map(function(e){return e[1]})}) + "\n```";
+    addMessageToDOM("assistant", summary);
+    conversationHistory.push({ role: "assistant", content: summary });
+    saveCurrentChat();
+    return;
+  }
+
+  // === AI (Bedrock) ===
   const sysPrompt = buildSystemPrompt();
   const messages = [{ role: "user", content: sysPrompt + "\n\nUser: " + text }];
   if (conversationHistory.length > 2) {
     const recent = conversationHistory.slice(-6);
-    messages[0].content = sysPrompt + "\n\nConversation:\n" + recent.map(m => m.role + ": " + m.content).join("\n");
+    messages[0].content = sysPrompt + "\n\nConversation:\n" + recent.map(function(m) { return m.role + ": " + m.content; }).join("\n");
   }
 
   try {
@@ -225,6 +323,7 @@ function buildSystemPrompt() {
   Object.entries(CLUSTERS).forEach(([code, c]) => {
     prompt += code + " (" + c.name + "): adoption=" + c.adoption + "%, status=" + c.status + "\n";
   });
+  prompt += "\nWhen user asks for a graph, chart, or visual summary, include a JSON code block like this:\n```chart\n{\"type\":\"bar\",\"title\":\"Example\",\"labels\":[\"A\",\"B\"],\"data\":[10,20]}\n```\nSupported chart types: bar, doughnut, pie. Always include a text summary alongside the chart.\n";
   return prompt;
 }
 
