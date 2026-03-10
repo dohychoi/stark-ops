@@ -77,7 +77,7 @@ function newChat() {
   currentChatId = "chat_" + Date.now();
   conversationHistory = [];
   const el = document.getElementById("chat-messages");
-  el.innerHTML = '<div class="welcome"><h2>🧤 Stark</h2><p>"I am Iron Man."</p><p style="margin-top:8px">☀️ What can I help you with today?</p></div>';
+  el.innerHTML = '<div class="welcome"><img src="avatar.webp" alt="Stark" class="welcome-avatar"><p>"I am Iron Man."</p><p class="mt-8">☀️ What can I help you with today?</p></div>';
   document.getElementById("chat-input").value = "";
   renderChatHistory();
 }
@@ -178,8 +178,8 @@ function addMessageToDOM(role, text) {
     try {
       var cfg = JSON.parse(charts[ph.dataset.idx]);
       var wrap = document.createElement("div");
-      wrap.style.cssText = "max-width:320px;margin:8px 0;";
-      if (cfg.title) { var t = document.createElement("div"); t.style.cssText = "font-size:12px;font-weight:600;margin-bottom:4px;"; t.textContent = cfg.title; wrap.appendChild(t); }
+      wrap.className = "chart-wrap";
+      if (cfg.title) { var t = document.createElement("div"); t.className = "chart-title"; t.textContent = cfg.title; wrap.appendChild(t); }
       var canvas = document.createElement("canvas");
       canvas.width = 300; canvas.height = 200;
       wrap.appendChild(canvas);
@@ -494,7 +494,7 @@ function renderNewsFeed() {
   const container = document.getElementById("news-feed");
   container.innerHTML = "";
   if (activeFeedTab === "emails") {
-    if (EMAIL_UPDATES.length === 0) { container.innerHTML = '<p class="text-sm" style="color:var(--text3)">No email updates.</p>'; return; }
+    if (EMAIL_UPDATES.length === 0) { container.innerHTML = '<p class="text-sm text-muted">No email updates.</p>'; return; }
     EMAIL_UPDATES.forEach(e => {
       const div = document.createElement("div");
       div.className = "feed-item";
@@ -507,7 +507,7 @@ function renderNewsFeed() {
     let tickets = TICKET_UPDATES.filter(t => !["Resolved","Closed"].includes(t.status));
     if (activeTeamFilter !== "All") tickets = tickets.filter(t => t.assignedGroup === activeTeamFilter);
     tickets.sort((a, b) => calcPriority(a) - calcPriority(b));
-    if (tickets.length === 0) { container.innerHTML = '<p class="text-sm" style="color:var(--text3)">No open tickets.</p>'; return; }
+    if (tickets.length === 0) { container.innerHTML = '<p class="text-sm text-muted">No open tickets.</p>'; return; }
     tickets.slice(0, 50).forEach(t => {
       const div = document.createElement("div");
       div.className = "feed-item";
@@ -515,7 +515,7 @@ function renderNewsFeed() {
       const shortId = t.id?.includes("-") ? t.id.split("-").pop() : t.id;
       div.innerHTML = '<div class="feed-title">' + escHtml(t.title) + '</div>' +
         '<div class="feed-meta"><span class="tag">' + t.severity + '</span> <span class="tag">' + cat + '</span> ' + (t.assignedGroup || '') + ' · ' + t.age + 'd old · ' +
-        '<a href="https://t.corp.amazon.com/' + shortId + '" target="_blank" style="color:var(--blue)">' + shortId + '</a></div>';
+        '<a href="https://t.corp.amazon.com/' + shortId + '" target="_blank" class="text-blue">' + shortId + '</a></div>';
       container.appendChild(div);
     });
   }
@@ -591,7 +591,7 @@ function renderSubGeoCards() {
     div.innerHTML = '<div class="flex items-center gap-2 mb-2"><span class="text-lg">' + info.emoji + '</span><span class="text-sm font-semibold">' + name + '</span></div>' +
       '<div class="text-2xl font-bold mb-2">' + avg + '%</div>' +
       '<div class="space-y-2">' + clusters.map(([code, c]) =>
-        '<div class="flex justify-between text-xs"><span>' + c.flag + ' ' + code + '</span><span style="color:' + statusColor(c.status) + '">' + c.adoption + '%</span></div>'
+        '<div class="flex justify-between text-xs"><span>' + c.flag + ' ' + code + '</span><span class="adoption-pct">' + c.adoption + '%</span></div>'
       ).join("") + '</div>';
     container.appendChild(div);
   });
@@ -618,11 +618,11 @@ function renderDashboardStats() {
   const high = Object.values(CLUSTERS).filter(c => c.adoption >= 60).length;
   const avg = cl ? (Object.values(CLUSTERS).reduce((s, c) => s + c.adoption, 0) / cl).toFixed(1) : 0;
   const notStarted = Object.values(CLUSTERS).filter(c => c.adoption === 0).length;
-  el.innerHTML = statCard("Total Clusters", cl, "") + statCard("Avg Adoption", avg + "%", "color:var(--blue)") + statCard("High Performers", high, "color:var(--green)") + statCard("Not Started", notStarted, "color:var(--amber)");
+  el.innerHTML = statCard("Total Clusters", cl, "") + statCard("Avg Adoption", avg + "%", "stat-blue") + statCard("High Performers", high, "stat-green") + statCard("Not Started", notStarted, "stat-amber");
 }
 
-function statCard(label, value, style) {
-  return '<div class="card stat-card"><div class="label">' + label + '</div><div class="value" style="' + style + '">' + value + '</div></div>';
+function statCard(label, value, cls) {
+  return '<div class="card stat-card"><div class="label">' + label + '</div><div class="value ' + cls + '">' + value + '</div></div>';
 }
 
 // ===== SETTINGS =====
@@ -691,20 +691,22 @@ function loadTheme() {
 // ===== DATA =====
 async function loadData() {
   try {
-    const s = loadSettings();
-    const site = (s.site || "ICN81").toUpperCase();
-    const role = s.team || "DCO";
-    let res;
-    try { res = await fetch("data/" + site + "-" + role + ".json"); } catch(e2) {}
-    if (!res || !res.ok) {
-      try { res = await fetch("data.json"); } catch(e3) {}
-    }
-    if (!res || !res.ok) {
-      try { res = await fetch("./data.json"); } catch(e4) {}
-    }
-    if (!res || !res.ok) { console.error("data.json not found"); return; }
-    const d = await res.json();
-    console.log("Data loaded:", Object.keys(d), "Tickets:", (d.TICKET_UPDATES||[]).length, "Emails:", (d.EMAIL_UPDATES||[]).length);
+    let res, d;
+    // Try fetching data.json directly
+    try {
+      res = await fetch("data.json");
+      if (res.ok) {
+        var ct = res.headers.get("content-type") || "";
+        if (ct.includes("json")) {
+          d = await res.json();
+        } else {
+          var txt = await res.text();
+          if (txt.trim().startsWith("{")) d = JSON.parse(txt);
+        }
+      }
+    } catch(e2) { console.warn("data.json fetch failed:", e2); }
+    if (!d) { console.error("data.json not loaded"); return; }
+    console.log("Data loaded: Tickets=" + (d.TICKET_UPDATES||[]).length + " Emails=" + (d.EMAIL_UPDATES||[]).length + " Clusters=" + Object.keys(d.CLUSTERS||{}).length);
     CLUSTERS = d.CLUSTERS || {};
     EMAIL_UPDATES = d.EMAIL_UPDATES || [];
     TICKET_UPDATES = d.TICKET_UPDATES || [];

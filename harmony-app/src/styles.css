@@ -131,3 +131,18 @@ body.light .map-container img { opacity: 0.5; }
   .subgeo-grid { grid-template-columns: 1fr; }
   .grid-cols-4 { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* Utility classes (CSP-safe replacements for inline styles) */
+.mt-4 { margin-top: 4px; }
+.mt-8 { margin-top: 8px; }
+.mt-16 { margin-top: 16px; }
+.settings-scroll { max-width: 600px; }
+.about-card { margin-top: 16px; }
+.text-muted { color: var(--text3); }
+.text-blue { color: var(--blue); }
+.stat-blue { color: var(--blue); }
+.stat-green { color: var(--green); }
+.stat-amber { color: var(--amber); }
+.chart-wrap { max-width: 320px; margin: 8px 0; }
+.chart-title { font-size: 12px; font-weight: 600; margin-bottom: 4px; }
+.adoption-pct { font-weight: 600; }
