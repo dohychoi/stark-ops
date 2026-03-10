@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stark - AI Operations Assistant</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark">
+  <div class="app-layout">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <button class="new-chat-btn" id="btn-new-chat">🧤 New Chat</button>
+      </div>
+      <div class="sidebar-list" id="chat-history-list"></div>
+    </div>
+
+    <!-- Main -->
+    <div class="main-area">
+      <div class="top-header">
+        <div class="logo">
+          <img src="ironman.png" alt="Stark">
+          <span>Tony Stark</span>
+          <span class="meta" id="header-cluster">No cluster set</span>
+        </div>
+        <div class="meta" id="header-time"></div>
+      </div>
+
+      <!-- Chat Page -->
+      <div class="page active" id="page-chat">
+        <div class="chat-area" id="chat-messages">
+          <div class="welcome">
+            <h2>🧤 Stark</h2>
+            <p>"I am Iron Man."</p>
+            <p style="margin-top:8px">☀️ What can I help you with today?</p>
+          </div>
+        </div>
+        <div class="chat-input-bar">
+          <input type="text" id="chat-input" placeholder="Ask Stark anything...">
+          <button id="btn-send">➤</button>
+        </div>
+      </div>
+
+      <!-- News Feed Page -->
+      <div class="page" id="page-news">
+        <div class="page-scroll">
+          <div class="feed-tabs" id="feed-tabs">
+            <button class="feed-tab active" data-tab="emails">📧 Emails</button>
+            <button class="feed-tab" data-tab="tickets">🎫 Tickets</button>
+          </div>
+          <div class="team-filter" id="email-team-filter"></div>
+          <div id="news-feed" class="space-y-3"></div>
+        </div>
+      </div>
+
+      <!-- Dashboard Page -->
+      <div class="page" id="page-dashboard">
+        <div class="page-scroll">
+          <div class="grid grid-cols-4 gap-4 mb-4" id="dashboard-stats"></div>
+          <div class="card mb-4">
+            <h2 class="text-sm font-semibold mb-3">🌏 APMEA Cluster Map</h2>
+            <div class="map-container" id="map-container">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/World_map_blank_without_borders.svg/1280px-World_map_blank_without_borders.svg.png" alt="world map">
+            </div>
+          </div>
+          <div class="card mb-4">
+            <h2 class="text-sm font-semibold mb-3">📊 AI Adoption by Cluster</h2>
+            <div class="chart-container"><canvas id="adoptionChart"></canvas></div>
+          </div>
+          <div class="subgeo-grid" id="subgeo-cards"></div>
+        </div>
+      </div>
+
+      <!-- Settings Page -->
+      <div class="page" id="page-settings">
+        <div class="page-scroll" style="max-width:600px">
+          <div class="setting-group">
+            <label>🏢 My Cluster</label>
+            <select id="setting-cluster"><option value="">Select cluster...</option></select>
+            <div class="hint">Select your home cluster region.</div>
+          </div>
+          <div class="setting-group">
+            <label>📍 My Site</label>
+            <input type="text" id="setting-site" placeholder="e.g. ICN81, SYD20">
+            <div class="hint">Tickets will be filtered to your site.</div>
+          </div>
+          <div class="setting-group">
+            <label>👥 My Role</label>
+            <select id="setting-team">
+              <option value="DCO">DCO</option><option value="DCEO">DCEO</option><option value="Security">Security</option>
+              <option value="Logistics">Logistics</option><option value="Central Ops">Central Ops</option>
+            </select>
+          </div>
+          <div class="setting-group">
+            <label>📌 Followed Teams</label>
+            <div id="followed-teams"></div>
+          </div>
+          <div class="setting-group">
+            <label>🎨 Theme</label>
+            <div class="flex gap-2">
+              <button class="theme-btn" data-theme="dark">🌙 Dark</button>
+              <button class="theme-btn active" data-theme="light">☀️ Light</button>
+            </div>
+          </div>
+          <button class="save-btn" id="btn-save-settings">Save Settings</button>
+          <div class="card mt-2" style="margin-top:16px">
+            <p class="text-sm font-semibold">ℹ️ About Stark</p>
+            <p class="text-xs" style="color:var(--text3);margin-top:4px">AI-powered operations assistant for APMEA clusters. Built with Amazon Bedrock + Cognito.</p>
+            <p class="text-xs" style="color:var(--text3);margin-top:4px">Stark v5.5 | AWS AI-novate Hackathon 2026 | APMEA DCO Operations</p>
+            <p class="text-xs" style="color:var(--blue);margin-top:4px">Built by Lucas Choi (dohychoi) — ICN DCO</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Nav -->
+      <div class="bottom-nav">
+        <button class="nav-btn active" data-page="chat">💬 Chat</button>
+        <button class="nav-btn" data-page="news">📰 News</button>
+        <button class="nav-btn" data-page="dashboard">🌏 APMEA DC</button>
+        <button class="nav-btn" data-page="settings">⚙️ Settings</button>
+      </div>
+    </div>
+  </div>
+  <script src="vendor/chart.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
