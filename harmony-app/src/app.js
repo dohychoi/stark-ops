@@ -172,33 +172,43 @@ async function sendMessage() {
   }
 
   try {
-    const { CognitoIdentityClient } = window.AWS_SDK?.CognitoIdentity || {};
-    const { BedrockRuntimeClient, InvokeModelCommand } = window.AWS_SDK?.BedrockRuntime || {};
-
-    if (!CognitoIdentityClient || !BedrockRuntimeClient) {
-      addMessageToDOM("assistant", "⚠️ AWS SDK not loaded. AI responses unavailable in this build.");
+    var sdk = typeof AwsBundle !== "undefined" ? AwsBundle : null;
+    if (!sdk) {
+      addMessageToDOM("assistant", "⚠️ AWS SDK not loaded. AI responses unavailable.");
       conversationHistory.push({ role: "assistant", content: "SDK not available" });
       saveCurrentChat();
       return;
     }
 
-    const cognito = new CognitoIdentityClient({ region: "us-east-1" });
-    const creds = await cognito.config.credentialDefaultProvider({ region: "us-east-1" })();
-    const bedrock = new BedrockRuntimeClient({ region: "us-east-1", credentials: creds });
+    var cognito = new sdk.CognitoIdentityClient({ region: "us-east-1" });
+    var creds = await cognito.send(new sdk.GetCredentialsForIdentityCommand({
+      IdentityId: await cognito.send(new sdk.GetIdCommand({
+        IdentityPoolId: "us-east-1:91dc7b85-b40b-49ea-91f8-d7cb2ce86252"
+      })).then(function(r) { return r.IdentityId; })
+    }));
+    var akid = creds.Credentials.AccessKeyId;
+    var secret = creds.Credentials.SecretKey;
+    var session = creds.Credentials.SessionToken;
 
-    const resp = await bedrock.send(new InvokeModelCommand({
+    var bedrock = new sdk.BedrockRuntimeClient({
+      region: "us-east-1",
+      credentials: { accessKeyId: akid, secretAccessKey: secret, sessionToken: session }
+    });
+
+    var resp = await bedrock.send(new sdk.InvokeModelCommand({
       modelId: "us.anthropic.claude-3-5-haiku-20241022-v1:0",
       contentType: "application/json",
-      body: JSON.stringify({ anthropic_version: "bedrock-2023-05-31", max_tokens: 2048, messages })
+      body: JSON.stringify({ anthropic_version: "bedrock-2023-05-31", max_tokens: 2048, messages: messages })
     }));
 
-    const result = JSON.parse(new TextDecoder().decode(resp.body));
-    const reply = result.content?.[0]?.text || "No response";
+    var result = JSON.parse(new TextDecoder().decode(resp.body));
+    var reply = result.content && result.content[0] ? result.content[0].text : "No response";
     addMessageToDOM("assistant", reply);
     conversationHistory.push({ role: "assistant", content: reply });
   } catch(e) {
-    addMessageToDOM("assistant", "I'm running in demo mode. AI backend requires AWS Cognito credentials.\n\nYour question: " + text);
-    conversationHistory.push({ role: "assistant", content: "demo mode" });
+    console.error("Bedrock error:", e);
+    addMessageToDOM("assistant", "Error connecting to AI: " + (e.message || e) + "\n\nYour question: " + text);
+    conversationHistory.push({ role: "assistant", content: "error" });
   }
   saveCurrentChat();
 }
