@@ -1,0 +1,18 @@
+{
+  "appName": "stark-ops",
+  "displayName": "Stark Ops",
+  "description": "Stark AI Assistant",
+  "bindleId": "amzn1.bindle.resource.eyw7cnxtsuo4ibgv75rq",
+  "harmony-version": "1.8.5",
+  "jobCategories": ["developer"],
+  "headers": [
+    {
+      "name": "Content-Security-Policy",
+      "value": "connect-src 'self' https://*.amazonaws.com; img-src 'self' data: blob: https://upload.wikimedia.org; font-src 'self' data:"
+    }
+  ],
+  "content-security-policy": {
+    "connect-src": ["https://*.amazonaws.com"],
+    "img-src": ["https://upload.wikimedia.org"]
+  }
+}

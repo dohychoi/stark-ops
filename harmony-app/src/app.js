@@ -690,34 +690,17 @@ function loadTheme() {
 
 // ===== DATA =====
 async function loadData() {
-  try {
-    let res, d;
-    // Try fetching data.json directly
-    try {
-      res = await fetch("data.json");
-      if (res.ok) {
-        var ct = res.headers.get("content-type") || "";
-        if (ct.includes("json")) {
-          d = await res.json();
-        } else {
-          var txt = await res.text();
-          if (txt.trim().startsWith("{")) d = JSON.parse(txt);
-        }
-      }
-    } catch(e2) { console.warn("data.json fetch failed:", e2); }
-    if (!d) { console.error("data.json not loaded"); return; }
-    console.log("Data loaded: Tickets=" + (d.TICKET_UPDATES||[]).length + " Emails=" + (d.EMAIL_UPDATES||[]).length + " Clusters=" + Object.keys(d.CLUSTERS||{}).length);
-    CLUSTERS = d.CLUSTERS || {};
-    EMAIL_UPDATES = d.EMAIL_UPDATES || [];
-    TICKET_UPDATES = d.TICKET_UPDATES || [];
-    GLOBAL_TEAMS = d.GLOBAL_TEAMS || {};
-    SUB_GEOS = d.SUB_GEOS || {};
-    SITE_DCO = d.SITE_DCO || {};
-    AZ_MAP = d.AZ_MAP || {};
-    UNMANNED_SITES = d.UNMANNED_SITES || [];
-  } catch(e) {
-    console.error("Failed to load data:", e);
-  }
+  var d = window.STARK_DATA;
+  if (!d) { console.error("STARK_DATA not found"); return; }
+  CLUSTERS = d.CLUSTERS || {};
+  EMAIL_UPDATES = d.EMAIL_UPDATES || [];
+  TICKET_UPDATES = d.TICKET_UPDATES || [];
+  GLOBAL_TEAMS = d.GLOBAL_TEAMS || {};
+  SUB_GEOS = d.SUB_GEOS || {};
+  SITE_DCO = d.SITE_DCO || {};
+  AZ_MAP = d.AZ_MAP || {};
+  UNMANNED_SITES = d.UNMANNED_SITES || [];
+  console.log("Data loaded: Tickets=" + TICKET_UPDATES.length + " Emails=" + EMAIL_UPDATES.length + " Clusters=" + Object.keys(CLUSTERS).length);
 }
 
 // ===== UTILS =====
@@ -738,5 +721,4 @@ function updateHeaderTime() {
   if (el) el.textContent = new Date().toLocaleString("en-US", { month: "short", day: "numeric", hour: "2-digit", minute: "2-digit", timeZoneName: "short" });
 }
 
-// Auto-refresh data every 5 minutes
-setInterval(async () => { await loadData(); }, 300000);
+// Data is loaded from data.js (STARK_DATA global)
