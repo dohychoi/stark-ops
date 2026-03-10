@@ -43,6 +43,10 @@ function bindEvents() {
   document.querySelectorAll(".theme-btn").forEach(btn => {
     btn.addEventListener("click", () => setTheme(btn.dataset.theme));
   });
+  // Quick action buttons
+  document.querySelectorAll(".quick-btn").forEach(btn => {
+    btn.addEventListener("click", () => runQuickAction(btn.dataset.action));
+  });
 }
 
 // ===== PAGES =====
@@ -184,6 +188,108 @@ function addMessageToDOM(role, text) {
   });
 
   el.scrollTop = el.scrollHeight;
+}
+
+function runQuickAction(action) {
+  var s = loadSettings();
+  var site = s.site || "ICN81";
+  var team = s.team || "DCO";
+  var mySites = new Set();
+  Object.entries(SITE_DCO).forEach(function(e) { if (e[1].toUpperCase() === site.toUpperCase()) mySites.add(e[0].toUpperCase()); });
+  if (mySites.size === 0) mySites.add(site.toUpperCase());
+
+  var openTickets = TICKET_UPDATES.filter(function(t) {
+    return ["Open","Pending","Assigned","Work In Progress","Researching"].includes(t.status);
+  });
+  openTickets.forEach(function(t) { t._priority = calcPriority(t); });
+  openTickets.sort(function(a, b) { return a._priority - b._priority; });
+
+  if (action === "briefing") {
+    addMessageToDOM("user", "☀️ What to do today");
+    var cats = {};
+    openTickets.forEach(function(t) { var c = categorizeTicket(t.title); cats[c] = (cats[c]||0)+1; });
+    var highEmails = EMAIL_UPDATES.filter(function(e) { return e.important; });
+
+    var msg = "☀️ " + site + " " + team + " — Today's Briefing\n\n";
+    msg += "━━━ 🎫 Open Tickets (" + openTickets.length + ") ━━━\n";
+    Object.entries(cats).sort(function(a,b){return b[1]-a[1]}).forEach(function(e) { msg += "  • " + e[0] + ": " + e[1] + "\n"; });
+    msg += "\n📋 Priority Order:\n";
+    openTickets.slice(0, 10).forEach(function(t, i) {
+      var linkId = t.shortId || (t.id && t.id.includes("-") ? t.id.split("-").pop() : t.id);
+      msg += "  " + (i+1) + ". [" + t.severity + "] " + (t.title||"").substring(0,60) + "\n     → t.corp.amazon.com/" + linkId + "\n";
+    });
+    if (highEmails.length > 0) {
+      msg += "\n━━━ 🚨 Priority Emails (" + highEmails.length + ") ━━━\n";
+      highEmails.forEach(function(e) { msg += "  • " + e.subject + "\n    " + (e.preview||"").substring(0,80) + "\n"; });
+    }
+    var catE = Object.entries(cats).sort(function(a,b){return b[1]-a[1]});
+    if (catE.length > 0) {
+      msg += "\n```chart\n" + JSON.stringify({type:"doughnut",title:"Ticket Categories",labels:catE.map(function(e){return e[0]}),data:catE.map(function(e){return e[1]})}) + "\n```";
+    }
+    addMessageToDOM("assistant", msg);
+  }
+
+  else if (action === "tickets") {
+    addMessageToDOM("user", "🎫 Open my tickets");
+    var cats2 = {}, statuses = {};
+    openTickets.forEach(function(t) { var c = categorizeTicket(t.title); cats2[c] = (cats2[c]||0)+1; statuses[t.status] = (statuses[t.status]||0)+1; });
+    var msg2 = "🎫 " + site + " Open Tickets — Malt Priority Order\n\n";
+    msg2 += "Total: " + openTickets.length + " | " + Object.entries(statuses).map(function(e){return e[0]+": "+e[1]}).join(", ") + "\n\n";
+    openTickets.forEach(function(t, i) {
+      var linkId = t.shortId || (t.id && t.id.includes("-") ? t.id.split("-").pop() : t.id);
+      var cat = categorizeTicket(t.title);
+      msg2 += (i+1) + ". [" + t.severity + "] " + cat + "\n   " + (t.title||"").substring(0,65) + "\n   Status: " + t.status + " | Age: " + t.age + "d → t.corp.amazon.com/" + linkId + "\n\n";
+    });
+    var catE2 = Object.entries(cats2).sort(function(a,b){return b[1]-a[1]});
+    msg2 += "```chart\n" + JSON.stringify({type:"doughnut",title:"By Category",labels:catE2.map(function(e){return e[0]}),data:catE2.map(function(e){return e[1]})}) + "\n```";
+    msg2 += "\n```chart\n" + JSON.stringify({type:"bar",title:"By Status",labels:Object.keys(statuses),data:Object.values(statuses)}) + "\n```";
+    addMessageToDOM("assistant", msg2);
+  }
+
+  else if (action === "emails") {
+    addMessageToDOM("user", "📬 Summarize my emails");
+    var important = EMAIL_UPDATES.filter(function(e) { return e.important; });
+    var other = EMAIL_UPDATES.filter(function(e) { return !e.important; });
+    var msg3 = "📬 Email Summary (" + EMAIL_UPDATES.length + " total)\n\n";
+    if (important.length > 0) {
+      msg3 += "━━━ 🚨 High Priority (" + important.length + ") ━━━\n";
+      important.forEach(function(e) {
+        msg3 += "\n📌 " + e.subject + "\n   From: " + e.from + " | " + e.date + "\n   " + (e.preview||"") + "\n";
+      });
+    }
+    if (other.length > 0) {
+      msg3 += "\n━━━ 📧 Other (" + other.length + ") ━━━\n";
+      other.forEach(function(e) {
+        msg3 += "\n• [" + (e.tag||"") + "] " + e.subject + "\n  From: " + e.from + " | " + (e.preview||"").substring(0,80) + "\n";
+      });
+    }
+    addMessageToDOM("assistant", msg3);
+  }
+
+  else if (action === "global") {
+    addMessageToDOM("user", "🌏 Global update");
+    var globalTags = ["Central Ops","DCC","Global","Networking","Install","DCEO"];
+    var globalEmails = EMAIL_UPDATES.filter(function(e) { return globalTags.some(function(tag) { return (e.tag||"").includes(tag) || (e.from||"").includes(tag.toLowerCase()) || (e.subject||"").toUpperCase().includes(tag.toUpperCase()); }); });
+    var otherGlobal = EMAIL_UPDATES.filter(function(e) { return !globalEmails.includes(e); });
+    var msg4 = "🌏 Global Team Updates\n\n";
+    if (globalEmails.length > 0) {
+      globalEmails.forEach(function(e) {
+        msg4 += "📌 [" + (e.tag||"General") + "] " + e.subject + "\n   From: " + e.from + " | " + e.date + "\n   " + (e.preview||"") + "\n\n";
+      });
+    } else {
+      msg4 += "No global team updates found in current emails.\n\n";
+    }
+    msg4 += "━━━ 🌏 Cluster Status ━━━\n";
+    Object.entries(CLUSTERS).forEach(function(e) {
+      var c = e[1];
+      msg4 += c.flag + " " + e[0] + " (" + c.name + "): " + c.adoption + "% adoption — " + c.status + "\n";
+    });
+    addMessageToDOM("assistant", msg4);
+  }
+
+  conversationHistory.push({ role: "user", content: action });
+  conversationHistory.push({ role: "assistant", content: "[quick action: " + action + "]" });
+  saveCurrentChat();
 }
 
 async function sendMessage() {
